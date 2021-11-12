@@ -37,13 +37,18 @@ class LoginController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
+    // public function showLoginForm()
+    // {
+    //     if(request()->ajax()){
+    //         return ['socialLinks' => (new Socialite)->getSocialLinks()];
+    //     }
+
+    //     return redirect('/')->with('show_login', true);
+    // }
+
     public function showLoginForm()
     {
-        if(request()->ajax()){
-            return ['socialLinks' => (new Socialite)->getSocialLinks()];
-        }
-
-        return redirect('/')->with('show_login', true);
+        return view('frontend.auth.login');
     }
 
     /**

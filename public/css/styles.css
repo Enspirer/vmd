@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0!important;
+}
+p {
+    font-size: 0.9rem;
+}
+
+.logo {
+    height: 4rem;
+    object-fit: cover;
+}
+
+.main-nav a {
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    border-bottom: 2px solid red;
+}
+
+.main-nav a.active {
+    border-bottom: 2px solid red;
+}
+
+.register-btn {
+    border: 1px solid #0763E5!important;
+    color: #0763E5!important;
+}
+
+
+.footer p, .footer .first-column i {
+    font-size: 0.8rem;
+}
+
+.footer a {
+    font-size: 0.8rem;
+}
+
+.social i {
+    font-size: 2rem;
+}
+
+.footer .links a {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.footer .links a:hover {
+    border-bottom: 2px solid white;
+}
+
+.footer hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    border-top: 1px solid white;
+}
+
+.footer ::placeholder {
+    font-size: 0.8rem;
+}

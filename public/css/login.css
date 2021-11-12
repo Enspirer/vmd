@@ -1,0 +1,54 @@
+.login .form-label {
+    position: relative;
+    top: 2rem;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+}
+
+.login .form-check-label {
+    font-size: 0.8rem;
+}
+
+
+.click-input {
+    top: -0.2rem!important;
+    transition: all 0.5s;
+}
+
+.login .form-control {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.3);
+    color: black!important;
+}
+
+
+input[type="email"]:focus {
+    background-color: transparent!important;
+}
+input[type="password"]:focus {
+    background-color: transparent!important;
+}
+input[type="text"]:focus {
+    background-color: transparent!important;
+}
+
+.login-btn {
+    background-color: #0763E5;
+    color: white;
+}
+
+.login-btn:hover {
+    color: white!important;
+    background-color: #5c0606;
+}
+
+hr {
+    opacity: 1;
+    border-color: #FF0000!important;
+}
+
+.horizontal {
+    border-bottom: 2px solid black;
+}

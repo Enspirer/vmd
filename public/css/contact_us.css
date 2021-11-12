@@ -1,0 +1,36 @@
+.contact-form .form-control {
+    border: 1px solid rgb(53, 74, 94, 0.5)!important;
+}
+
+.contact-form .input-group .form-select {
+    padding: .100rem 1.75rem .100rem .30rem!important;
+    background-color: #0763E5;
+    border: 1px solid #0763E5!important;
+    border-radius: 0!important;
+    height: 100%;
+}
+.contact-form .input-group select {
+    color: white!important;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='fas fa-chevron-down' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
+.contact-form ::placeholder { /* Chrome/Opera/Safari */
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0, 0.37);
+}
+.form-check-label {
+    font-size: 0.8rem;
+    color: #666666;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.3rem!important;
+}
+.submit-btn {
+    background-color: #0763E5;
+    color: white;
+    padding: 1rem 0;
+}
+.submit-btn:hover {
+    color: white!important;
+    background-color: #5c0606;
+}
