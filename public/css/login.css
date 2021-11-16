@@ -44,11 +44,17 @@ input[type="text"]:focus {
     background-color: #5c0606;
 }
 
-hr {
-    opacity: 1;
-    border-color: #FF0000!important;
-}
 
-.horizontal {
-    border-bottom: 2px solid black;
+
+.upload {
+    cursor: pointer;
+    border: 3px solid #2680EB;
+    color: #2680EB;
+    font-size: 0.9rem;
+    border-radius: 6px;
 }
+#upload-resume {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }

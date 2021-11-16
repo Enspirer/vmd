@@ -54,13 +54,22 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showRegistrationForm()
+    public function showEmployeeRegistrationForm()
     {
         abort_unless(config('access.registration'), 404);
 
-        return view('frontend.auth.register')
+        return view('frontend.auth.register_employee')
             ->withSocialiteLinks((new Socialite)->getSocialLinks());
     }
+
+    public function showCandidateRegistrationForm()
+    {
+        abort_unless(config('access.registration'), 404);
+
+        return view('frontend.auth.register_candidate')
+            ->withSocialiteLinks((new Socialite)->getSocialLinks());
+    }
+
 
     /**
      * @param RegisterRequest $request

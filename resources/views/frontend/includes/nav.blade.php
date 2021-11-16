@@ -29,7 +29,7 @@
                     <a class="nav-link p-0 text-dark" href="{{ route('frontend.auth.login') }}">Log In</a>
                 </li>
                 <li class="nav-item ps-3">
-                    <a class="nav-link p-0 btn register-btn px-3 py-2" type="button" href="#">Register</a>
+                    <a class="nav-link p-0 btn register-btn px-3 py-2" type="button" href="{{ route('frontend.auth.register_employee') }}">Register</a>
                 </li>
             </ul>
         </div>

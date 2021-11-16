@@ -52,7 +52,7 @@
 
                 <div class="row mb-3">
                     <div class="col-12 text-center">
-                        <p style="font-size: 0.8rem;">No account? <a href="{{ route('frontend.auth.register') }}" class="text-decoration-none" style="color: #00A3FE; font-size: 0.8rem;">Create one here.</a></p>
+                        <p style="font-size: 0.8rem;">No account? <a href="{{ route('frontend.auth.register_candidate') }}" class="text-decoration-none" style="color: #00A3FE; font-size: 0.8rem;">Create one here.</a></p>
                     </div>
                 </div>
 
