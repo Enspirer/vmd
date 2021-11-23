@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+@if(auth()->user()->hasRole('student'))
+
+        @include('backend.layouts.student_app')
+
+@else
+
+
+
+        <!DOCTYPE html>
 @if(config('app.display_type') == 'rtl' || (session()->has('display_type') && session('display_type') == 'rtl'))
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
 
@@ -123,3 +131,5 @@
 
         </body>
         </html>
+
+@endif
