@@ -70,7 +70,7 @@
     </div>
 
 
-    <div class="container position-relative" style="margin-bottom : 5rem;">
+    <div class="container position-relative" style="margin-bottom : 7rem;">
         <div class="row justify-content-end align-items-center" style="margin-bottom: 9rem;">
             <div class="col-2 text-center">
                 <img src="{{ url('img/frontend/employee/sample_1.png') }}" alt="" class="img-fluid">
@@ -111,12 +111,12 @@
             </div>
         </div>
 
-        <div class="row justify-content-end align-items-center" style="margin-bottom: 9rem;">
+        <div class="row justify-content-end align-items-center">
             <div class="col-2 text-center">
                 <img src="{{ url('img/frontend/employee/sample_5.png') }}" alt="" class="img-fluid">
             </div>
             <div class="col-5 text-center">
-                <h5 class="fw-bold mb-2">License  application prosess</h5>
+                <h5 class="fw-bold mb-2">License  application process</h5>
                 <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.</p>
             </div>
         </div>
@@ -141,13 +141,13 @@
 
         <div class="row align-items-center">
             <div class="col-5">
-                <img src="{{ url('img/frontend/candidate/girl.png') }}" alt="" class="img-fluid w-100" style="height: 48rem; object-fit: cover;">
+                <img src="{{ url('img/frontend/employee/girl.png') }}" alt="" class="img-fluid w-100" style="height: 48rem; object-fit: cover;">
             </div>
 
             <div class="col-7">
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
@@ -162,7 +162,7 @@
 
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
@@ -177,7 +177,7 @@
 
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
@@ -192,7 +192,7 @@
 
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
@@ -207,7 +207,7 @@
 
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
@@ -222,7 +222,7 @@
 
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
@@ -237,7 +237,7 @@
 
                 <div class="row align-items-center mb-3">
                     <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
                     </div>
                     <div class="col-11">
                         <h5 class="fw-bold">Sample text here</h5>
