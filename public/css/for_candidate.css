@@ -3,6 +3,16 @@
 }
 
 
+.bottom_banner {
+    background-color: rgb(143, 201, 255, 0.2);
+    background-size: 100% 100%;
+}
+
+.join {
+    background-color: #0763E5;
+    color: white;
+    width: 40%;
+}
 
 
 
@@ -13,11 +23,6 @@
 
 
 
-body {
-    font-family: tahoma;
-    padding: 40px 0;
-  }
-  
   .main-timeline {
     font-family: tahoma;
     padding: 20px 0;

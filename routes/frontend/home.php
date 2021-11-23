@@ -7,6 +7,7 @@ use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\AboutUsController;
 use App\Http\Controllers\Frontend\CandidateController;
+use App\Http\Controllers\Frontend\EmployeeController;
 
 /*
  * Frontend Controllers
@@ -17,6 +18,7 @@ Route::get('about-us', [AboutUsController::class, 'index'])->name('about_us');
 Route::get('contact-us', [ContactController::class, 'index'])->name('contact_us');
 
 Route::get('for-candidate', [CandidateController::class, 'index'])->name('for_candidate');
+Route::get('for-employee', [EmployeeController::class, 'index'])->name('for_employee');
 
 
 

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <h3 class="fw-bolder">VMD Consultants</h3>
+                <a href="{{ route('frontend.index') }}"><img src="{{ url('img/frontend/footer_logo.png') }}" alt="" class="img-fluid"></a>
 
                 <p class="text-white mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p>
 
