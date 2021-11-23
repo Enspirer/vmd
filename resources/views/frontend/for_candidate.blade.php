@@ -24,112 +24,70 @@
     </div>
 
 
-    <div class="container" style="margin-bottom : 5rem;">
-        <div class="row">
-            <div class="col">
-            <div class="main-timeline">
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2018</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-rocket" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">Web Development</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">JavaScript</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-cog" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">Mongo DB</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">BlackPearl</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">Angular</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-apple" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">Laravel</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
-                <div class="timeline">
-                <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                    <i class="fa fa-edit" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                    <h3 class="title">Creapure</h3>
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    </div>
-                </a>
-                </div>
+    <div class="container position-relative" style="margin-bottom : 7rem;">
+        <div class="row justify-content-end align-items-center" style="margin-bottom: 9rem;">
+            <div class="col-2 text-center">
+                <img src="{{ url('img/frontend/candidate/sample_1.png') }}" alt="" class="img-fluid">
             </div>
+            <div class="col-5 text-center">
+                <h5 class="fw-bold mb-2">Register with VMD</h5>
+                <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.</p>
             </div>
         </div>
-    </div>    
+
+        <div class="row align-items-center" style="margin-bottom: 9rem;">
+            <div class="col-5 text-center">
+                <h5 class="fw-bold mb-2">Create your profile LMS</h5>
+                <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.</p>
+            </div>
+            <div class="col-2 text-center">
+                <img src="{{ url('img/frontend/candidate/sample_2.png') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row justify-content-end align-items-center" style="margin-bottom: 9rem;">
+            <div class="col-2 text-center">
+                <img src="{{ url('img/frontend/candidate/sample_3.png') }}" alt="" class="img-fluid">
+            </div>
+            <div class="col-5 text-center">
+                <h5 class="fw-bold mb-2">Get Qualified</h5>
+                <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center" style="margin-bottom: 9rem;">
+            <div class="col-5 text-center">
+                <h5 class="fw-bold mb-2">Find a sponsor</h5>
+                <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.</p>
+            </div>
+            <div class="col-2 text-center">
+                <img src="{{ url('img/frontend/candidate/sample_4.png') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row justify-content-end align-items-center">
+            <div class="col-2 text-center">
+                <img src="{{ url('img/frontend/candidate/sample_5.png') }}" alt="" class="img-fluid">
+            </div>
+            <div class="col-5 text-center">
+                <h5 class="fw-bold mb-2">Apply for job</h5>
+                <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 vl_1"></div>
+        </div>
+        <div class="row">
+            <div class="col-6 vl_2"></div>
+        </div>
+        <div class="row">
+            <div class="col-6 vl_3"></div>
+        </div>
+        <div class="row">
+            <div class="col-6 vl_4"></div>
+        </div>
+    </div>      
 
 
     <div class="container" style="margin-bottom : 5rem;">
