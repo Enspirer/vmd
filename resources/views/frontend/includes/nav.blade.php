@@ -14,7 +14,7 @@
                     <a class="nav-link p-0 text-dark {{ Request::segment(1) == 'about-us' ? 'active' : null }}" href="{{ route('frontend.about_us') }}">About Us</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link p-0 text-dark" href="#">Courses</a>
+                    <a class="nav-link p-0 text-dark  {{ Request::segment(1) == 'courses' ? 'active' : null }}" href="{{route('courses.all')}}">Courses</a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link p-0 text-dark" href="#">Services</a>

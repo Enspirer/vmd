@@ -19,7 +19,7 @@
                     <button class="btn inquire">Inquire Now</button>
                 </div>
                 <div class="col-6">
-                    <img src="{{ url('img/frontend/employee/banner.png') }}" alt="" class="img-fluid w-100">
+                    <img src="{{ url('img/frontend/employee/banner.png') }}" style="object-fit: cover" alt="" class="img-fluid w-100">
                 </div>
             </div>
         </div>

@@ -36,7 +36,7 @@
                 <div class="card p-3">
                     <h6 class="fw-bold mb-3" style="line-height: 1.5rem;">Largest pool of trained & Experienced Hospitality staff</h6>
 
-                    <button class="btn now">Hire Now</button>
+                    <a href="{{route('frontend.for_employee')}}" class="btn now">Hire Now</a>
                 </div>
             </div>
             <div class="col-6 position-relative">
@@ -47,7 +47,7 @@
                 <div class="card p-3">
                     <h6 class="fw-bold mb-3" style="line-height: 1.5rem;">Get qualified & land the best job with a sponsorship</h6>
 
-                    <button class="btn now">Register Now</button>
+                    <a href="{{route('frontend.for_candidate')}}" class="btn now">Register Now</a>
                 </div>
             </div>
         </div>
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
@@ -229,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="swiper-pagination"></div>
