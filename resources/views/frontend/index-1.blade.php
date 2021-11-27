@@ -19,8 +19,11 @@
     <div class="container" style="margin-bottom: 6rem;">
         <div class="row justify-content-center">
             <div class="col-9 text-center">
-                <h2 class="mb-3">Our <span class="fw-bolder">Unique Service</span></h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quaerat magni eaque error reprehenderit assumenda tempora unde asperiores ut delectus. Consectetur necessitatibus, libero eveniet cupiditate distinctio hic ipsum ex aliquid vitae fugiat laudantium consequatur ut aperiam doloremque quisquam possimus enim ducimus quas adipisci ad. Odio!</p>
+                <h2 class="mb-3">Immigration and Recruitments <span class="fw-bolder">-All in 1 platform</span></h2>
+                <p>SKILLJOBS.UK offers the accurate and expertise of your dreams which can come
+                    true in real life. Are you seeking an opportunity to start a career in the UK or are you
+                    an employer who is seeking to fill gaps in human capital workforce, you are at the
+                    right place to fulfil your prospects.</p>
             </div>
         </div>
     </div>
@@ -250,7 +253,9 @@
 
                             <div class="carousel-caption">
                                 <h3 class="fw-bolder mb-2">IMMIGRATION</h3>
-                                <p style="font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quibusdam doloribus, fuga eum dolore tempora mollitia qui ipsam dolorum nostrum harum consectetur numquam saepe ut dolorem. Consequuntur reprehenderit non impedit!</p>
+                                <p style="font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">We can help you to obtain Skilled worker visa sponsorship licences, encounter the
+                                    sponsorship compliance and provide expertise advice to recruit successful migrant
+                                    workforce.</p>
                             </div>
                         </div>
                     </div>
@@ -264,8 +269,9 @@
                             <img src="{{ url('img/frontend/index/service_2.png') }}" alt="" srcset="" class="img-fluid w-100" style="height: 23rem; object-fit:cover;"/>
 
                             <div class="carousel-caption">
-                                <h3 class="fw-bolder mb-2">RECRUITMENT</h3>
-                                <p style="font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quibusdam doloribus, fuga eum dolore tempora mollitia qui ipsam dolorum nostrum harum consectetur numquam saepe ut dolorem. Consequuntur reprehenderit non impedit!</p>
+                                <h3 class="fw-bolder mb-2">STAFFING</h3>
+                                <p style="font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">Recruitment services will enable to search for the best talented highly skilled migrant
+                                    workforce for your organisation in a shorter period of time to save your finances.</p>
                             </div>
                         </div>
                     </div>
@@ -280,7 +286,9 @@
 
                             <div class="carousel-caption">
                                 <h3 class="fw-bolder mb-2">TRAINING</h3>
-                                <p style="font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quibusdam doloribus, fuga eum dolore tempora mollitia qui ipsam dolorum nostrum harum consectetur numquam saepe ut dolorem. Consequuntur reprehenderit non impedit!</p>
+                                <p style="font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">We know the positive impact for employers, employees and the wider economy. This
+                                    investment in your people and their skills makes your business more efficient and
+                                    profitable, and ensures your people improve their life chances.</p>
                             </div>
                         </div>
                     </div>

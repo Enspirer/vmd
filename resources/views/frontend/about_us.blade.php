@@ -22,10 +22,32 @@
     <div class="container" style="margin-bottom : 7rem;">
         <div class="row align-items-center">
             <div class="col-6">
-                <img src="{{ url('img/frontend/about_us/about.png') }}" alt="" class="img-fluid w-100" style="height: 25rem; object-fit: cover">
+                <img src="{{ url('img/frontend/about_us/about.png') }}" alt="" class="img-fluid w-100" style="height: 30rem; object-fit: cover">
             </div>
             <div class="col-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia dolores cumque ut officiis suscipit inventore, perspiciatis, libero saepe quaerat corporis cupiditate dolore ea molestiae perferendis tempore accusamus possimus laudantium provident sed minima harum animi. Totam quaerat repudiandae voluptatem laborum? Distinctio nulla, dolores quos natus architecto quaerat facilis. Totam ea quas ducimus sapiente, corporis quod rerum a dicta placeat dolorum ratione blanditiis impedit nulla doloribus consectetur repellendus? Culpa nulla temporibus laudantium corrupti vel qui natus quasi, odit vero illum eaque recusandae suscipit a, voluptatibus molestiae ullam commodi, voluptatem fuga nihil. Repellat molestiae aliquam ipsa voluptas culpa. Aliquid accusantium pariatur natus ipsa accusamus architecto praesentium doloremque explicabo. Praesentium expedita est perferendis non maiores quasi. Dignissimos veniam maiores maxime soluta, sequi delectus non modi facilis, quia provident quae aperiam nisi, commodi pariatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nesciunt molestiae maxime sit veritatis libero illo? Vel maiores accusantium repellendus libero possimus quas, illo itaque magnam natus provident aliquam quam!</p>
+                <p>Our main aim is to provide the right position to the right person. We believe, if you
+                    meet the required standards we will be able to provide you the role no matter what
+                    background or what country you come from.</p> <br>
+
+                <h5>Start your desired life in the UK :</h5> <br>
+
+                <p>Our promise to you is to provide a superior employment experience whether you are
+                    a candidate or we are engaging with your organization. While our competitors think
+                    recruiting is a business, we believe it is one of the most important services in the
+                    world. We believe we can make people’s lives better with correct recruitment.</p>
+                <br>
+
+                <p>For Candidates(Applicants) : If you have the right Qualifications, experience, talent
+                    and more than anything else, you have the commitment and drive to pursue your
+                    dreams, we are at your service to provide you with the opportunity to achieve your
+                    goals. Nothing else matters to us. We will lead you to the career life you deserve.</p>
+                <br>
+
+                <p>For Clients (Employers) : We understand the importance of recruiting the suitable
+                    candidate to a company. We dedicate much time, and energy to provide best
+                    suitable &amp; most importantly the candidates which we think have the utter
+                    commitment and dedication to work for you. We want our candidates to be a part of
+                    the organisation family and make a positive different.</p>
             </div>
         </div>
     </div>

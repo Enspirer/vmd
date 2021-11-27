@@ -74,7 +74,9 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab vel eos pariatur, provident porro qui. Mollitia laudantium dignissimos nihil eveniet aspernatur ullam fuga, pariatur corrupti sunt accusantium non minus aperiam eaque id atque, incidunt aliquam laboriosam eligendi nobis. Quas hic asperiores cumque odio in, reiciendis natus exercitationem.</p>
+                        <p>Our main aim is to provide the right position to the right person. We believe, if you
+                            meet the required standards we will be able to provide you the role no matter what
+                            background or what country you come from.</p>
 
                     </div>
                 </div>
