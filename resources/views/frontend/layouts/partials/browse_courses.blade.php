@@ -63,5 +63,8 @@
                 </div>
             @endforeach
         @endif
+
+            <div class="" style="background-image: url('{{url('img/couse_dummy.png')}}');height: 2000px"></div>
+
     </div>
 </div>

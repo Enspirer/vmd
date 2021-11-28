@@ -64,6 +64,8 @@
     <!-- Start of best course
    =============================================  -->
     @include('frontend.layouts.partials.browse_courses')
+
+
     <!-- End of best course
             ============================================= -->
 
