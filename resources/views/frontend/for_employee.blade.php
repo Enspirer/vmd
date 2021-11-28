@@ -43,7 +43,7 @@
                             <h4 class="fw-bold mb-4">Post your Jobs</h4>
 
                             <div class="text-center">
-                                <button class="btn">Register</button>
+                                <a href="{{url('register-employee')}}" class="btn btn-primary">Register</a>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             <h4 class="fw-bold mb-4">View Candidates</h4>
 
                             <div class="text-center">
-                                <button class="btn">Log in</button>
+                                <a href="{{route('frontend.auth.login')}}" class="btn btn-primary">Log in</a>
                             </div>
                         </div>
                     </div>
