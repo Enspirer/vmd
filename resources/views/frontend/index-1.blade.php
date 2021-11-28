@@ -112,7 +112,7 @@
                                         <div class="text-center">
                                             <h3 class="fw-bold mb-3" style="color: #0763E5">$250.00</h3>
 
-                                            <button class="btn enroll w-75">Enroll Now</button>
+                                            <a href="{{'course/morbi-fermentum-sit-amet-libero-vel-ullamcorper'}}" class="btn enroll w-75">Enroll Now</a>
                                         </div>
                                     </div>
                                 </div>
