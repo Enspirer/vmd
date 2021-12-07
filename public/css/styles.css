@@ -68,3 +68,38 @@ p {
     font-size: 0.8rem;
 }
 
+
+.drop-icon {
+    padding: 0px 10px;
+}
+
+/* Hide Dropdowns by Default */
+li.drop-list ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.drop-list:hover > ul.dropdown{
+    display: inherit;
+}
+
+li.drop-list ul.dropdown li {
+    width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+    padding: 10px;
+}
+
+
+
+ul.dropdown li a {
+    text-decoration: none;
+    color: #000;
+}
+
