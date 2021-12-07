@@ -69,10 +69,11 @@ class CoursesController extends Controller
         $all_courses = Course::where('published', 1)->orderBy('id', 'desc')->get();
         $feature_courses = Course::where('featured', 1)->where('published', 1)->latest()->take(2)->get();
         $popular_courses = Course::where('popular', 1)->where('published', 1)->get();
+        $trending_courses = Course::where('trending', 1)->where('published', 1)->get();
 
-        // dd($popular_courses);
+        // dd($trending_courses);
 
-        return view($this->path . '.courses.index', compact('courses', 'purchased_courses', 'recent_news', 'featured_courses', 'categories', 'all_courses','feature_courses','popular_courses'));
+        return view($this->path . '.courses.index', compact('courses', 'purchased_courses', 'recent_news', 'featured_courses', 'categories', 'all_courses','feature_courses','popular_courses','trending_courses'));
     }
 
     public function show($course_slug)

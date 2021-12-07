@@ -214,8 +214,121 @@
                 </div>
             </div>
             <div class="tab-pane" id="trending" role="tabpanel">
-                <br>
-                <h3>Trending content goes here</h3>
+            <div class="swipper-outer">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- single slide start here -->
+
+                            @if(count($trending_courses) != 0 )
+                            @foreach($trending_courses as $trend_courses)
+                            <div class="swiper-slide">
+                                <div class="slide-inner-wrapper">
+                                    <div class="card-img-area">
+                                        <img src="{{ asset('storage/uploads/'.$trend_courses->course_image) }}" alt="">
+                                    </div>
+                                    <div class="card-content-area">
+                                        <div class="card p-4 slider-card">
+                                            <p class="mb-1 card-instructor ">Rozel | Teacher</p>
+
+                                            <h5 class="fw-bold mb-2 card-title" style="color: #150D6D">
+                                                {{$trend_courses->title}}</h5>
+
+                                            <div
+                                                style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                                <p class="mb-3" style="font-size: 0.7rem;">
+                                                    {!!$trend_courses->description!!}</p>
+                                            </div>
+
+                                            <div class="row mb-3 align-items-center">
+                                                <div class="col-6">
+                                                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                                                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                                                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                                                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                                                    <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="notification-box">
+                                                        <div class="student-count">
+                                                            <p>
+                                                                <i class="far fa-user" aria-hidden="true"></i>
+                                                                <span class="fw-bold ms-2 top-notification"
+                                                                    style="color: #150D6D">01</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="review-count">
+                                                            <p><i class="bi bi-chat-left-text"></i><span
+                                                                    class="fw-bold ms-2 top-notification"
+                                                                    style="color: #150D6D">00</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row  mb-3 align-items-center">
+                                                <div class="col-6 border-right">
+                                                    <p><i class="bi bi-layers-fill"
+                                                            style="color: #0763E5; font-size: 1.2rem; vertical-align: middle"></i><span
+                                                            class="fw-bold ms-2 time-and-lessons-small"
+                                                            style="color: #150D6D">12 Lessons</span></p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p><i class="fas fa-stopwatch"
+                                                            style="color: #0763E5; font-size: 1.2rem; "
+                                                            aria-hidden="true"></i><span
+                                                            class="fw-bold ms-2 time-and-lessons-small"
+                                                            style="color: #150D6D">3
+                                                            hr 30
+                                                            min</span></p>
+                                                </div>
+                                            </div>
+
+                                            <div class=" price-enroll-box  card-box">
+                                                <h3 class="fw-bold mb-3 course-price-card" style="color: #0763E5">
+                                                    ${{$trend_courses->price}}</h3>
+
+                                                <button class="card-enroll-btn">Enroll Now</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="hover-card-popup">
+                                        <h5 class="fw-bold mb-2 card-title" style="color: #150D6D">
+                                            {{$trend_courses->title}}</h5>
+                                        <p class="mb-1 card-instructor ">Rozel | Teacher</p>
+                                        <p class="mb-3 " style="font-size: 0.8rem;">{!!$trend_courses->description!!}</p>
+                                        <ul class="card-popup-list">
+                                            <li><span><i class="fas fa-check"></i></span>Build websites and webapps</li>
+                                            <li><span><i class="fas fa-check"></i></span>Build HTML-based mobile apps
+                                            </li>
+                                            <li><span><i class="fas fa-check"></i></span>Get a job as a junior web
+                                                developer</li>
+                                        </ul>
+                                        <button class="btn enroll-blue-btn">Entroll Now</button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            @endforeach
+                            @endif
+
+                            <!-- single slide ends here -->
+
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="swiper-button-next card-slider-next">
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                        <div class="swiper-button-prev card-slider-prev"><i class="fas fa-chevron-circle-left"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

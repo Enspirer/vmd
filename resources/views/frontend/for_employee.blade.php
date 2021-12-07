@@ -16,7 +16,7 @@
             <div class="row align-items-center">
                 <div class="col-6">
                     <h1 class="fw-bold mb-4" style="color: #4E6BC8">The smartest way to Recruit Overseas </h1>
-                    <button class="btn inquire">Inquire Now</button>
+                    <a href="{{url('contact-us')}}" class="btn inquire">Inquire Now</a>
                 </div>
                 <div class="col-6">
                     <img src="{{ url('img/frontend/employee/banner.png') }}" style="object-fit: cover" alt="" class="img-fluid w-100">
@@ -43,16 +43,17 @@
                             <h4 class="fw-bold mb-4">Post your Jobs</h4>
 
                             <div class="text-center">
-                                <a href="{{url('register-employee')}}" class="btn btn-primary">Register</a>
+                                <!-- <a href="{{url('register-employee')}}" class="btn btn-primary">Register</a> -->
+                                <a href="" data-bs-toggle="modal" data-bs-target="#post_job" class="btn btn-primary">Register</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-5">
                         <div class="card p-5 text-center">
-                            <h4 class="fw-bold mb-4">View Candidates</h4>
+                            <h4 class="fw-bold mb-4">Find Candidates</h4>
 
                             <div class="text-center">
-                                <a href="{{route('frontend.auth.login')}}" class="btn btn-primary">Log in</a>
+                                <a href="{{route('frontend.auth.login')}}" class="btn btn-primary">Contact us</a>
                             </div>
                         </div>
                     </div>
@@ -253,7 +254,51 @@
         </div>
     </div>
 
+    <div class="modal fade" id="post_job" tabindex="-1" aria-labelledby="inquireLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
 
+            <form action="" method="post" enctype="multipart/form-data">
+            {{csrf_field()}}
+                <div class="modal-header text-white" style="background-color: #1D5001;">
+                  <h6 class="modal-title" id="inquire-modal">Post Your Job</h6>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="mb-2">
+                      <label for="first-name" class="form-label"><p>First Name <span class="text-danger">*</span></p></label>
+                      <input type="text" class="form-control" name="first_name" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="last-name" class="form-label"><p>Last Name</p></label>
+                      <input type="text" class="form-control" name="last_name">
+                    </div>
+                    <div class="mb-2">
+                      <label for="contact-number" class="form-label"><p>Contact Number <span class="text-danger">*</span></p></label>
+                      <input type="number" class="form-control" name="contact_number" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="email" class="form-label"><p>Email Address</p></label>
+                      <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="mb-2">
+                      <label for="file" class="form-label"><p>Attached File</p></label>
+                      <input type="file" class="form-control" name="file">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label"><p>Message</p></label>
+                      <textarea class="form-control" name="message" cols="30" rows="3"></textarea>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn" data-bs-dismiss="modal" style="color: #68AE42;">Cancel</button>
+                  <input type="submit" class="submit-btn btn text-white px-5" style="background-color: #68AE42;" value="Send Request"/>
+                </div>
+            </form>  
+          </div>
+        </div>
+      </div>
 @endsection
 
 
