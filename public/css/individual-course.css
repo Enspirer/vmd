@@ -122,7 +122,7 @@ svg#baseline-flash_on-24px {
     display: flex;
     width: 100%;
     position: relative;
-    height: 1100px;
+    height: 100%;
 }
 
 .side-mg {
@@ -408,4 +408,8 @@ span.play-btn img {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     opacity: 0.7;
+}
+
+.main-content-height {
+    height: 100%;
 }
