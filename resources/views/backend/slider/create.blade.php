@@ -168,7 +168,7 @@
                 }
             });
 
-            $(document).on('click',',add-button',function (e) {
+            $(document).on('click','#add-button',function (e) {
                 e.preventDefault()
 
                 if($('.button-wrapper').length <= 3){

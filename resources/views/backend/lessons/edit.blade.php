@@ -73,9 +73,9 @@
                         {!! Form::hidden('lesson_image_max_height', 4000) !!}
                     </div>
                     <div class="col-lg-1 col-12 form-group">
-                        <a href="{{ asset('uploads/'.$lesson->lesson_image) }}" target="_blank"><img
-                                    src="{{ asset('uploads/'.$lesson->lesson_image) }}" height="65px"
-                                    width="65px"></a>
+                        <a href="{{ asset('storage/uploads/'.$lesson->lesson_image) }}" target="_blank"><img
+                                    src="{{ asset('storage/uploads/'.$lesson->lesson_image) }}" height="50px"
+                                    width="65px" class="mt-3"></a>
                     </div>
                 @else
                     <div class="col-12 col-lg-6 form-group">
