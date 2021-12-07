@@ -34,3 +34,40 @@
     color: white!important;
     background-color: #5c0606;
 }
+
+@media screen and (max-width: 767px) {
+    .col-4, .col-6 {
+        flex: none;
+        width: 100%;
+    }
+    .col-6.text-end.submit-btn-area {
+        text-align: left !important;
+        margin-top: 10px;
+        width: 50%;
+    }
+
+     p.text-center.position-absolute {
+        top: -1.4rem !important;
+        font-size: 4rem !important;
+    }
+
+    .container {
+        margin-top: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}

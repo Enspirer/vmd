@@ -1,0 +1,350 @@
+.single-course-banner-container {
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url('../img/frontend/individual_courses/individual-coures-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 55vh;
+}
+
+.learn-box {
+    margin: 50px 0; 
+}
+
+.img-banner {
+    width: 100%;
+}
+
+.trending-tag {
+    color: #000;
+    background-color: #FFC600;
+    margin-top: 30px;
+    width: max-content;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 8px 24px;
+    font-size: 12px;
+}
+
+i.fas.fa-star.gold, i.fas.fa-star-half-alt.gold {
+    color: orange;
+    font-size: 0.6rem;
+}
+
+svg#baseline-flash_on-24px {
+    width: 18px;
+}
+
+
+.faq-list {
+    width: 100%;
+    list-style-type: none;
+    color: #000;
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+
+.faq-list > li {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.faq-list > li.open .list-header:after {
+    transform: rotate(180deg);
+}
+.faq-list > li.open .list-content {
+    max-height: 1000px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -moz-transition: max-height 0.5s ease-in;
+    -ms-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+}
+.faq-list .list-header {
+    position: relative;
+    padding: 20px 0 20px 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.faq-list .list-header:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border-style: solid;
+    border-width: 18px 12px 0 12px;
+    border-color: #757575 transparent transparent transparent;
+    -webkit-transition: transform 0.5s ease-in;
+    -moz-transition: transform 0.5s ease-in;
+    -ms-transition: transform 0.5s ease-in;
+    -o-transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+}
+.faq-list .list-content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 1s cubic-bezier(0, 1.05, 0, 1);
+    -moz-transition: max-height 1s cubic-bezier(0, 1.05, 0, 1);
+    -ms-transition: max-height 1s cubic-bezier(0, 1.05, 0, 1);
+    -o-transition: max-height 1s cubic-bezier(0, 1.05, 0, 1);
+    transition: max-height 1s cubic-bezier(0, 1.05, 0, 1);
+}
+.faq-list .list-content-inner {
+    padding: 0 45px 30px;
+    font-size: 0.8em;
+}
+
+
+.btn.enroll-blue-btn {
+    background: #0763E5;
+    color: #fff;
+    border-radius: 1px;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    padding: 10px 80px;
+}
+
+.i-course-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main-content-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 1100px;
+}
+
+.side-mg {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.side-cards {
+    padding: 15px 30px;
+    position: absolute;
+    right: 0;
+    top: -40vh;
+}
+
+.top-card  {
+    text-align: center;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.progress {
+    margin: 5px auto;
+    padding: 0;
+    width: 90%;
+    height: 15px;
+    overflow: hidden;
+    background: #e5e5e5;
+    border-radius: 6px;
+}
+  
+  .bar {
+      position:relative;
+    float:left;
+    min-width:1%;
+    height:100%;
+    background:#FACA51;
+  }
+  
+  .percent {
+      position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    font-family:tahoma,arial,helvetica;
+    font-size:12px;
+    color:white;
+  }
+
+.progress-bar-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.review-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.rating-number {
+    flex: 1;
+    text-align: center;
+}
+
+.five-star {
+    flex: 1;
+}
+
+.progress-bar-wrapper {
+    flex: 2;
+}
+
+.review-card {
+    padding: 20px 5px;
+}
+
+.review-card h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1em;
+}
+
+.profile-card {
+   text-align: center;
+   padding: 20px;
+}
+
+.banner-txt-wrapper {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    justify-content: center;
+}
+
+.banner-txt-wrapper h1 {
+    font-size: 26px;
+    margin-top: 60px;
+}
+
+.banner-txt-wrapper h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.inner-box ul {
+    list-style: none;
+    padding: 30px;
+}
+
+.inner-box ul li {
+    display: flex;
+    font-size: 0.9em;
+} 
+
+.check-icon {
+    width: 15px;
+    height: auto;
+}
+
+.course-list-box {
+    display: flex;
+}
+
+.learn-box {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding: 30px 15px;
+    border: 1px solid #000;
+}
+
+
+span.learn-task {
+    margin-left: 10px;
+}
+
+h3.coourse-price {
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+.sidebar-btn {
+    background: #0763E5;
+    color: #fff;
+    border-radius: 11px;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    padding: 10px 80px;
+    width: 80%;
+}
+
+button.btn.sidebar-btn.white-btn {
+    background: #fff;
+    border: 1px solid #0763E5;
+    color: #0763E5;
+}
+
+.top-card p {
+    font-size: 0.7rem;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-bar {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-bar a {
+    margin: 5px;
+    text-decoration: none;
+}
+
+span.vertical-line {
+    display: inline-flex;
+    width: 2px;
+    background: #eee;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.rating-number h2 {
+    font-size: 1rem;;
+}
+
+.rating-number h6 {
+    font-size: 0.5rem;;
+}
+
+.profile-card h3 {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.profile-card h4 {
+    font-size: 0.8rem;
+}
+
+.main-content-wrapper h2 {
+    font-size: 1.5rem;
+}
+
+.rating-number h2 {
+    font-size: 1rem;
+}

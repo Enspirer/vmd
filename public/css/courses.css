@@ -102,7 +102,7 @@
     border-radius: 1px;
     margin-top: 20px;
     font-size: 0.7rem;
-    padding: 10px 50px;
+    padding: 10px 80px;
 }
   
   .course-list {
@@ -296,12 +296,12 @@ i.fas.fa-star.gold, i.fas.fa-star-half-alt.gold {
   /*popover styles*/
 .slide-inner-wrapper .hover-card-popup {
     opacity: 0;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in;
 }
 
-.slide-inner-wrapper:hover .hover-card-popup {
-    transform: translateX(75%);
+.swiper-slide-active  .hover-card-popup {
+    transform: translateX(90%);
     opacity: 1;
     z-index: 100;
     cursor: pointer;
@@ -327,12 +327,108 @@ ul.card-popup-list li span {
 .hover-card-popup {
     position: absolute;
     top: 5%;
-    width: 150%;
+    width: 120%;
     background: #fff;
     padding: 25px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     text-align: left;
 }
 
+span.btn-heart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span.btn-heart button.btn.enroll-blue-btn {
+    margin-top: 0;
+}
+
+i.far.fa-heart {
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 10px;
+}
+
   /*end of popover styles*/
+
+  .visible-xs {
+      display: none !important;
+  }
   
+
+  /*mobile-view*/
+@media screen and (max-width: 767px) {
+    .mobile-row-gap {
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+ 
+    .swiper-slide-active  .hover-card-popup {
+        transform: translateX(5%);
+    }
+
+    .hover-card-popup {
+        position: absolute;
+        top: 3%;
+        width: 100%;
+    }
+
+    .course-list {
+        margin-top: 15px;
+    }
+
+    .course-list .row {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .course-list-item-details {
+        padding: 10px;
+    }
+
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .visible-xs {
+        display: block !important;
+    }
+
+    .mobile-wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        justify-content: space-between;
+    }
+    .btn.enroll-blue-btn {
+        margin-top: 0;
+    }
+
+    h4 {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    h2 {
+        margin-bottom: 20px !important;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}

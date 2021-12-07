@@ -8,6 +8,7 @@ use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\AboutUsController;
 use App\Http\Controllers\Frontend\CandidateController;
 use App\Http\Controllers\Frontend\EmployeeController;
+use App\Http\Controllers\Frontend\IndividualCourseController;
 
 /*
  * Frontend Controllers
@@ -20,6 +21,9 @@ Route::get('contact-us', [ContactController::class, 'index'])->name('contact_us'
 Route::get('for-candidate', [CandidateController::class, 'index'])->name('for_candidate');
 Route::get('for-employee', [EmployeeController::class, 'index'])->name('for_employee');
 
+
+
+Route::get('individual-course', [IndividualCourseController::class, 'index'])->name('individual_course');
 
 
 /*

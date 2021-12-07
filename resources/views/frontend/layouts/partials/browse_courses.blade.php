@@ -10,7 +10,7 @@
     <h2 style="margin-top: 20px;">Development Courses</h2>
     <!-- featured courses -->
     <h4 style="padding-top: 40px;padding-bottom: 40px;">Featured course</h4>
-    <div class="row">
+    <div class="row mobile-row-gap">
         <div class="col-md-6 col-xs-12">
             <div class="featured-card">
                 <div class="row">
@@ -208,7 +208,10 @@
                                     <li><span><i class="fas fa-check"></i></span>Build HTML-based mobile apps</li>
                                     <li><span><i class="fas fa-check"></i></span>Get a job as a junior web developer</li>
                                 </ul>
-                                <button class="btn enroll-blue-btn">Entroll Now</button>
+                                <span class="btn-heart">
+                                    <button class="btn enroll-blue-btn">Entroll Now</button>
+                                   <i class="far fa-heart"></i>
+
                             </div>
                         </div>
                         
@@ -287,7 +290,8 @@
                                     <li><span><i class="fas fa-check"></i></span>Build HTML-based mobile apps</li>
                                     <li><span><i class="fas fa-check"></i></span>Get a job as a junior web developer</li>
                                 </ul>
-                                <button class="btn enroll-blue-btn">Entroll Now</button>
+                                <span class="btn-heart"><button class="btn enroll-blue-btn">Entroll Now</button><i class="far fa-heart"></i></span>
+
                             </div>
                         </div>
                         
@@ -365,7 +369,8 @@
                                     <li><span><i class="fas fa-check"></i></span>Build HTML-based mobile apps</li>
                                     <li><span><i class="fas fa-check"></i></span>Get a job as a junior web developer</li>
                                 </ul>
-                                <button class="btn enroll-blue-btn">Entroll Now</button>
+                                <span class="btn-heart"><button class="btn enroll-blue-btn">Entroll Now</button><i class="far fa-heart"></i></span>
+
                             </div>
                         </div>
                         
@@ -443,7 +448,7 @@
                                     <li><span><i class="fas fa-check"></i></span>Build HTML-based mobile apps</li>
                                     <li><span><i class="fas fa-check"></i></span>Get a job as a junior web developer</li>
                                 </ul>
-                                <button class="btn enroll-blue-btn">Entroll Now</button>
+                                <span class="btn-heart"><button class="btn enroll-blue-btn">Entroll Now</button><i class="far fa-heart"></i></span>
                             </div>
                         </div>
                         
@@ -521,7 +526,8 @@
                                     <li><span><i class="fas fa-check"></i></span>Build HTML-based mobile apps</li>
                                     <li><span><i class="fas fa-check"></i></span>Get a job as a junior web developer</li>
                                 </ul>
-                                <button class="btn enroll-blue-btn">Entroll Now</button>
+                                <span class="btn-heart"><button class="btn enroll-blue-btn">Entroll Now</button><i class="far fa-heart"></i></span>
+                                
                             </div>
                         </div>
                         
@@ -572,12 +578,16 @@
                         <span>612 lectures</span>-
                         <span>All Levels</span>
                     </div>
-                    <button class="btn enroll-blue-btn">Entroll Now</button>
+                    <div class="mobile-wrap">
+                        <button class="btn enroll-blue-btn">Entroll Now</button>
+                        <span class="course-list-item-price visible-xs">$11.99</span>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 hidden-xs">
                 <span class="course-list-item-price">$11.99</span>
-</div>
+            </div>
         </div>
         <!--single card end here-->
         <hr>
@@ -602,12 +612,16 @@
                         <span>612 lectures</span>-
                         <span>All Levels</span>
                     </div>
-                    <button class="btn enroll-blue-btn">Entroll Now</button>
+                    <div class="mobile-wrap">
+                        <button class="btn enroll-blue-btn">Entroll Now</button>
+                        <span class="course-list-item-price visible-xs">$11.99</span>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 hidden-xs">
                 <span class="course-list-item-price">$11.99</span>
-</div>
+            </div>
         </div>
         <!--single card end here-->
         <hr>
@@ -632,12 +646,16 @@
                         <span>612 lectures</span>-
                         <span>All Levels</span>
                     </div>
-                    <button class="btn enroll-blue-btn">Entroll Now</button>
+                    <div class="mobile-wrap">
+                        <button class="btn enroll-blue-btn">Entroll Now</button>
+                        <span class="course-list-item-price visible-xs">$11.99</span>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 hidden-xs">
                 <span class="course-list-item-price">$11.99</span>
-</div>
+            </div>
         </div>
         <!--single card end here-->
     </div>
@@ -659,9 +677,10 @@
 <!-- Initialize Swiper -->
 <script>
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
+    slidesPerView: 4,
     spaceBetween: 10,
     slidesPerGroup: 1,
+    centeredSlides: true,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -674,7 +693,32 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-mySwiper.realIndex(2);
+function myFunction(x) {
+    if (x.matches) {
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        slidesPerGroup: 1,
+        centeredSlides: true,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x)
+x.addListener(myFunction)
+
 
 </script>
 <script>

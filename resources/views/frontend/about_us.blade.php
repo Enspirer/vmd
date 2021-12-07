@@ -24,7 +24,7 @@
             <div class="col-6">
                 <img src="{{ url('img/frontend/about_us/about.png') }}" alt="" class="img-fluid w-100" style="height: 30rem; object-fit: cover">
             </div>
-            <div class="col-6">
+            <div class="col-6 mt">
                 <p>Our main aim is to provide the right position to the right person. We believe, if you
                     meet the required standards we will be able to provide you the role no matter what
                     background or what country you come from.</p> <br>

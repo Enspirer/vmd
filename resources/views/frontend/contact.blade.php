@@ -138,7 +138,7 @@
                                 <div class="g-recaptcha d-inline" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
                             </div>
 
-                            <div class="col-6 text-end">
+                            <div class="col-6 text-end submit-btn-area">
                                 <button type="submit" class="btn submit-btn w-75" disabled>Submit</button>
                             </div>
                         </div>
