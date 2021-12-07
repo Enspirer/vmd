@@ -6,6 +6,9 @@ use App\Models\Blog;
 use App\Models\Bundle;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Lesson;
+use App\Models\Auth\User;
+use App\Models\TeacherProfile;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -13,6 +16,7 @@ use Stripe\Stripe;
 use Stripe\Charge;
 use Stripe\Customer;
 use Cart;
+use DB;
 
 class CoursesController extends Controller
 {
@@ -82,6 +86,8 @@ class CoursesController extends Controller
         $continue_course = NULL;
         $recent_news = Blog::orderBy('created_at', 'desc')->take(2)->get();
         $course = Course::withoutGlobalScope('filter')->where('slug', $course_slug)->with('publishedLessons')->firstOrFail();
+        // dd($course);
+
         $purchased_course = \Auth::check() && $course->students()->where('user_id', \Auth::id())->count() > 0;
         if (($course->published == 0) && ($purchased_course == false)) {
             abort(404);
@@ -98,6 +104,7 @@ class CoursesController extends Controller
             $total_ratings = $course->reviews()->where('rating', '!=', "")->get()->count();
         }
         $lessons = $course->courseTimeline()->orderby('sequence', 'asc')->get();
+        // dd($lessons);
         $checkSubcribePlan=[];
         if (\Auth::check()) {
 
@@ -116,7 +123,20 @@ class CoursesController extends Controller
             $checkSubcribePlan = auth()->user()->checkPlanSubcribeUser();
         }
         $courseInPlan = courseOrBundlePlanExits($course->id,'');
-        return view($this->path . '.courses.course', compact('course', 'purchased_course', 'recent_news', 'course_rating', 'completed_lessons', 'total_ratings', 'is_reviewed', 'lessons', 'continue_course', 'checkSubcribePlan','courseInPlan'));
+
+        $course_lessons = Lesson::where('course_id',$course->id)->get();
+        // dd($course_lessons);
+
+        $course_user = DB::table('course_user')->where('course_id',$course->id)->first(); 
+        // dd($course_user);
+
+        $user_details = User::where('id',$course_user->user_id)->first();
+        // dd($user_details);
+
+        $teacher = TeacherProfile::where('user_id',$user_details->id)->first();
+        // dd($teacher);
+
+        return view($this->path . '.courses.course', compact('course', 'purchased_course', 'recent_news', 'course_rating', 'completed_lessons', 'total_ratings', 'is_reviewed', 'lessons', 'continue_course', 'checkSubcribePlan','courseInPlan','course_lessons','user_details'));
     }
 
 

@@ -119,83 +119,29 @@
                     </div>
                 </div>
                 <!-- course timeline -->
-                <h2>Course Timeline</h2>
-                <ul class="faq-list">
-                    <li class="J_list">
-                        <div class="list-header">Introduction</div>
-                        <div class="list-content">
-                            <div class="list-content-inner">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum
-                                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only
-                                five centuries, but also the leap into electronic typesetting, remaining essentially
-                                unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                                containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.
+                @if(count($course_lessons) != 0)
+                    <h2>Course Timeline</h2>
+                    <ul class="faq-list">
+                        
+                        @foreach($course_lessons as $lesson)
+                            <li class="J_list">
+                                <div class="list-header">{{$lesson->title}}</div>
+                                <div class="list-content">
+                                    <div class="list-content-inner">
+                                    {!!$lesson->full_text!!}
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach                        
+                        
+                    </ul>
 
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </div>
-                        </div>
-                    </li>
-                    <li class="J_list">
-                        <div class="list-header">1st Chapter</div>
-                        <div class="list-content">
-                            <div class="list-content-inner">
-                                Files or folders in your Dropbox folder can be shared, instantly. All you have to do is
-                                select the file and then select Share link from the Dropbox menu. Once you do, you can
-                                send the link to anyone over email, instant message, text message...you name it. People
-                                who click the link will get a preview of the file or folder on the Dropbox website.
-                                They'll also have the option to download a copy of the file. If the person you share the
-                                link with already has the file or folder saved in their Dropbox, they will be taken
-                                directly to that file or folder's location.
-                                <br /> Note: If you share a link to a video, the recipient will be able to watch up to
-                                15 minutes of it on the preview page on the Dropbox website. For a longer video, the
-                                recipient will need to download the file or watch from the Dropbox mobile app to see all
-                                of it.
-                                <br /> If you're a Dropbox Pro or Dropbox for Business user, you can control who
-                                accesses your links and for how long by setting passwords and expirations for them.
-                                Alternatively, you can use view-only permissions for shared folders. Links are ideal for
-                                replacing email attachments, whereas view-only permissions for shared folders are useful
-                                for keeping collaborators continuously up to date without giving them the ability to
-                                change files.
-                            </div>
-                        </div>
-                    </li>
-                    <li class="J_list">
-                        <div class="list-header">2nd Chapter</div>
-                        <div class="list-content">
-                            <div class="list-content-inner">
-                                There are two ways to share the files or folders in your Dropbox with others. If instead
-                                you'd like to collect files from people, read more about the file requests feature.
-                            </div>
-                        </div>
-                    </li>
-                    <li class="J_list">
-                        <div class="list-header">3rd Chapter</div>
-                        <div class="list-content">
-                            <div class="list-content-inner">
-                                File requests allows you to collect and receive files—big or small — from anyone, right
-                                into your Dropbox. File requests are ideal for receiving a large file or collection of
-                                files, collecting photos after a special event, and requesting submissions from
-                                coworkers and clients.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                @else
+                    <h5 class="p-5">No Any Lessons</h5>    
+                @endif
             </div>
+
+            <div style="padding:450px"></div>
             <!-- sidebar -->
             <div class="col-md-4 side-cards">
                 <div class="top-card i-course-card">
@@ -321,19 +267,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="profile-card i-course-card">
-                    <img class="prof-img" src="{{ url('img/frontend/individual_courses/profile.png')}}"
-                        alt="add to card">
-                    <h3>Elina Roshita</h3>
-                    <h4>IT Director at Cognizant</h4>
-                    <div>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+
+                @if($user_details != null)
+                    <div class="profile-card i-course-card">
+                        <img class="prof-img" src="{{ url('img/frontend/individual_courses/profile.png')}}"
+                            alt="add to card">
+                        <h3>{{$user_details->first_name}} {{$user_details->last_name}}</h3>
+                        <!-- <h4>IT Director at Cognizant</h4> -->
+                        <div>
+                            <i class="fas fa-star gold" aria-hidden="true"></i>
+                            <i class="fas fa-star gold" aria-hidden="true"></i>
+                            <i class="fas fa-star gold" aria-hidden="true"></i>
+                            <i class="fas fa-star gold" aria-hidden="true"></i>
+                            <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
 
 
