@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid main-content-height">
     <div class="container">
         <!-- main content area -->
         <div class="main-content-wrapper">
@@ -335,12 +335,15 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
 
 
     </div>
 </div>
-</div>
+
 
 
 
