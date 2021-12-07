@@ -32,8 +32,8 @@
     <div class="container emp-can" style="margin-bottom: 9rem;">
         <div class="row">
             <div class="col-6 col-xs-12 position-relative">
-                <p class="position-absolute large-title large-design-title"" style="opacity: 0.05;z-index: -1;">Employers</p>
-                <h4>For <span class="h2 fw-bolder">Employers</span></h4>
+                <p class="position-absolute large-title large-design-title" style="opacity: 0.05;z-index: -1;">Employers</p>
+                <h4><span class="h2 fw-bolder">Employers</span></h4>
                 <img src="{{ url('img/frontend/index/employer.png') }}" alt="" class="img-fluid w-100" style="height: 20rem; object-fit: cover;">
 
                 <div class="card p-3">
@@ -43,8 +43,8 @@
                 </div>
             </div>
             <div class="col-6 col-xs-12 position-relative">
-                <p class="position-absolute large-title large-design-title" style="opacity: 0.05;  z-index: -1;">Candidate</p>
-                <h4>For <span class="h2 fw-bolder">Candidate</span></h4>
+                <p class="position-absolute large-title large-design-title" style="opacity: 0.05;  z-index: -1;">Candidates</p>
+                <h4><span class="h2 fw-bolder">Candidates</span></h4>
                 <img src="{{ url('img/frontend/index/employer.png') }}" alt="" class="img-fluid w-100" style="height: 20rem; object-fit: cover;">
 
                 <div class="card p-3">
