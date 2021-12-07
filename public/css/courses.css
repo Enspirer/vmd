@@ -137,16 +137,24 @@
   }
 
   /*swiper slider styles*/
-  ul.course-filtering li.active {
+  ul.course-filtering li a.active {
     border-bottom: 5px solid #201A4A;
 }
 
-ul.course-filtering {
+ul.course-filtering li.active a {
+    border-bottom: 5px solid #201A4A;
+}
+
+
+ul.course-filtering { 
     margin-bottom: 0px;
 }
 
-ul.course-filtering li {
-    padding-bottom: 10px;
+
+
+ul.course-filtering li a {
+    text-decoration: none;
+    padding-bottom: 5px;
 }
 
 h5.fw-bold.mb-2.card-title {
@@ -157,7 +165,7 @@ p.mb-1.card-instructor {
     font-size: 10px;
 }
 hr.categories-line {
-    margin-top: 0px;
+    margin-top: 9px;
 }
 
 span.fw-bold.ms-2.top-notification {
@@ -234,7 +242,7 @@ button.card-enroll-btn {
   .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
   }
 
@@ -300,8 +308,16 @@ i.fas.fa-star.gold, i.fas.fa-star-half-alt.gold {
     transition-timing-function: ease-in;
 }
 
-.swiper-slide-active  .hover-card-popup {
+/* .swiper-slide-active  .hover-card-popup {
     transform: translateX(90%);
+    opacity: 1;
+    z-index: 100;
+    cursor: pointer;
+} */
+
+
+.swiper-slide:hover  .hover-card-popup {
+    transform: translateX(10%);
     opacity: 1;
     z-index: 100;
     cursor: pointer;
@@ -356,6 +372,21 @@ i.far.fa-heart {
   .visible-xs {
       display: none !important;
   }
+
+
+  .tab-content>.active {
+      opacity: 1;
+  }
+
+  ul.nav.nav-pills li {
+    margin-right: 30px;
+}
+
+.swiper-slide {
+    height: 600px;
+}
+
+
   
 
   /*mobile-view*/

@@ -348,3 +348,64 @@ span.vertical-line {
 .rating-number h2 {
     font-size: 1rem;
 }
+
+video[poster] {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+}
+
+video {
+    height: 210px;
+} 
+
+source {
+    height: 210px;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+span.play-btn {
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 160px;
+    opacity:0.8;
+}
+
+span.play-btn img {
+    width: 100%;
+}
+
+
+.play-button-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+.play-button-wrapper #circle-play-b {
+    cursor: pointer;
+    pointer-events: auto;
+}
+.play-button-wrapper #circle-play-b svg {
+    width: 75px;
+    height: 75px;
+    fill: #fff;
+    stroke: #fff;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    opacity: 0.7;
+}

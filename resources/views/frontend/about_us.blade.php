@@ -54,7 +54,7 @@
 
 
     <div class="container" style="margin-bottom : 6rem;">
-        <div class="row">
+        <div class="row" style="justify-content: center;">
             <div class="col-4 position-relative">
                 <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
                 <div class="row content justify-content-center text-center">
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="col-4 position-relative">
+            <!-- <div class="col-4 position-relative">
                 <img src="{{ url('img/frontend/about_us/vision_2.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
                 <div class="row content justify-content-center text-center">
                     <div class="col-9">
@@ -83,7 +83,7 @@
                         <p style="font-size: 0.85rem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, illum. Delectus inventore ad ex recusandae velit explicabo sint fuga. Maxime qui, unde doloribus itaque dolores nemo laborum temporibus ducimus. Adipisci!</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

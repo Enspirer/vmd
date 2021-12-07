@@ -1,678 +1,399 @@
 @extends('frontend.layouts.app'.config('theme_layout'))
 
-@section('title', ($course->meta_title) ? $course->meta_title : app_name() )
-@section('meta_description', $course->meta_description)
-@section('meta_keywords', $course->meta_keywords)
+@section('title', trans('labels.frontend.home.title').' | '.app_name())
+@section('meta_description', '')
+@section('meta_keywords','')
 
 @push('after-styles')
-    <style>
-        .leanth-course.go {
-            right: 0;
-        }
-        .video-container iframe{
-            max-width: 100%;
-        }
-
-    </style>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css"/>
-
+<link href="{{ url('css/individual-course.css') }}" rel="stylesheet">
 @endpush
 
+
 @section('content')
-    <div style="background-image: url('{{url('img/course_sing.png')}}');height: 3040px;background-size: contain;background-repeat: no-repeat;"></div>
 
-    <!-- Start of breadcrumb section
-        ============================================= -->
-    {{--<section id="breadcrumb" class="breadcrumb-section relative-position backgroud-style">--}}
-        {{--<div class="blakish-overlay"></div>--}}
-        {{--<div class="container">--}}
-            {{--<div class="page-breadcrumb-content text-center">--}}
-                {{--<div class="page-breadcrumb-title">--}}
-                    {{--<h2 class="breadcrumb-head black bold"><span>{{$course->title}}</span></h2>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
-    {{--<!-- End of breadcrumb section--}}
-        {{--============================================= -->--}}
+<div class="container-fluid single-course-banner-container">
+    <div class="container">
+        <!-- banner area -->
+        <div class="row">
+            <div class="col-md-9 banner-txt-wrapper">
+                <span class="trending-tag">
+                    <svg id="baseline-flash_on-24px" xmlns="http://www.w3.org/2000/svg" width="25.545" height="25.545"
+                        viewBox="0 0 25.545 25.545">
+                        <path id="Path_1638" data-name="Path 1638" d="M0,0H25.545V25.545H0Z" fill="none" />
+                        <path id="Path_1639" data-name="Path 1639"
+                            d="M7,2V13.708h3.193v9.579l7.451-12.772H13.386L17.644,2Z"
+                            transform="translate(0.451 0.129)" />
+                    </svg>
+                    Trending
+                </span>
+                <h1>Ultimate AWS Certified Solutions Architect <br />
+                    Associate 2021</h1>
+                <h3>Pass the AWS Certified Solutions Architect Associate Certification SAA-C02. Complete <br />Amazon
+                    Web Services Cloud training!</h3>
+                <div class="col-6">
+                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                    <i class="fas fa-star gold" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    {{--<!-- Start of course details section--}}
-        {{--============================================= -->--}}
-    {{--<section id="course-details" class="course-details-section">--}}
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-md-9">--}}
-                    {{--@if(session()->has('danger'))--}}
-                        {{--<div class="alert alert-dismissable alert-danger fade show">--}}
-                            {{--<button type="button" class="close" data-dismiss="alert">&times;</button>--}}
-                            {{--{!! session('danger')  !!}--}}
-                        {{--</div>--}}
-                    {{--@endif--}}
-                    {{--@if(session()->has('success'))--}}
-                        {{--<div class="alert alert-dismissable alert-success fade show">--}}
-                            {{--<button type="button" class="close" data-dismiss="alert">&times;</button>--}}
-                            {{--{{session('success')}}--}}
-                        {{--</div>--}}
-                    {{--@endif--}}
-                    {{--<div class="course-details-item border-bottom-0 mb-0">--}}
-                        {{--<div class="course-single-pic mb30">--}}
-                            {{--@if($course->course_image != "")--}}
-                                {{--<img src="{{asset('storage/uploads/'.$course->course_image)}}"--}}
-                                     {{--alt="">--}}
-                            {{--@endif--}}
-                        {{--</div>--}}
-                        {{--<div class="course-single-text">--}}
-                            {{--<div class="course-title mt10 headline relative-position">--}}
-                                {{--<h3><a href="{{ route('courses.show', [$course->slug]) }}"><b>{{$course->title}}</b></a>--}}
-                                    {{--@if($course->trending == 1)--}}
-                                        {{--<span class="trend-badge text-uppercase bold-font"><i--}}
-                                                    {{--class="fas fa-bolt"></i> @lang('labels.frontend.badges.trending')</span>--}}
-                                    {{--@endif--}}
+<div class="container-fluid">
+    <div class="container">
+        <!-- main content area -->
+        <div class="main-content-wrapper">
+            <!-- main content -->
+            <div class="col-md-8">
+                <!-- learn box -->
+                <div class="learn-box">
+                    <h3>What you'll learn</h3>
+                    <div class="course-list-box">
+                        <div class="inner-box">
+                            <ul>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">FULLY UPDATED FOR SAA-CO2:Pass the
+                                        AWS Certified Solutions
+                                        Architect Associate Certification</span>
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">Perform Real-World Solution
+                                        Architecture on AWS
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">Learn the Serverless Fundamantals
+                                        (Lambda, DynamoDB, Cognito, API
+                                        Gateway)</span>
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">Understand the Well Architected
+                                        Framework, DIsaster Recovery</span>
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">|Secure your entire AWS Cloud using
+                                        KMS, IAM, Policies & SSM</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-box">
+                            <ul>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">All 600+ slides available as
+                                        downloadable PDF</span>
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">Learn the AWS Fundamantals (EC2, ELB,
+                                        ASG, RDS, ElastiCache, S3)</span>
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">Analyze 10+ Solution Architectures
+                                        (traditional & serverless)</span>
+                                </li>
+                                <li>
+                                    <span><img class="check-icon"
+                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
+                                            alt=""></span><span class="learn-task">Master all the differences of
+                                        Databases on AWS</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- course timeline -->
+                <h2>Course Timeline</h2>
+                <ul class="faq-list">
+                    <li class="J_list">
+                        <div class="list-header">Introduction</div>
+                        <div class="list-content">
+                            <div class="list-content-inner">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum
+                                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five centuries, but also the leap into electronic typesetting, remaining essentially
+                                unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                                Aldus PageMaker including versions of Lorem Ipsum.
 
-                                {{--</h3>--}}
-                            {{--</div>--}}
-                            {{--<div class="course-details-content">--}}
-                                {{--<p>--}}
-                                    {{--{!! $course->description !!}--}}
-                                {{--</p>--}}
-                            {{--</div>--}}
-                            {{--@if($course->mediaVideo && $course->mediavideo->count() > 0)--}}
-                                {{--<div class="course-single-text">--}}
-                                    {{--@if($course->mediavideo != "")--}}
-                                        {{--<div class="course-details-content mt-3">--}}
-                                            {{--<div class="video-container mb-5" data-id="{{$course->mediavideo->id}}">--}}
-                                                {{--@if($course->mediavideo->type == 'youtube')--}}
-
-
-                                                    {{--<div id="player" class="js-player" data-plyr-provider="youtube"--}}
-                                                         {{--data-plyr-embed-id="{{$course->mediavideo->file_name}}"></div>--}}
-                                                {{--@elseif($course->mediavideo->type == 'vimeo')--}}
-                                                    {{--<div id="player" class="js-player" data-plyr-provider="vimeo"--}}
-                                                         {{--data-plyr-embed-id="{{$course->mediavideo->file_name}}"></div>--}}
-                                                {{--@elseif($course->mediavideo->type == 'upload')--}}
-                                                    {{--<video poster="" id="player" class="js-player" playsinline controls>--}}
-                                                        {{--<source src="{{$course->mediavideo->url}}" type="video/mp4"/>--}}
-                                                    {{--</video>--}}
-                                                {{--@elseif($course->mediavideo->type == 'embed')--}}
-                                                    {{--{!! $course->mediavideo->url !!}--}}
-                                                {{--@endif--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--@endif--}}
-                                {{--</div>--}}
-                            {{--@endif--}}
-
-
-                            {{--@if(count($lessons)  > 0)--}}
-
-                                {{--<div class="course-details-category ul-li">--}}
-                                    {{--<span class="float-none">@lang('labels.frontend.course.course_timeline')</span>--}}
-                                {{--</div>--}}
-                            {{--@endif--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- /course-details -->--}}
-
-                    {{--<div class="affiliate-market-guide mb65">--}}
-
-                        {{--<div class="affiliate-market-accordion">--}}
-                            {{--<div id="accordion" class="panel-group">--}}
-                                {{--@if(count($lessons)  > 0)--}}
-                                    {{--@php $count = 0; @endphp--}}
-                                    {{--@foreach($lessons as $key=> $lesson)--}}
-                                        {{--@if($lesson->model && $lesson->model->published == 1)--}}
-                                            {{--@php $count++ @endphp--}}
-
-                                            {{--<div class="panel position-relative">--}}
-                                                {{--@if(auth()->check())--}}
-                                                    {{--@if(in_array($lesson->model->id,$completed_lessons))--}}
-                                                        {{--<div class="position-absolute" style="right: 0;top:0px">--}}
-                                                            {{--<span class="gradient-bg p-1 text-white font-weight-bold completed">@lang('labels.frontend.course.completed')</span>--}}
-                                                        {{--</div>--}}
-                                                    {{--@endif--}}
-                                                {{--@endif--}}
-                                                {{--<div class="panel-title" id="headingOne">--}}
-                                                    {{--<div class="ac-head">--}}
-                                                        {{--<button class="btn btn-link collapsed" data-toggle="collapse"--}}
-                                                                {{--data-target="#collapse{{$count}}" aria-expanded="false"--}}
-                                                                {{--aria-controls="collapse{{$count}}">--}}
-                                                            {{--<span>{{ sprintf("%02d", $count)}}</span>--}}
-                                                            {{--{{$lesson->model->title}}--}}
-                                                        {{--</button>--}}
-                                                        {{--@if($lesson->model_type == 'App\Models\Test')--}}
-                                                            {{--<div class="leanth-course">--}}
-                                                                {{--<span>@lang('labels.frontend.course.test')</span>--}}
-                                                            {{--</div>--}}
-                                                        {{--@endif--}}
-                                                        {{--@if($lesson->model->live_lesson)--}}
-                                                            {{--<div class="leanth-course">--}}
-                                                                {{--<span>@lang('labels.frontend.course.live_lesson')</span>--}}
-                                                            {{--</div>--}}
-                                                        {{--@endif--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                                {{--<div id="collapse{{$count}}" class="collapse" aria-labelledby="headingOne"--}}
-                                                     {{--data-parent="#accordion">--}}
-                                                    {{--<div class="panel-body">--}}
-                                                        {{--@if($lesson->model_type == 'App\Models\Test')--}}
-                                                            {{--{{ mb_substr($lesson->model->description,0,20).'...'}}--}}
-                                                        {{--@else--}}
-                                                            {{--@if($lesson->model->live_lesson)--}}
-                                                            {{--{{ mb_substr($lesson->model->short_text,0,20).'...'}}--}}
-                                                            {{--@else--}}
-                                                            {{--{{$lesson->model->short_text}}--}}
-                                                            {{--@endif--}}
-
-                                                        {{--@endif--}}
-                                                        {{--@if($lesson->model->live_lesson)--}}
-                                                            {{--<h4>@lang('labels.frontend.course.available_slots')</h4>--}}
-                                                            {{--@forelse($lesson->model->liveLessonSlots as $slot)--}}
-                                                                {{--<div class="card">--}}
-                                                                    {{--<div class="card-body">--}}
-                                                                        {{--@lang('labels.frontend.course.date') {{ $slot->start_at->format('d-m-Y h:i A') }}--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--@empty--}}
-                                                            {{--@endforelse--}}
-                                                        {{--@endif--}}
-                                                        {{--@if(auth()->check())--}}
-
-                                                            {{--@if(in_array($lesson->model->id,$completed_lessons))--}}
-                                                                {{--<div>--}}
-                                                                    {{--<a class="btn btn-warning mt-3"--}}
-                                                                       {{--href="{{route('lessons.show',['course_id' => $lesson->course->id,'slug'=>$lesson->model->slug])}}">--}}
-                                                                        {{--<span class=" text-white font-weight-bold ">@lang('labels.frontend.course.go')--}}
-                                                                            {{--></span>--}}
-                                                                    {{--</a>--}}
-                                                                {{--</div>--}}
-                                                            {{--@endif--}}
-                                                        {{--@endif--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--@endif--}}
-                                    {{--@endforeach--}}
-                                {{--@endif--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- /market guide -->--}}
-
-                    {{--<div class="course-review">--}}
-                        {{--<div class="section-title-2 mb20 headline text-left">--}}
-                            {{--<h2>@lang('labels.frontend.course.course_reviews')</h2>--}}
-                        {{--</div>--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-md-6">--}}
-                                {{--<div class="ratting-preview">--}}
-                                    {{--<div class="row">--}}
-                                        {{--<div class="col-md-4">--}}
-                                            {{--<div class="avrg-rating ul-li">--}}
-                                                {{--<b>@lang('labels.frontend.course.average_rating')</b>--}}
-                                                {{--<span class="avrg-rate">{{$course_rating}}</span>--}}
-                                                {{--<ul>--}}
-                                                    {{--@for($r=1; $r<=$course_rating; $r++)--}}
-                                                        {{--<li><i class="fas fa-star"></i></li>--}}
-                                                    {{--@endfor--}}
-                                                {{--</ul>--}}
-                                                {{--<b>{{$total_ratings}} @lang('labels.frontend.course.ratings')</b>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="col-md-8">--}}
-                                            {{--<div class="avrg-rating ul-li">--}}
-                                                {{--<span><b>@lang('labels.frontend.course.details')</b></span>--}}
-                                                {{--@for($r=5; $r>=1; $r--)--}}
-                                                    {{--<div class="rating-overview">--}}
-                                                        {{--<span class="start-item">{{$r}} @lang('labels.frontend.course.stars')</span>--}}
-                                                        {{--<span class="start-bar"></span>--}}
-                                                        {{--<span class="start-count">{{$course->reviews()->where('rating','=',$r)->get()->count()}}</span>--}}
-                                                    {{--</div>--}}
-                                                {{--@endfor--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- /review overview -->--}}
-
-                    {{--<div class="couse-comment">--}}
-                        {{--<div class="blog-comment-area ul-li about-teacher-2">--}}
-                            {{--@if(count($course->reviews) > 0)--}}
-                                {{--<ul class="comment-list">--}}
-                                    {{--@foreach($course->reviews as $item)--}}
-                                        {{--<li class="d-block">--}}
-                                            {{--<div class="comment-avater">--}}
-                                                {{--<img src="{{$item->user->picture}}" alt="">--}}
-                                            {{--</div>--}}
-
-                                            {{--<div class="author-name-rate">--}}
-                                                {{--<div class="author-name float-left">--}}
-                                                    {{--@lang('labels.frontend.course.by'):--}}
-                                                    {{--<span>{{$item->user->full_name}}</span>--}}
-                                                {{--</div>--}}
-                                                {{--<div class="comment-ratting float-right ul-li">--}}
-                                                    {{--<ul>--}}
-                                                        {{--@for($i=1; $i<=(int)$item->rating; $i++)--}}
-                                                            {{--<li><i class="fas fa-star"></i></li>--}}
-                                                        {{--@endfor--}}
-                                                    {{--</ul>--}}
-                                                    {{--@if(auth()->check() && ($item->user_id == auth()->user()->id))--}}
-                                                        {{--<div>--}}
-                                                            {{--<a href="{{route('courses.review.edit',['id'=>$item->id])}}"--}}
-                                                               {{--class="mr-2">@lang('labels.general.edit')</a>--}}
-                                                            {{--<a href="{{route('courses.review.delete',['id'=>$item->id])}}"--}}
-                                                               {{--class="text-danger">@lang('labels.general.delete')</a>--}}
-                                                        {{--</div>--}}
-
-                                                    {{--@endif--}}
-                                                {{--</div>--}}
-                                                {{--<div class="time-comment float-right">{{$item->created_at->diffforhumans()}}</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="author-designation-comment">--}}
-                                                {{--<p>{{$item->content}}</p>--}}
-                                            {{--</div>--}}
-                                        {{--</li>--}}
-                                    {{--@endforeach--}}
-                                {{--</ul>--}}
-                            {{--@else--}}
-                                {{--<h4> @lang('labels.frontend.course.no_reviews_yet')</h4>--}}
-                            {{--@endif--}}
-
-                            {{--@if ($purchased_course)--}}
-                                {{--@if(isset($review) || ($is_reviewed == false))--}}
-                                    {{--<div class="reply-comment-box">--}}
-                                        {{--<div class="review-option">--}}
-                                            {{--<div class="section-title-2  headline text-left float-left">--}}
-                                                {{--<h2>@lang('labels.frontend.course.add_reviews')</h2>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="review-stars-item float-right mt15">--}}
-                                                {{--<span>@lang('labels.frontend.course.your_rating'): </span>--}}
-                                                {{--<div class="rating">--}}
-                                                    {{--<label>--}}
-                                                        {{--<input type="radio" name="stars" value="1"/>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                    {{--</label>--}}
-                                                    {{--<label>--}}
-                                                        {{--<input type="radio" name="stars" value="2"/>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                    {{--</label>--}}
-                                                    {{--<label>--}}
-                                                        {{--<input type="radio" name="stars" value="3"/>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                    {{--</label>--}}
-                                                    {{--<label>--}}
-                                                        {{--<input type="radio" name="stars" value="4"/>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                    {{--</label>--}}
-                                                    {{--<label>--}}
-                                                        {{--<input type="radio" name="stars" value="5"/>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                        {{--<span class="icon"><i class="fas fa-star"></i></span>--}}
-                                                    {{--</label>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-
-                                        {{--<div class="teacher-faq-form">--}}
-                                            {{--@php--}}
-                                                {{--if(isset($review)){--}}
-                                                    {{--$route = route('courses.review.update',['id'=>$review->id]);--}}
-                                                {{--}else{--}}
-                                                   {{--$route = route('courses.review',['id'=> $course->id]);--}}
-                                                {{--}--}}
-                                            {{--@endphp--}}
-
-                                            {{--<form method="POST"--}}
-                                                  {{--action="{{$route}}"--}}
-                                                  {{--data-lead="Residential">--}}
-                                                {{--@csrf--}}
-                                                {{--<input type="hidden" name="rating" id="rating">--}}
-                                                {{--<label for="review">@lang('labels.frontend.course.message')</label>--}}
-                                                {{--<textarea name="review" class="mb-2" id="review" rows="2"--}}
-                                                          {{--cols="20">@if(isset($review)){{$review->content}} @endif</textarea>--}}
-                                                {{--<span class="help-block text-danger">{{ $errors->first('review', ':message') }}</span>--}}
-                                                {{--<div class="nws-button text-center  gradient-bg text-uppercase">--}}
-                                                    {{--<button type="submit"--}}
-                                                            {{--value="Submit">@lang('labels.frontend.course.add_review_now')--}}
-                                                    {{--</button>--}}
-                                                {{--</div>--}}
-                                            {{--</form>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--@endif--}}
-                            {{--@endif--}}
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="J_list">
+                        <div class="list-header">1st Chapter</div>
+                        <div class="list-content">
+                            <div class="list-content-inner">
+                                Files or folders in your Dropbox folder can be shared, instantly. All you have to do is
+                                select the file and then select Share link from the Dropbox menu. Once you do, you can
+                                send the link to anyone over email, instant message, text message...you name it. People
+                                who click the link will get a preview of the file or folder on the Dropbox website.
+                                They'll also have the option to download a copy of the file. If the person you share the
+                                link with already has the file or folder saved in their Dropbox, they will be taken
+                                directly to that file or folder's location.
+                                <br /> Note: If you share a link to a video, the recipient will be able to watch up to
+                                15 minutes of it on the preview page on the Dropbox website. For a longer video, the
+                                recipient will need to download the file or watch from the Dropbox mobile app to see all
+                                of it.
+                                <br /> If you're a Dropbox Pro or Dropbox for Business user, you can control who
+                                accesses your links and for how long by setting passwords and expirations for them.
+                                Alternatively, you can use view-only permissions for shared folders. Links are ideal for
+                                replacing email attachments, whereas view-only permissions for shared folders are useful
+                                for keeping collaborators continuously up to date without giving them the ability to
+                                change files.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="J_list">
+                        <div class="list-header">2nd Chapter</div>
+                        <div class="list-content">
+                            <div class="list-content-inner">
+                                There are two ways to share the files or folders in your Dropbox with others. If instead
+                                you'd like to collect files from people, read more about the file requests feature.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="J_list">
+                        <div class="list-header">3rd Chapter</div>
+                        <div class="list-content">
+                            <div class="list-content-inner">
+                                File requests allows you to collect and receive files—big or small — from anyone, right
+                                into your Dropbox. File requests are ideal for receiving a large file or collection of
+                                files, collecting photos after a special event, and requesting submissions from
+                                coworkers and clients.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar -->
+            <div class="col-md-4 side-cards">
+                <div class="top-card i-course-card">
+                    <div class="video-wrapper">
+                        <video id="video" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" width="100%"
+                            height="100%" poster="{{ url('img/frontend/individual_courses/video-banner.jpg')}}"
+                            controls>
+                            <source src="{{ url('video/frontend/individual_course/computer_science.mp4') }}"
+                                type="video/mp4">
+                        </video>
+                        <!-- <span class="play-btn"><img src="{{ url('img/frontend/individual_courses/play.png') }}" alt=""> -->
+                        <div class="play-button-wrapper">
+                            <div title="Play video" class="play-gif" id="circle-play-b">
+                                <!-- SVG Play Button -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                                    <path d="M40 0a40 40 0 1040 40A40 40 0 0040 0zM26 61.56V18.44L64 40z" />
+                                </svg>
+                            </div>
+                        </div>
+                        </span>
+                    </div>
 
 
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--@if($course->bundles && (count($course->bundles) > 0))--}}
-                        {{--<div class="course-details-category ul-li mt-5">--}}
-                            {{--<h3 class="float-none text-dark">@lang('labels.frontend.course.available_in_bundles')</h3>--}}
-                        {{--</div>--}}
-                        {{--<div class="genius-post-item mb55">--}}
-                            {{--<div class="tab-container">--}}
-                                {{--<div id="tab1" class="tab-content-1 pt35">--}}
-                                    {{--<div class="best-course-area best-course-v2">--}}
-                                        {{--<div class="row">--}}
-                                            {{--@foreach($course->bundles as $bundle)--}}
 
-                                                {{--<div class="col-md-4">--}}
-                                                    {{--<div class="best-course-pic-text relative-position">--}}
-                                                        {{--<div class="best-course-pic relative-position"--}}
-                                                             {{--@if($bundle->course_image != "") style="background-image: url('{{asset('storage/uploads/'.$course->course_image)}}')" @endif>--}}
-
-                                                            {{--@if($bundle->trending == 1)--}}
-                                                                {{--<div class="trend-badge-2 text-center text-uppercase">--}}
-                                                                    {{--<i class="fas fa-bolt"></i>--}}
-                                                                    {{--<span>@lang('labels.frontend.badges.trending')</span>--}}
-                                                                {{--</div>--}}
-                                                            {{--@endif--}}
-                                                            {{--@if($bundle->free == 1)--}}
-                                                                {{--<div class="trend-badge-3 text-center text-uppercase">--}}
-                                                                    {{--<i class="fas fa-bolt"></i>--}}
-                                                                    {{--<span>@lang('labels.backend.courses.fields.free')</span>--}}
-                                                                {{--</div>--}}
-                                                            {{--@endif--}}
-
-                                                            {{--<div class="course-rate ul-li">--}}
-                                                                {{--<ul>--}}
-                                                                    {{--@for($i=1; $i<=(int)$bundle->rating; $i++)--}}
-                                                                        {{--<li><i class="fas fa-star"></i></li>--}}
-                                                                    {{--@endfor--}}
-                                                                {{--</ul>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div class="course-details-btn">--}}
-                                                                {{--<a href="{{ route('bundles.show', [$bundle->slug]) }}">@lang('labels.frontend.course.bundle_detail')--}}
-                                                                    {{--<i class="fas fa-arrow-right"></i></a>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div class="blakish-overlay"></div>--}}
-                                                        {{--</div>--}}
-                                                        {{--<div class="best-course-text">--}}
-                                                            {{--<div class="course-title mb20 headline relative-position">--}}
-                                                                {{--<h3>--}}
-                                                                    {{--<a href="{{ route('bundles.show', [$bundle->slug]) }}">{{$bundle->title}}</a>--}}
-                                                                {{--</h3>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div class="course-meta">--}}
-                                                            {{--<span class="course-category"><a--}}
-                                                                        {{--href="{{route('courses.category',['category'=>$bundle->category->slug])}}">{{$bundle->category->name}}</a></span>--}}
-                                                                {{--<span class="course-author"><a href="#">{{ $bundle->students()->count() }}--}}
-                                                                        {{--@lang('labels.frontend.course.students')</a></span>--}}
-                                                                {{--<span class="course-author mr-0">{{ $bundle->courses()->count() }}--}}
-                                                                    {{--@if($bundle->courses()->count() > 1 )--}}
-                                                                        {{--@lang('labels.frontend.course.courses')--}}
-                                                                    {{--@else--}}
-                                                                        {{--@lang('labels.frontend.course.course')--}}
-                                                                    {{--@endif--}}
-                                                                {{--</span>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                        {{--@endforeach--}}
-                                        {{--<!-- /course -->--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div><!-- /tab-1 -->--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--@endif--}}
-                {{--</div>--}}
-
-                {{--<div class="col-md-3">--}}
-                    {{--<div class="side-bar">--}}
-                        {{--<div class="course-side-bar-widget">--}}
-
-                            {{--@php--}}
-                                {{--$matched = checkCourseSubscribeOrNot($checkSubcribePlan,$course->id);--}}
-                                {{--$courseExpire = courseOrBundleExpire($course->id,'');--}}
-                            {{--@endphp--}}
-                            {{--@if ($courseExpire==false && !$purchased_course && $matched['matched']==false && $matched['matchedBundle']==false)--}}
-                                {{--<h3>--}}
-                                    {{--@if($course->free == 1)--}}
-                                        {{--<span> {{trans('labels.backend.courses.fields.free')}}</span>--}}
-                                    {{--@else--}}
-                                        {{--{!!  $course->CoursePageStrikePrice  !!}--}}
-                                        {{--@lang('labels.frontend.course.price')<span>   {{$appCurrency['symbol'].' '.$course->price}}</span>--}}
-                                    {{--@endif</h3>--}}
-
-                                {{--@if(auth()->check() && (auth()->user()->hasRole('student')) && (Cart::session(auth()->user()->id)->get( $course->id)))--}}
-                                    {{--<button class="btn genius-btn btn-block text-center my-2 text-uppercase  btn-success text-white bold-font"--}}
-                                            {{--type="submit">@lang('labels.frontend.course.added_to_cart')--}}
-                                    {{--</button>--}}
-
-                                {{--@elseif(!auth()->check())--}}
-                                    {{--@if($course->free == 1)--}}
-                                        {{--<a id="openLoginModal"--}}
-                                           {{--class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-                                           {{--data-target="#myModal" href="#">@lang('labels.frontend.course.get_now') <i--}}
-                                                    {{--class="fas fa-caret-right"></i></a>--}}
-                                    {{--@else--}}
-                                        {{--<a id="openLoginModal"--}}
-                                           {{--class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-                                           {{--data-target="#myModal" href="#">@lang('labels.frontend.course.buy_now') <i--}}
-                                                    {{--class="fas fa-caret-right"></i></a>--}}
-
-                                        {{--<a id="openLoginModal"--}}
-                                           {{--class="genius-btn btn-block my-2 bg-dark text-center text-white text-uppercase "--}}
-                                           {{--data-target="#myModal" href="#">@lang('labels.frontend.course.add_to_cart') <i--}}
-                                                    {{--class="fa fa-shopping-bag"></i></a>--}}
-
-                                        {{--<a id="openLoginModal"--}}
-                                           {{--class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-                                           {{--data-target="#myModal" href="#">@lang('labels.frontend.course.subscribe')</a>--}}
-                                    {{--@endif--}}
-                                {{--@elseif(auth()->check() && (auth()->user()->hasRole('student')))--}}
-
-                                    {{--@if($course->free == 1)--}}
-                                        {{--<form action="{{ route('cart.getnow') }}" method="POST">--}}
-                                            {{--@csrf--}}
-                                            {{--<input type="hidden" name="course_id" value="{{ $course->id }}"/>--}}
-                                            {{--<input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>--}}
-                                            {{--<button class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-                                                    {{--href="#">@lang('labels.frontend.course.get_now') <i--}}
-                                                        {{--class="fas fa-caret-right"></i></button>--}}
-                                        {{--</form>--}}
-                                    {{--@else--}}
-                                        {{--<form action="{{ route('cart.checkout') }}" method="POST">--}}
-                                            {{--@csrf--}}
-                                            {{--<input type="hidden" name="course_id" value="{{ $course->id }}"/>--}}
-                                            {{--<input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>--}}
-                                            {{--<button class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-                                                    {{--href="#">@lang('labels.frontend.course.buy_now') <i--}}
-                                                        {{--class="fas fa-caret-right"></i></button>--}}
-                                        {{--</form>--}}
-                                        {{--<form action="{{ route('cart.addToCart') }}" method="POST">--}}
-                                            {{--@csrf--}}
-                                            {{--<input type="hidden" name="course_id" value="{{ $course->id }}"/>--}}
-                                            {{--<input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>--}}
-                                            {{--<button type="submit"--}}
-                                                    {{--class="genius-btn btn-block my-2 bg-dark text-center text-white text-uppercase ">--}}
-                                                {{--@lang('labels.frontend.course.add_to_cart') <i--}}
-                                                        {{--class="fa fa-shopping-bag"></i></button>--}}
-                                        {{--</form>--}}
-                                        {{--@if($courseInPlan==true)--}}
-                                            {{--<a class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-                                           {{--href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>--}}
-                                        {{--@endif--}}
-
-{{--                                        @if(auth()->user()->subscription('default'))--}}
-{{--                                        <form action="{{ route('subscription.course_subscribe') }}" method="POST">--}}
-{{--                                            @csrf--}}
-{{--                                            <input type="hidden" name="course_id" value="{{ $course->id }}"/>--}}
-{{--                                            <input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>--}}
-{{--                                            <button type="submit"--}}
-{{--                                                    class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font">--}}
-{{--                                                Course @lang('labels.frontend.course.subscribe')</button>--}}
-{{--                                        </form>--}}
-{{--                                        <br/>--}}
-{{--                                        <a class="genius-btn btn-block text-white  bg-dark text-center text-uppercase  bold-font"--}}
-{{--                                               href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>--}}
-{{--                                        @else--}}
-{{--                                        <a class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-{{--                                           href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>--}}
-{{--                                        @endif--}}
-                                    {{--@endif--}}
+                    <h3 class="coourse-price" style="color: #0763E5">$11.99</h3>
+                    <button class="btn sidebar-btn">Entroll Now</button>
+                    <button class="btn sidebar-btn white-btn">Buy Now</button>
+                    <p>Pass the AWS Certified Solutions Architect Associate Certification SAA-C02. Complete Amazon Web
+                        Services Cloud training!</p>
+                    <div class="notification-row row  mb-3 align-items-center">
+                        <div class="col-6 border-right">
+                            <p><i class="bi bi-layers-fill"
+                                    style="color: #0763E5; font-size: 1.2rem; vertical-align: middle"></i><span
+                                    class="fw-bold ms-2 time-and-lessons-small" style="color: #150D6D">12 Lessons</span>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p><i class="fas fa-stopwatch" style="color: #0763E5; font-size: 1.2rem; "
+                                    aria-hidden="true"></i><span class="fw-bold ms-2 time-and-lessons-small"
+                                    style="color: #150D6D">3
+                                    hr 30
+                                    min</span></p>
+                        </div>
+                        <div class="btn-bar">
+                            <a href="">Reminder</a>
+                            <span class="vertical-line"></span>
+                            <a href="">Favorite</a>
+                            <span class="vertical-line"></span>
+                            <a href="">Share</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card i-course-card">
+                    <h3>Course Reviews</h3>
+                    <div class="review-inner">
+                        <div class="rating-number">
+                            <h2>4.4 / 5</h2>
+                            <h6>58 Ratings</h6>
+                        </div>
+                        <div class="five-star">
+                            <div>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star gold" aria-hidden="true"></i>
+                                <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress">
+                                <div class="bar" style="width:35%">
+                                    <p class="percent">35%</p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="bar" style="width:35%">
+                                    <p class="percent">35%</p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="bar" style="width:35%">
+                                    <p class="percent">35%</p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="bar" style="width:35%">
+                                    <p class="percent">35%</p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="bar" style="width:35%">
+                                    <p class="percent">35%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-card i-course-card">
+                    <img class="prof-img" src="{{ url('img/frontend/individual_courses/profile.png')}}"
+                        alt="add to card">
+                    <h3>Elina Roshita</h3>
+                    <h4>IT Director at Cognizant</h4>
+                    <div>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-                                {{--@else--}}
-                                    {{--<h6 class="alert alert-danger"> @lang('labels.frontend.course.buy_note')</h6>--}}
-                                {{--@endif--}}
-                                {{--@include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price])--}}
-                            {{--@else--}}
-
-                                {{--@if($continue_course || !empty($checkSubcribePlan))--}}
-                                    {{--<a href="{{route('lessons.show',['course_id' => $course->id,'slug'=>$continue_course->model->slug])}}"--}}
-                                       {{--class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font">--}}
-
-                                        {{--@lang('labels.frontend.course.continue_course')--}}
-
-                                        {{--<i class="fa fa-arow-right"></i></a>--}}
-                                {{--@endif--}}
-
-                            {{--@endif--}}
-
-                        {{--</div>--}}
-                        {{--<div class="enrolled-student">--}}
-                            {{--<div class="comment-ratting float-left ul-li">--}}
-                                {{--<ul>--}}
-                                    {{--@for($i=1; $i<=(int)$course->rating; $i++)--}}
-                                        {{--<li><i class="fas fa-star"></i></li>--}}
-                                    {{--@endfor--}}
-                                {{--</ul>--}}
-                            {{--</div>--}}
-                            {{--<div class="student-number bold-font">--}}
-                                {{--{{ $course->students()->count() }}  @lang('labels.frontend.course.enrolled')--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="couse-feature ul-li-block">--}}
-                            {{--<ul>--}}
-                                {{--<li > @lang('labels.frontend.course.chapters')--}}
-                                    {{--<span>  {{$course->chapterCount()}} </span></li>--}}
-                                {{--<li>Language <span>English</span></li>--}}
-                                {{--<li class="d-inline-block w-100">@lang('labels.frontend.course.category')<span class="text-right"><a--}}
-                                                {{--href="{{route('courses.category',['category'=>$course->category->slug])}}"--}}
-                                                {{--target="_blank">{{$course->category->name}}</a> </span></li>--}}
-                                {{--<li> @lang('labels.frontend.course.author') <span>--}}
-
-                                        {{--@foreach($course->teachers as $key=>$teacher)--}}
-                                            {{--@php $key++ @endphp--}}
-                                            {{--<a href="{{route('teachers.show',['id'=>$teacher->id])}}" target="_blank">--}}
-                                                {{--{{$teacher->full_name}}@if($key < count($course->teachers )), @endif--}}
-                                            {{--</a>--}}
-                                        {{--@endforeach--}}
-
-                                       {{--</span>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-
-                        {{--</div>--}}
-
-                        {{--@if($recent_news->count() > 0)--}}
-                            {{--<div class="side-bar-widget">--}}
-                                {{--<h2 class="widget-title text-capitalize">@lang('labels.frontend.course.recent_news')</h2>--}}
-                                {{--<div class="latest-news-posts">--}}
-                                    {{--@foreach($recent_news as $item)--}}
-                                        {{--<div class="latest-news-area">--}}
-                                            {{--@if($item->image != "")--}}
-                                                {{--<div class="latest-news-thumbnile relative-position"--}}
-                                                     {{--style="background-image: url({{asset('storage/uploads/'.$item->image)}})">--}}
-                                                    {{--<div class="blakish-overlay"></div>--}}
-                                                {{--</div>--}}
-                                            {{--@endif--}}
+    </div>
+</div>
+</div>
 
 
-                                            {{--<div class="date-meta">--}}
-                                                {{--<i class="fas fa-calendar-alt"></i> {{$item->created_at->format('d M Y')}}--}}
-                                            {{--</div>--}}
-                                            {{--<h3 class="latest-title bold-font"><a--}}
-                                                        {{--href="{{route('blogs.index',['slug'=>$item->slug.'-'.$item->id])}}">{{$item->title}}</a>--}}
-                                            {{--</h3>--}}
-                                        {{--</div>--}}
-                                        {{--<!-- /post -->--}}
-                                    {{--@endforeach--}}
-
-
-                                    {{--<div class="view-all-btn bold-font">--}}
-                                        {{--<a href="{{route('blogs.index')}}">@lang('labels.frontend.course.view_all_news')--}}
-                                            {{--<i class="fas fa-chevron-circle-right"></i></a>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-
-                        {{--@endif--}}
-
-                        {{--@if($global_featured_course != "")--}}
-                            {{--<div class="side-bar-widget">--}}
-                                {{--<h2 class="widget-title text-capitalize">@lang('labels.frontend.course.featured_course')</h2>--}}
-                                {{--<div class="featured-course">--}}
-                                    {{--<div class="best-course-pic-text relative-position pt-0">--}}
-                                        {{--<div class="best-course-pic relative-position "--}}
-                                             {{--@if($global_featured_course->course_image != "") style="background-image: url({{asset('storage/uploads/'.$global_featured_course->course_image)}})" @endif>--}}
-
-                                            {{--@if($global_featured_course->trending == 1)--}}
-                                                {{--<div class="trend-badge-2 text-center text-uppercase">--}}
-                                                    {{--<i class="fas fa-bolt"></i>--}}
-                                                    {{--<span>@lang('labels.frontend.badges.trending')</span>--}}
-                                                {{--</div>--}}
-                                            {{--@endif--}}
-                                            {{--@if($global_featured_course->free == 1)--}}
-                                                {{--<div class="trend-badge-3 text-center text-uppercase">--}}
-                                                    {{--<i class="fas fa-bolt"></i>--}}
-                                                    {{--<span>@lang('labels.backend.courses.fields.free')</span>--}}
-                                                {{--</div>--}}
-                                            {{--@endif--}}
-                                        {{--</div>--}}
-                                        {{--<div class="best-course-text" style="left: 0;right: 0;">--}}
-                                            {{--<div class="course-title mb20 headline relative-position">--}}
-                                                {{--<h3>--}}
-                                                    {{--<a href="{{ route('courses.show', [$global_featured_course->slug]) }}">{{$global_featured_course->title}}</a>--}}
-                                                {{--</h3>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="course-meta">--}}
-                                                {{--<span class="course-category"><a--}}
-                                                            {{--href="{{route('courses.category',['category'=>$global_featured_course->category->slug])}}">{{$global_featured_course->category->name}}</a></span>--}}
-                                                {{--<span class="course-author">{{ $global_featured_course->students()->count() }}</span>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--@endif--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
-    <!-- End of course details section
-        ============================================= -->
 
 @endsection
 
+
 @push('after-scripts')
-    <script src="https://cdn.plyr.io/3.5.3/plyr.polyfilled.js"></script>
+<script>
+$('.list-header').on('click', function() {
+    var $J_li = $(this).parents('.J_list')
+    $J_li.hasClass('open') ? $J_li.removeClass('open') : $J_li.addClass('open');
+})
+</script>
 
-    <script>
-        const player = new Plyr('#player');
+<script>
+const video = document.getElementById("video");
+const circlePlayButton = document.getElementById("circle-play-b");
 
-        $(document).on('change', 'input[name="stars"]', function () {
-            $('#rating').val($(this).val());
-        })
-                @if(isset($review))
-        var rating = "{{$review->rating}}";
-        $('input[value="' + rating + '"]').prop("checked", true);
-        $('#rating').val(rating);
-        @endif
-    </script>
+function togglePlay() {
+	if (video.paused || video.ended) {
+		video.play();
+	} else {
+		video.pause();
+	}
+}
+
+circlePlayButton.addEventListener("click", togglePlay);
+video.addEventListener("playing", function () {
+	circlePlayButton.style.opacity = 0;
+});
+video.addEventListener("pause", function () {
+	circlePlayButton.style.opacity = 1;
+});
+
+
+//hide controls
+var vids = $("video"); 
+$.each(vids, function(){
+       this.controls = false; 
+}); 
+//Loop though all Video tags and set Controls as false
+
+$("video").click(function() {
+  //console.log(this); 
+  if (this.paused) {
+    this.play();
+   
+  } else {
+    this.pause();
+    this.controls = true; 
+  }
+});
+
+</script>
+
 @endpush
