@@ -103,3 +103,83 @@ ul.dropdown li a {
     color: #000;
 }
 
+.large-design-title, .large-design-title-about {
+    top: -3rem; 
+    left: 13%; 
+    font-size: 5rem; 
+    line-height: 1.2;
+}
+
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .large-design-title {
+        font-size: 2.5rem;
+        top: 1.5rem;
+        left: 4%;
+    }
+
+    .large-design-title-about {
+        font-size: 2.5rem;
+        top: -1.5rem;
+        left: 14%;
+        width: max-content;
+    }
+
+    .col-xs-12 {
+        width: 100% !important;
+        padding: 45px 15px;
+    }
+
+    .container {
+        margin-top: 3rem;
+        margin-bottom: 3rem;    
+    }
+
+    /*navigation styles*/
+
+    li.drop-list ul.dropdown {
+        position:inherit;
+    }
+
+    a.nav-link.p-0.text-dark {
+        text-align: center;
+    }
+
+
+    .logo {
+        object-fit: contain;
+    }
+    
+    a.navbar-brand {
+        width: 50%;
+    }
+
+    li.nav-item.px-3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}
+
+
+

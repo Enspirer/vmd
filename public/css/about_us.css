@@ -4,6 +4,10 @@
     left: -1.5rem;
 }
 
+.vision-height {
+    height: 30rem;
+}
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
     .row {
@@ -21,6 +25,10 @@
 
     .mt {
         margin-top: 15px;
+    }
+
+    .vision-height {
+        height: unset;
     }
 }
 

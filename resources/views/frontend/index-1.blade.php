@@ -31,8 +31,8 @@
 
     <div class="container emp-can" style="margin-bottom: 9rem;">
         <div class="row">
-            <div class="col-6 position-relative">
-                <p class="position-absolute large-title" style="opacity: 0.05; top: -3rem; left: 13%; font-size: 5rem; line-height: 1.2; z-index: -1;">Employers</p>
+            <div class="col-6 col-xs-12 position-relative">
+                <p class="position-absolute large-title large-design-title"" style="opacity: 0.05;z-index: -1;">Employers</p>
                 <h4>For <span class="h2 fw-bolder">Employers</span></h4>
                 <img src="{{ url('img/frontend/index/employer.png') }}" alt="" class="img-fluid w-100" style="height: 20rem; object-fit: cover;">
 
@@ -42,8 +42,8 @@
                     <a href="{{route('frontend.for_employee')}}" class="btn now">Hire Now</a>
                 </div>
             </div>
-            <div class="col-6 position-relative">
-                <p class="position-absolute large-title" style="opacity: 0.05; top: -3rem; left: 13%; font-size: 5rem; line-height: 1.2; z-index: -1;">Candidate</p>
+            <div class="col-6 col-xs-12 position-relative">
+                <p class="position-absolute large-title large-design-title" style="opacity: 0.05;  z-index: -1;">Candidate</p>
                 <h4>For <span class="h2 fw-bolder">Candidate</span></h4>
                 <img src="{{ url('img/frontend/index/employer.png') }}" alt="" class="img-fluid w-100" style="height: 20rem; object-fit: cover;">
 
@@ -66,8 +66,8 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
-                            <div class="row" style="padding-top: 4rem;">
-                                <div class="col-4">
+                            <div class="row home-card">
+                                <div class="col-4 col-xs-12 padding-reduce">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
 
@@ -123,8 +123,8 @@
 
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
-                            <div class="row" style="padding-top: 4rem;">
-                                <div class="col-4">
+                            <div class="row" class="home-card">
+                                <div class="col-4 col-xs-12 padding-reduce">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
 
@@ -179,8 +179,8 @@
 
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
-                            <div class="row" style="padding-top: 4rem;">
-                                <div class="col-4">
+                            <div class="row" class="home-card">
+                                <div class="col-4 col-xs-12 padding-reduce">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
 
@@ -245,7 +245,7 @@
         <h2 class="text-center mb-5">All services in <span class="fw-bolder">One</span></h2>
 
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-xs-12">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide position-relative">
@@ -262,7 +262,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 col-xs-12">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide position-relative">
@@ -278,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 col-xs-12">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide position-relative">
@@ -305,7 +305,7 @@
         <h2 class="text-center mb-5">Why choose <span class="fw-bolder">VMD Consultants</span></h2>
 
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-xs-12">
                 <div class="row align-items-center">
                     <div class="col-3">
                         <img src="{{ url('img/frontend/index/consultant_1.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
@@ -318,7 +318,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 col-xs-12">
                 <div class="row align-items-center">
                     <div class="col-3">
                         <img src="{{ url('img/frontend/index/consultant_2.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
@@ -331,7 +331,7 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 col-xs-12">
                 <div class="row align-items-center">
                     <div class="col-3">
                         <img src="{{ url('img/frontend/index/consultant_3.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">

@@ -64,3 +64,43 @@
     bottom: 0px!important;
     background: rgb(7, 99, 229, 0.9);
 }
+
+.home-card {
+    padding-top: 4rem;
+}
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .emp-can .card {
+        left: 1.5rem;
+    }
+
+    
+    .home-card {
+        padding-top: 1rem;
+    }
+
+    .padding-reduce {
+        padding-top: 5px;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}
+
+
+

@@ -14,7 +14,7 @@
     <div class="container" style="margin-top: 4rem; margin-bottom : 5rem;">
         <div class="row position-relative">
             <h1 class="fw-bold text-center">ABOUT US</h1>
-            <p class="text-center position-absolute" style="opacity: 0.04; top: -2.1rem; font-size: 6rem; line-height: 1.2; z-index: -1; font-weight: 800">ABOUT US</p>
+            <p class="text-center position-absolute large-design-title-about" style="opacity: 0.04; z-index: -1; font-weight: 800">ABOUT US</p>
         </div>
     </div>
 
@@ -56,7 +56,7 @@
     <div class="container" style="margin-bottom : 6rem;">
         <div class="row" style="justify-content: center;">
             <div class="col-4 position-relative">
-                <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
+                <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100 vision-height">
                 <div class="row content justify-content-center text-center">
                     <div class="col-9">
                         <h4 class="fw-bold mb-2" style="color: #0763E5">Our Mission</h4>
