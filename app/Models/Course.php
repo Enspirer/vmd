@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Auth\User;
-use App\Models\stripe\UserCourses;
+use App\Models\Stripe\UserCourses;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
