@@ -1,0 +1,131 @@
+.breadcrumb-head.black.bold {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 15px !important;
+}
+
+.cart-sub-title {
+    font-size: 1.2rem;
+    margin-top: 0px;
+    display: block;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+table.table {
+    background: #eee;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+table.table td {
+    vertical-align: middle;
+}
+
+.course-list-text h3 {
+    font-size: 1rem;
+}
+
+.course-list-text h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.course-price-tag {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: max-content;
+    font-size: 0.8rem;
+}
+
+.label-tag {
+    background: #4dbd74;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.side-bar-widget {
+    background: #eeeeee !important;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    margin-top: 1.2rem;
+}
+
+.cart-img {
+    height: 160px;
+    background-size: contain;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+
+.cart-course-title a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.cart-course-title {
+    line-height: 0.7;
+}
+
+.feaured-category {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #4dbd74;
+    display: block;
+    width: max-content;
+    margin: 15px 0px;
+}
+
+.feaured-category a {
+    color: #fff;
+    text-decoration: none;
+}
+
+span.course-author {
+    background: transparent;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.trend-badge-2.text-center.text-uppercase {
+    background: #ff5a00;
+    width: max-content;
+    padding: 5px;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+}
+
+.trend-badge-3.text-center.text-uppercase {
+    background: #1ef7f7;
+    width: max-content;
+    padding: 5px;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+    margin-top: 15px;
+}
+
+h2.payment-txt {
+    font-size: 1rem;
+    color: tomato;
+}

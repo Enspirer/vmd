@@ -34,6 +34,8 @@
 
     </style>
 
+    <link rel="stylesheet" href="{{ url('css/cart.css') }}"/>
+
     <script src='https://js.stripe.com/v2/' type='text/javascript'></script>
 @endpush
 @section('content')
@@ -60,7 +62,7 @@
         <div class="container">
             <div class="section-title mb45 headline text-center">
                 <span class="subtitle text-uppercase">@lang('labels.frontend.cart.your_shopping_cart')</span>
-                <h2>@lang('labels.frontend.cart.complete_your_purchases')</h2>
+                <h2 class="cart-sub-title mb-50">@lang('labels.frontend.cart.complete_your_purchases')</h2>
             </div>
             <div class="checkout-content">
                 @if(session()->has('danger'))
@@ -73,7 +75,7 @@
                     <div class="col-md-9">
                         <div class="order-item mb30 course-page-section">
                             <div class="section-title-2  headline text-left">
-                                <h2>@lang('labels.frontend.cart.order_item')</h2>
+                                <h2 class="cart-sub-title">@lang('labels.frontend.cart.order_item')</h2>
                             </div>
 
                             <div class="course-list-view table-responsive">
@@ -92,7 +94,7 @@
                                             <tr class="position-relative">
 
                                                 <td>
-                                                    <a style="right: 3%;" class="text-danger position-absolute"
+                                                    <a style="right: 3%; top:33%;" class="text-danger position-absolute"
                                                        href="{{route('cart.remove',['course'=>$course])}}"><i
                                                                 class="fa fa-times"></i></a>
                                                     <div class="course-list-img-text">
@@ -105,13 +107,13 @@
                                                                 <a href="{{ route('courses.show', [$course->slug]) }}">{{$course->title}}</a>
                                                             </h3>
                                                             <div class="course-meta">
-                                                                <span class="course-category bold-font"><a
+                                                                <span class="course-category bold-font "><a class="course-price-tag"
                                                                             href="#">@if($course->free == 1)
                                                                             <span>{{trans('labels.backend.bundles.fields.free')}}</span>
                                                                         @else
                                                                             <span> {{$appCurrency['symbol'].' '.$course->price}}</span>
                                                                         @endif</a></span>
-                                                                <span class="bold-font">{{$course->category->name}}</span>
+                                                                <span class="bold-font label-tag ">{{$course->category->name}}</span>
                                                                 <div class="course-rate ul-li">
                                                                     <ul>
                                                                         @for($i=1; $i<=(int)$course->rating; $i++)
@@ -144,7 +146,7 @@
                             @if((config('services.stripe.active') == 0) && (config('paypal.active') == 0) && (config('payment_offline_active') == 0) && (config('services.instamojo.active') == 0) && (config('services.razorpay.active') == 0) && (config('services.cashfree.active') == 0) && (config('services.payu.active') == 0) && (config('flutter.active') == 0))
                                 <div class="order-payment">
                                     <div class="section-title-2 headline text-left">
-                                        <h2>@lang('labels.frontend.cart.no_payment_method')</h2>
+                                        <h2 class="payment-txt">@lang('labels.frontend.cart.no_payment_method')</h2>
                                     </div>
                                 </div>
                             @else
@@ -652,7 +654,7 @@
 
                     <div class="col-md-3">
                         <div class="side-bar-widget first-widget">
-                            <h2 class="widget-title text-capitalize">@lang('labels.frontend.cart.order_detail')</h2>
+                            <h2 class="widget-title text-capitalize cart-sub-title">@lang('labels.frontend.cart.order_detail')</h2>
                             <div class="sub-total-item">
                                 @if(count($courses) > 0)
                                     <div class="purchase-list py-3 ul-li-block">
@@ -670,10 +672,10 @@
                         </div>
                         @if($global_featured_course != "")
                             <div class="side-bar-widget">
-                                <h2 class="widget-title text-capitalize">@lang('labels.frontend.blog.featured_course')</h2>
+                                <h2 class="widget-title text-capitalize cart-sub-title">@lang('labels.frontend.blog.featured_course')</h2>
                                 <div class="featured-course">
                                     <div class="best-course-pic-text relative-position pt-0">
-                                        <div class="best-course-pic relative-position "
+                                        <div class="best-course-pic relative-position cart-img"
                                              style="background-image: url({{asset('storage/uploads/'.$global_featured_course->course_image)}})">
 
                                             @if($global_featured_course->trending == 1)
@@ -692,14 +694,14 @@
                                         </div>
                                         <div class="best-course-text" style="left: 0;right: 0;">
                                             <div class="course-title mb20 headline relative-position">
-                                                <h3>
+                                                <h3 class="cart-course-title">
                                                     <a href="{{ route('courses.show', [$global_featured_course->slug]) }}">{{$global_featured_course->title}}</a>
                                                 </h3>
                                             </div>
                                             <div class="course-meta">
-                                                <span class="course-category"><a
+                                                <span class="course-category feaured-category"><a
                                                             href="{{route('courses.category',['category'=>$global_featured_course->category->slug])}}">{{$global_featured_course->category->name}}</a></span>
-                                                <span class="course-author">{{ $global_featured_course->students()->count() }}</span>
+                                                <span class="course-author">{{ $global_featured_course->students()->count() }} students</span>
                                             </div>
                                         </div>
                                     </div>

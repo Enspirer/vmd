@@ -404,7 +404,7 @@
     <!-- Initialize Swiper -->
     <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 10,
         slidesPerGroup: 1,
         loop: false,
