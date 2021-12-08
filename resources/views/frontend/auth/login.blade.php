@@ -13,6 +13,10 @@
     <div class="row align-items-center reverse-row-xs">
         <div class="col-6 col-xs-12 p-0-xs">
             <h3 class="text-center mb-2 pb-20-xs">Login to your account.</h3>
+            @if($errors->any())
+
+                <div class="reg-error" style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
+            @endif
             {{ html()->form('POST', route('frontend.auth.login.post'))->open() }}
             <div class="mb-3">
                 <label for="email" class="form-label mb-0 me-3 form-label">Email Address</label>
