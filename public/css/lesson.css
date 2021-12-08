@@ -1,0 +1,84 @@
+.back-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.lesson-banner {
+    height:50vh;
+}
+
+h2.breadcrumb-head.black.bold {
+    color: #fff;
+    margin-top: 15vh;
+}
+
+.lesson-img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.course-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.course-details-content {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.lesson-side-btn  {
+    width: 100%;
+}
+
+.course-timeline-list, .couse-feature.ul-li-block ul {
+    list-style: none;
+}
+
+.course-timeline-list li a, .couse-feature.ul-li-block ul li a{
+    text-decoration: none;
+}
+
+ul.course-timeline-list {
+    min-height: 200px;
+    padding: 0;
+}
+
+ul.course-timeline-list li {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.couse-feature.ul-li-block ul li {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+i.fa.text-success.float-right.fa-check-square {
+    float: right;
+    margin-top: 5px;
+}
+
+.couse-feature.ul-li-block {
+    padding: 15px;
+    background: #eee;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding-left: 0;
+}
+
+a.btn.btn-block.gradient-bg.font-weight-bold.text-white {
+    background: #357960;
+    margin-bottom: 15px;
+    width: 100%;
+}

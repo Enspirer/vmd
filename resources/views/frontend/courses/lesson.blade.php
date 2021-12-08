@@ -4,7 +4,7 @@
     {{--<link rel="stylesheet" href="{{asset('plugins/YouTube-iFrame-API-Wrapper/css/main.css')}}">--}}
     <link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css"/>
     <link href="{{asset('plugins/touchpdf-master/jquery.touchPDF.css')}}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ url('css/lesson.css') }}" />
     <style>
         .test-form {
             color: #333333;
@@ -130,7 +130,8 @@
 @section('content')
     <!-- Start of breadcrumb section
         ============================================= -->
-    <section id="breadcrumb" class="breadcrumb-section relative-position backgroud-style">
+    <section id="breadcrumb" class="breadcrumb-section relative-position backgroud-style lesson-banner">
+        <img class="back-img" src="{{ url('img/frontend/index/banner.png') }}" alt="">
         <div class="blakish-overlay"></div>
         <div class="container">
             <div class="page-breadcrumb-content text-center">
@@ -162,7 +163,7 @@
                     <div class="course-details-item border-bottom-0 mb-0">
                         @if($lesson->lesson_image != "")
                             <div class="course-single-pic mb30">
-                                <img src="{{asset('storage/uploads/'.$lesson->lesson_image)}}"
+                                <img class="lesson-img" src="{{asset('storage/uploads/'.$lesson->lesson_image)}}"
                                      alt="">
                             </div>
                         @endif
@@ -444,7 +445,7 @@
                                     <form method="post" action="{{route('admin.certificates.generate')}}">
                                         @csrf
                                         <input type="hidden" value="{{$lesson->course->id}}" name="course_id">
-                                        <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
+                                        <button class="btn btn-success lesson-side-btn btn-block text-white mb-3 text-uppercase font-weight-bold"
                                                 id="finish">@lang('labels.frontend.course.finish_course')</button>
                                     </form>
                                 @else
@@ -477,12 +478,12 @@
                         </div>
                         <div class="couse-feature ul-li-block">
                             <ul>
-                                <li>@lang('labels.frontend.course.chapters')
+                                <li>@lang('labels.frontend.course.chapters') : 
                                     <span> {{$lesson->course->chapterCount()}} </span></li>
-                                <li>@lang('labels.frontend.course.category') <span><a
+                                <li>@lang('labels.frontend.course.category') : <span><a
                                                 href="{{route('courses.category',['category'=>$lesson->course->category->slug])}}"
                                                 target="_blank">{{$lesson->course->category->name}}</a> </span></li>
-                                <li>@lang('labels.frontend.course.author') <span>
+                                <li>@lang('labels.frontend.course.author') : <span>
 
                    @foreach($lesson->course->teachers as $key=>$teacher)
                                             @php $key++ @endphp
@@ -492,7 +493,7 @@
                                         @endforeach
                                     </span>
                                 </li>
-                                <li>@lang('labels.frontend.course.progress') <span> <b> {{ $lesson->course->progress()  }}
+                                <li>@lang('labels.frontend.course.progress') : <span> <b> {{ $lesson->course->progress()  }}
                                             % @lang('labels.frontend.course.completed')</b></span></li>
                             </ul>
 
