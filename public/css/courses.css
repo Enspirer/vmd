@@ -445,6 +445,33 @@ i.far.fa-heart {
     h2 {
         margin-bottom: 20px !important;
     }
+
+    .star-bar {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .star-bar-left {
+        text-align: left !important;
+    }
+
+    .featured-text-box {
+        padding: 15px 0px;
+    }
+
+    .lessons-time {
+        justify-content: space-around;
+    }
+
+    .enroll-price {
+        width: max-content;
+    }
+
+    .price-enroll-box {
+        justify-content: space-around;
+    }
+
 }
 
 

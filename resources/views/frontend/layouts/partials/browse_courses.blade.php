@@ -26,7 +26,7 @@
                                 <h2>{{$fea_courses->title}}</h2>
                                 <p style="overflow: hidden;text-overflow: ellipsis;height: 119px;">{{ strip_tags($fea_courses->description) }}
                                 </p>
-                                <div class="col-6">
+                                <div class="col-6 star-bar">
                                     <i class="fas fa-star gold" aria-hidden="true"></i>
                                     <i class="fas fa-star gold" aria-hidden="true"></i>
                                     <i class="fas fa-star gold" aria-hidden="true"></i>
@@ -360,7 +360,7 @@
                     <div class="course-list-item-details">
                         <h2>{{$all->title}}</h2>
                         <p>{!! $all->description !!}</p>
-                        <div class="star-bar">
+                        <div class="star-bar star-bar-left">
                             <i class="fas fa-star gold" aria-hidden="true"></i>
                             <i class="fas fa-star gold" aria-hidden="true"></i>
                             <i class="fas fa-star gold" aria-hidden="true"></i>
