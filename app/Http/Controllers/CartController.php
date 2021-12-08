@@ -270,7 +270,6 @@ class CartController extends Controller
 
     public function offlinePayment(Request $request)
     {
-        dd($request);
         if ($this->checkDuplicate()) {
             return $this->checkDuplicate();
         }
