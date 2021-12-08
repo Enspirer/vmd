@@ -1,0 +1,36 @@
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .mobile-fix-row {
+        flex-direction: column;
+    }
+
+    .p-10-xs {
+        padding: 10px !important;
+    }
+
+    .p-topic-10-xs {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}
+
+
+

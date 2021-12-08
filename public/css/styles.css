@@ -110,6 +110,10 @@ ul.dropdown li a {
     line-height: 1.2;
 }
 
+i.drop-icon.fa.fa-caret-down {
+    padding: 0;
+}
+
 
 /*mobile-view*/
 @media screen and (max-width: 767px) {
@@ -134,6 +138,11 @@ ul.dropdown li a {
     .container {
         margin-top: 3rem;
         margin-bottom: 3rem;    
+    }
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light > .container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important; 
     }
 
     /*navigation styles*/

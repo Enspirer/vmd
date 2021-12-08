@@ -396,14 +396,8 @@ i.far.fa-heart {
         margin-bottom: 30px;
     }
  
-    .swiper-slide-active  .hover-card-popup {
-        transform: translateX(5%);
-    }
-
     .hover-card-popup {
-        position: absolute;
-        top: 3%;
-        width: 100%;
+        display: none;
     }
 
     .course-list {
@@ -454,6 +448,7 @@ i.far.fa-heart {
 
     .star-bar-left {
         text-align: left !important;
+        margin-bottom: 10px !important;
     }
 
     .featured-text-box {
@@ -471,6 +466,31 @@ i.far.fa-heart {
     .price-enroll-box {
         justify-content: space-around;
     }
+
+    .swiper-slide {
+        width: 90% !important;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .swiper-button-lock {
+        display: block !important;
+    }
+
+    .course-list-item-price {
+        padding: 10px;
+    }
+
+    .course-list-item-details h2 {
+        padding: 10px 0px;
+    }
+
+    .course-list-item-content-details {
+        margin-bottom: 10px;
+    }
+
+    
+    
 
 }
 
