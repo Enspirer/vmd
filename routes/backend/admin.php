@@ -7,6 +7,9 @@ use \App\Http\Controllers\Backend\Auth\User\UpdatePasswordController;
 use \App\Http\Controllers\Backend\Auth\User\UserPasswordController;
 use \App\Http\Controllers\Backend\FindCandidatesController;
 use \App\Http\Controllers\Backend\YourJobController;
+use \App\Http\Controllers\Backend\EmployeeBannerController;
+use \App\Http\Controllers\Backend\ForEmployeeController;
+
 
 /*
  * All route names are prefixed with 'admin.'.
@@ -364,5 +367,18 @@ Route::get('your_jobs/getdetails', [YourJobController::class, 'getdetails'])->na
 Route::get('your_jobs/edit/{id}', [YourJobController::class, 'edit'])->name('your_jobs.edit');
 Route::post('your_jobs/update', [YourJobController::class, 'update'])->name('your_jobs.update');
 Route::get('your_jobs/delete/{id}', [YourJobController::class, 'destroy'])->name('your_jobs.destroy');
+
+Route::get('employee_banner', [EmployeeBannerController::class, 'index'])->name('employee_banner.index');
+Route::post('employee_banner/update', [EmployeeBannerController::class, 'update'])->name('employee_banner.update');
+
+Route::get('home_banner', [EmployeeBannerController::class, 'home_banner_index'])->name('home_banner.index');
+Route::post('home_banner/update', [EmployeeBannerController::class, 'home_banner_update'])->name('home_banner.update');
+
+Route::get('candidate_banner', [EmployeeBannerController::class, 'candidate_index'])->name('candidate_banner.index');
+Route::post('candidate_banner/update', [EmployeeBannerController::class, 'candidate_update'])->name('candidate_banner.update');
+
+
+
+
 
 
