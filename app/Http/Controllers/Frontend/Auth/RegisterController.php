@@ -93,11 +93,11 @@ class RegisterController extends Controller
         if ($validator->passes()) {
             // Store your user in database
             event(new Registered($user = $this->create($request->all())));
-            return response(['success' => true]);
+            return redirect()-> route('frontend.auth.login');
 
         }
 
-        return response(['errors' => $validator->errors()]);
+        return back()->withErrors($validator);;
     }
 
     /**
