@@ -71,7 +71,8 @@ i.fa.text-success.float-right.fa-check-square {
 
 .couse-feature.ul-li-block {
     padding: 15px;
-    background: #eee;
+    background-color: #deebdd;
+    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     padding-left: 0;
@@ -81,4 +82,19 @@ a.btn.btn-block.gradient-bg.font-weight-bold.text-white {
     background: #357960;
     margin-bottom: 15px;
     width: 100%;
+}
+
+ul.course-timeline-list li.active {
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+
+}
+
+.row.main-content {
+    padding-bottom: 250px;
+    position: relative;
+}
+
+.couse-feature.ul-li-block a {
+    color: #000;
 }

@@ -1,7 +1,7 @@
 <div class="">
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 side-bg" style="width: 280px;">
         <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
+        <ul class="nav nav-pills flex-column mb-auto user-nav">
             <li class="nav-item">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->segment(2) == 'dashboard' ? 'active' : '' }}" aria-current="page">
                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
@@ -43,7 +43,7 @@
             </li>
         </ul>
         <hr>
-        <div class="dropdown">
+        <div class="dropdown profile-drop">
             <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{auth()->user()->picture}}" alt="" width="32" height="32" class="rounded-circle me-2">
                 <strong>{{auth()->user()->first_name}} {{auth()->user()->last_name}}</strong>

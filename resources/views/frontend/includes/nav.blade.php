@@ -39,10 +39,19 @@
                         href="{{ route('frontend.contact_us') }}">Contact Us</a>
                 </li>
                 @auth
-                <li class="nav-item px-3"
+                <!-- <li class="nav-item px-3"
                     style="background: #e7e7e7;padding-top: 6px;padding-bottom: 6px;border-radius: 10px;">
                     <a class="nav-link p-0 text-dark" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                </li> -->
+
+                <li class="nav-item px-3 drop-list" style="background: #e7e7e7;padding-top: 6px;padding-bottom: 6px;border-radius: 10px;">
+                    <a class="nav-link p-0 text-dark" href="#">Dashboard <i class="drop-icon fa fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
                 </li>
+
                 @else
                 <li class="nav-item px-3">
                     <a class="nav-link p-0 text-dark" href="{{ route('frontend.auth.login') }}">Log In</a>

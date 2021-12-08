@@ -41,7 +41,7 @@
         @include('frontend.includes.nav')
 
         <div class="container">
-            <div class="row">
+            <div class="row fix-row">
                 <div class="col-md-3">
                     @include('frontend.includes.user_sidebar')
 
