@@ -130,3 +130,26 @@ h2.payment-txt {
     font-size: 1rem;
     color: tomato;
 }
+
+
+.request-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #212529;
+    padding: 15px;
+    border-radius: 4px;
+    border: 0;
+    font-size: 0.8rem;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+#accordion {
+    padding-top: 30px;
+}
+
+.checkout-section {
+    min-height: 900px;
+}

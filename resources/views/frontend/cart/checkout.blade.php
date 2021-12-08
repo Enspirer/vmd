@@ -202,7 +202,7 @@
 
 
                                                         <div class="payment-info">
-                                                            <label class=" control-label">@lang('labels.frontend.cart.name_on_card')
+                                                            <label class="pb-15 control-label">@lang('labels.frontend.cart.name_on_card')
                                                                 :</label>
                                                             <input type="text" autocomplete='off'
                                                                    class="form-control required card-name"
@@ -210,7 +210,7 @@
                                                                    value="">
                                                         </div>
                                                         <div class="payment-info">
-                                                            <label class=" control-label">@lang('labels.frontend.cart.card_number')
+                                                            <label class="pb-15 control-label">@lang('labels.frontend.cart.card_number')
                                                                 :</label>
                                                             <input autocomplete='off' type="text"
                                                                    class="form-control required card-number"
@@ -218,14 +218,14 @@
                                                                    value="">
                                                         </div>
                                                         <div class="payment-info input-2">
-                                                            <label class=" control-label">@lang('labels.frontend.cart.cvv')
+                                                            <label class="pb-15 control-label">@lang('labels.frontend.cart.cvv')
                                                                 :</label>
                                                             <input type="text" class="form-control card-cvc required"
                                                                    placeholder="@lang('labels.frontend.cart.cvv')"
                                                                    value="">
                                                         </div>
                                                         <div class="payment-info input-2">
-                                                            <label class=" control-label">@lang('labels.frontend.cart.expiration_date')
+                                                            <label class="pb-15 control-label">@lang('labels.frontend.cart.expiration_date')
                                                                 :</label>
                                                             <input autocomplete='off' type="text"
                                                                    class="form-control required card-expiry-month"
@@ -612,7 +612,7 @@
                                                         <div class="col-md-6">
                                                             <div class="method-header-text">
                                                                 <div class="radio">
-                                                                    <label>
+                                                                    <label class="pb-15 ">
                                                                         <input data-toggle="collapse"
                                                                                href="#collapsePaymentThree" type="radio"
                                                                                name="paymentMethod" value="3">
@@ -630,11 +630,11 @@
                                                     <p>{{ config('payment_offline_instruction')  }}</p>
                                                     <form method="post" action="{{route('cart.offline.payment')}}">
                                                         @csrf
-                                                        <label>Upload your bank slip</label>
+                                                        <label class="pb-15">Upload your bank slip</label>
                                                         <input type="text" class="form-control">
 
                                                         <button type="submit"
-                                                                class="text-white genius-btn mt25 gradient-bg text-center text-uppercase  bold-font">
+                                                                class="request-btn text-white genius-btn mt25 gradient-bg text-center text-uppercase  bold-font">
                                                             @lang('labels.frontend.cart.request_assistance') <i
                                                                     class="fas fa-caret-right"></i>
                                                         </button>

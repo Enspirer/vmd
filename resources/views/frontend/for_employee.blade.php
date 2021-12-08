@@ -26,17 +26,18 @@
 @else
 
     <div class="container-fluid banner" style="margin-bottom : 2rem;">
-        <div class="container p-5 zero-margin">
+    <img src="{{ url('img/frontend/employee/banner.png') }}" style="object-fit: cover" alt="" class="img-fluid w-100">
+        <!-- <div class="container p-5 zero-margin">
             <div class="row align-items-center">
                 <div class="col-6">
                     <h1 class="fw-bold mb-4" style="color: #4E6BC8">The smartest way to Recruit Overseas </h1>
                     <a href="{{url('contact-us')}}" class="btn inquire">Inquire Now</a>
                 </div>
                 <div class="col-6">
-                    <img src="{{ url('img/frontend/employee/banner.png') }}" style="object-fit: cover" alt="" class="img-fluid w-100">
+                    
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="container employee-container">
