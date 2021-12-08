@@ -342,12 +342,13 @@ ul.card-popup-list li span {
 
 .hover-card-popup {
     position: absolute;
-    top: 5%;
-    width: 120%;
+    top: 10%;
+    width: 90%;
     background: #fff;
     padding: 25px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
     text-align: left;
+    left: 1%;
 }
 
 span.btn-heart {
