@@ -106,7 +106,7 @@ class LoginController extends Controller
         }
 
 
-        return response(['success'=>false,'errors' => $validator->errors()]);
+        return back()->withErrors($validator);
 
     }
 
