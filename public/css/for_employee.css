@@ -51,3 +51,49 @@
   position: absolute;
   top: 944px;
 }
+
+.employee-container {
+  margin-bottom: 6rem;
+}
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+  .zero-margin {
+    margin-top: 0px;
+  }
+
+  .inquire {
+    width: max-content;
+  }
+
+  .col-xs-12 {
+    width: 100%;
+  }
+
+  .employee-container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}
+
+
+
+

@@ -26,7 +26,7 @@
 @else
 
     <div class="container-fluid banner" style="margin-bottom : 2rem;">
-        <div class="container p-5">
+        <div class="container p-5 zero-margin">
             <div class="row align-items-center">
                 <div class="col-6">
                     <h1 class="fw-bold mb-4" style="color: #4E6BC8">The smartest way to Recruit Overseas </h1>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="container" style="margin-bottom: 6rem;">
+    <div class="container employee-container">
         <div class="row justify-content-center">
             <div class="col-9 text-center">
                 <h2 class="mb-3">The Integrated <span class="fw-bolder" style="font-size: 2.5rem;">Recruitment Solution</span></h2>
@@ -48,11 +48,11 @@
         </div>
     </div>
 
-    <div class="container cards" style="margin-bottom: 6rem;">
+    <div class="container cards employee-container">
         <div class="row justify-content-center">
-            <div class="col-9">
+            <div class="col-9 col-xs-12">
                 <div class="row justify-content-center">
-                    <div class="col-5">
+                    <div class="col-5 col-xs-12">
                         <div class="card p-5 text-center">
                             <h4 class="fw-bold mb-4">Post your Jobs</h4>
 
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5">
+                    <div class="col-5 col-xs-12">
                         <div class="card p-5 text-center">
                             <h4 class="fw-bold mb-4">Find Candidates</h4>
 

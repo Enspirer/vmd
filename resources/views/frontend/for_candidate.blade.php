@@ -207,7 +207,7 @@
 
 
     <div class="container-fluid bottom_banner">
-        <div class="container p-5 pb-0">
+        <div class="container p-5 pb-0 join-banner">
             <div class="row align-items-center">
                 <div class="col-6">
                     <h3 class="fw-bold mb-4">Get started with your future progress today</h3>

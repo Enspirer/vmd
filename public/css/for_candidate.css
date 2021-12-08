@@ -40,3 +40,30 @@
   position: absolute;
   top: 944px;
 }
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+  .join {
+    width: max-content;
+  }
+
+  .container.p-5.pb-0.join-banner {
+    padding-bottom: 3rem !important;
+  }
+}
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}

@@ -411,4 +411,5 @@ span.play-btn img {
 
 .main-content-height {
     height: 100%;
+    min-height: 950px;
 }

@@ -15,6 +15,10 @@
     transition: all 0.5s;
 }
 
+
+
+
+
 .login .form-control {
     background-color: transparent;
     border-radius: 0;
@@ -58,3 +62,43 @@ input[type="text"]:focus {
     position: absolute;
     z-index: -1;
  }
+
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .reverse-row-xs {
+        flex-direction: column-reverse;
+    }
+
+    .container.login {
+        margin-top: 0px;
+    }
+
+    .p-0-xs {
+        padding-top: 0px;
+    }
+
+    .pb-20-xs {
+        padding-bottom: 20px;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}
+
+
+

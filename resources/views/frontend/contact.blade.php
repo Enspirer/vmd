@@ -68,8 +68,8 @@
                             <i style="padding-top:5px;" class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="col-11 ps-0">
-                            <h6 class="fw-bolder mb-2">VMD Consultant</h6>
-                            <p style="line-height: 1.4rem; font-weight: 600">45/a 1st Avenue, <br> London, <br> USA</p>
+                            <h6 class="fw-bolder mb-2 pl-10-xs">VMD Consultant</h6>
+                            <p class="pl-10-xs" style="line-height: 1.4rem; font-weight: 600">45/a 1st Avenue, <br> London, <br> USA</p>
                         </div>
                     </div>
                     <div class="row align-items-center mb-3">
@@ -77,7 +77,7 @@
                             <i class="bi bi-telephone-fill"></i>
                         </div>
                         <div class="col-11 ps-0">
-                            <p>0094 11 2942952 / 11 5022832</p>
+                            <p class="pl-10-xs">0094 11 2942952 / 11 5022832</p>
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@
                                 style="height: 1rem; width: 1rem;">
                         </div>
                         <div class="col-11 ps-0">
-                            <p>0094 11 5526575</p>
+                            <p class="pl-10-xs">0094 11 5526575</p>
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@
                             <i class="bi bi-envelope-fill"></i>
                         </div>
                         <div class="col-11 ps-0">
-                            <p>info@anur.com</p>
+                            <p class="pl-10-xs">info@anur.com</p>
                         </div>
                     </div>
                 </div>

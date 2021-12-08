@@ -8,6 +8,15 @@
     height: 30rem;
 }
 
+/*small mobile*/
+@media (min-width: 321px) and (max-width: 375px)  {
+    .mobile-fix-row {
+        left: 4.5% !important;
+        width: 96% !important;
+        top: 11rem !important;
+    }
+}
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
     .row {
@@ -30,6 +39,12 @@
     .vision-height {
         height: unset;
     }
+
+    .mobile-fix-row {
+        left: 10.5%;
+        width: 80%;
+    }
+    
 }
 
 /*tab-portrait*/
