@@ -79,9 +79,10 @@ li.drop-list ul.dropdown {
     position: absolute;
     top: 45px;
     list-style: none;
-    background-color: #fff;
+    background-color: #f8f9fa;
     padding-top: 15px;
     padding-bottom: 15px;
+    z-index: 100;
 }
 
 li.drop-list:hover > ul.dropdown{

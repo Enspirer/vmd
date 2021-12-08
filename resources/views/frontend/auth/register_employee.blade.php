@@ -13,71 +13,89 @@
     <div class="container login" style="margin-bottom: 5rem;">
         <div class="row align-items-center">
             <div class="col-7 col-xs-12">
-                <h3 class="text-center mb-2 p-topic-10-xs">Register as a Employer</h3>
-                <!-- {{ html()->form('POST', route('frontend.auth.login.post'))->open() }} -->
+                <h3 class="text-center mb-2 p-topic-10-xs register-title">Register as a Employer</h3>
+{{--                {{ html()->form('POST', route('frontend.auth.login.post'))->open() }}--}}
 
-                <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="company_name" class="form-label mb-0 me-3 form-label">Company Name</label> 
-                        <input type="text" class="form-control text-white" id="company_name" name="company_name" required>
-                    </div>
+                @if($errors->any())
 
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="employee_name" class="form-label mb-0 me-3 form-label">Employee Name</label> 
-                        <input type="text" class="form-control text-white" id="employee_name" name="employee_name" required>
-                    </div>
-                </div>
+                  <div class="reg-error" style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
+                @endif
 
-                <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="contact" class="form-label mb-0 me-3 form-label">Contact</label>                                    
-                        <input type="text" class="form-control text-white" id="contact" name="contact" required> 
-                    </div>
+                <form method="post" action="{{route('frontend.auth.register.post')}}">
+                    {{csrf_field()}}
 
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="email" class="form-label mb-0 me-3 form-label">Email</label>                                    
-                        <input type="email" class="form-control text-white" id="email" name="email" required> 
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="password" class="form-label mb-0 me-3 form-label">Password</label>                                    
-                        <input type="password" class="form-control text-white" id="password" name="password" required> 
-                    </div>
-
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>                                    
-                        <input type="password" class="form-control text-white" id="confirm_password" name="confirm_password" required> 
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="position" class="form-label mb-0 me-3 form-label">The position vacant</label>                                    
-                        <input type="text" class="form-control text-white" id="position" name="position" required> 
-                    </div>
-
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="comment" class="form-label mb-0 me-3 form-label">Comments</label>                                    
-                        <input type="text" class="form-control text-white" id="comment" name="comment" required> 
-
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox">
-                            <label class="form-check-label" for="flexRadioDefault1" style="font-size: 0.75rem;">I agree to the Terms of Use/ Privacy Policy</label>
+                    <div class="row mb-12">
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="employee_name" class="form-label mb-0 me-3 form-label">First Name</label>
+                            <input type="text" class="form-control text-white" id="employee_name" name="first_name" required>
+                        </div>
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="employee_name" class="form-label mb-0 me-3 form-label">Last Name</label>
+                            <input type="text" class="form-control text-white" id="employee_name" name="last_name" required>
                         </div>
                     </div>
-                </div>
 
-                <div class="row align-items-center mt-4 mobile-fix-row">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <div class="g-recaptcha d-inline" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                    <div class="row mb-12">
+                        <div class="col-12 col-xs-12 p-10-xs p-20-md">
+                            <label for="company_name" class="form-label mb-0 me-3 form-label">Company Name</label>
+                            <input type="text" class="form-control text-white" id="company_name" name="company_name" required>
+                        </div>
                     </div>
 
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <button type="submit" class="btn login-btn w-100 p-3" id="submit-btn" disabled>Register</button>
+                    <div class="row mb-3">
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="contact" class="form-label mb-0 me-3 form-label">Contact</label>
+                            <input type="text" class="form-control text-white" id="contact" name="contact_number" required>
+                        </div>
+
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="email" class="form-label mb-0 me-3 form-label">Email</label>
+                            <input type="email" class="form-control text-white" id="email" name="email" required>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="row mb-3">
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
+                            <input type="password" class="form-control text-white" id="password" name="password" required>
+                        </div>
+
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>
+                            <input type="password" class="form-control text-white" id="confirm_password" name="password_confirmation" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="position" class="form-label mb-0 me-3 form-label">The position vacant</label>
+                            <input type="text" class="form-control text-white" id="position" name="position" required>
+                        </div>
+
+                        <div class="col-6 col-xs-12 p-10-xs p-20-md">
+                            <label for="comment" class="form-label mb-0 me-3 form-label">Comments</label>
+                            <input type="text" class="form-control text-white" id="comment" name="comment" required>
+
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox">
+                                <label class="form-check-label" for="flexRadioDefault1" style="font-size: 0.75rem;">I agree to the Terms of Use/ Privacy Policy</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mobile-fix-row">
+                        <div class="col-6 col-xs-12 p-10-xs">
+                            <div class="g-recaptcha d-inline" data-callback="checked" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                        </div>
+
+                        <div class="col-6 col-xs-12 p-10-xs">
+                            <button type="submit" class="btn login-btn w-100 p-3" id="submit-btn" disabled>Register</button>
+                        </div>
+                    </div>
+
+                </form>
+
+
             </div>
 
             <div class="col-5 col-xs-12">

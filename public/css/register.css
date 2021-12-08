@@ -1,3 +1,21 @@
+.register-title {
+    margin-top: 60px;
+    margin-bottom: 60px !important;
+}
+
+.p-20-md {
+    padding: 20px;
+}
+
+
+.reg-error {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 60px;
+    width: max-content;
+}
+
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
     .mobile-fix-row {
