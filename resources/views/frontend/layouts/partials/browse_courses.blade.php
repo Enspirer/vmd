@@ -22,9 +22,9 @@
                                 alt="featured image">
                         </div>
                         <div class="col-md-7">
-                            <div class="featured-text-box">
+                            <div class="featured-text-box" >
                                 <h2>{{$fea_courses->title}}</h2>
-                                <p>{!! $fea_courses->description !!}
+                                <p style="overflow: hidden;text-overflow: ellipsis;height: 119px;">{{ strip_tags($fea_courses->description) }}
                                 </p>
                                 <div class="col-6">
                                     <i class="fas fa-star gold" aria-hidden="true"></i>

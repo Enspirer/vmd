@@ -26,10 +26,8 @@
                     </svg>
                     Trending
                 </span>
-                <h1>Ultimate AWS Certified Solutions Architect <br />
-                    Associate 2021</h1>
-                <h3>Pass the AWS Certified Solutions Architect Associate Certification SAA-C02. Complete <br />Amazon
-                    Web Services Cloud training!</h3>
+                <h1>{{$course->title}}</h1>
+                <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
                 <div class="col-6">
                     <i class="fas fa-star gold" aria-hidden="true"></i>
                     <i class="fas fa-star gold" aria-hidden="true"></i>
