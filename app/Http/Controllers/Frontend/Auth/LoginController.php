@@ -96,18 +96,11 @@ class LoginController extends Controller
                 }else{
                     \Illuminate\Support\Facades\Auth::logout();
 
-                    return
-                        response([
-                            'success' => false,
-                            'message' => 'Login failed. Account is not active'
-                        ], Response::HTTP_FORBIDDEN);
+                    return back()->withErrors($validator);
+
                 }
             }else{
-                return
-                    response([
-                        'success' => false,
-                        'message' => 'Login failed. Account not found'
-                    ], Response::HTTP_FORBIDDEN);
+                return back()->withErrors($validator);
             }
 
         }
