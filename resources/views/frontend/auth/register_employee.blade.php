@@ -77,7 +77,7 @@
                             <input type="text" class="form-control text-white" id="comment" name="comment" required>
 
                             <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox">
+                                <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
                                 <label class="form-check-label" for="flexRadioDefault1" style="font-size: 0.75rem;">I agree to the Terms of Use/ Privacy Policy</label>
                             </div>
                         </div>
