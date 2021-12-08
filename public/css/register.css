@@ -1,3 +1,14 @@
+.register-title {
+    margin-top: 60px;
+    margin-bottom: 60px !important;
+}
+
+.p-20-md {
+    padding: 20px;
+}
+
+
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
     .mobile-fix-row {

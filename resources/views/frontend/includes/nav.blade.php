@@ -48,7 +48,7 @@
                     <a class="nav-link p-0 text-dark" href="#">Dashboard <i class="drop-icon fa fa-caret-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="{{route('frontend.auth.logout')}}">Logout</a></li>
                     </ul>
                 </li>
 
