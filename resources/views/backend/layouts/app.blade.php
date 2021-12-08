@@ -30,6 +30,8 @@
                       href="{{asset('storage/logos/'.config('favicon_image'))}}"/>
             @endif
             @yield('meta')
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
             <link rel="stylesheet" href="{{asset('css/select2.min.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.css')}}">
 

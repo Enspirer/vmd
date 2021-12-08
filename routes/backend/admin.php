@@ -5,6 +5,8 @@ use App\Http\Controllers\Backend\Auth\User\AccountController;
 use App\Http\Controllers\Backend\Auth\User\ProfileController;
 use \App\Http\Controllers\Backend\Auth\User\UpdatePasswordController;
 use \App\Http\Controllers\Backend\Auth\User\UserPasswordController;
+use \App\Http\Controllers\Backend\FindCandidatesController;
+use \App\Http\Controllers\Backend\YourJobController;
 
 /*
  * All route names are prefixed with 'admin.'.
@@ -349,3 +351,18 @@ Route::get('subscriptions/cancel','SubscriptionController@deleteSubscription')->
 // Wishlist Route
 Route::get('wishlist/data',['uses' => 'WishlistController@getData', 'as' => 'wishlist.get_data']);
 Route::resource('wishlist','WishlistController');
+
+
+Route::get('find_candidate', [FindCandidatesController::class, 'index'])->name('find_candidate.index');
+Route::get('find_candidate/getdetails', [FindCandidatesController::class, 'getdetails'])->name('find_candidate.getdetails');
+Route::get('find_candidate/edit/{id}', [FindCandidatesController::class, 'edit'])->name('find_candidate.edit');
+Route::post('find_candidate/update', [FindCandidatesController::class, 'update'])->name('find_candidate.update');
+Route::get('find_candidate/delete/{id}', [FindCandidatesController::class, 'destroy'])->name('find_candidate.destroy');
+
+Route::get('your_jobs', [YourJobController::class, 'index'])->name('your_jobs.index');
+Route::get('your_jobs/getdetails', [YourJobController::class, 'getdetails'])->name('your_jobs.getdetails');
+Route::get('your_jobs/edit/{id}', [YourJobController::class, 'edit'])->name('your_jobs.edit');
+Route::post('your_jobs/update', [YourJobController::class, 'update'])->name('your_jobs.update');
+Route::get('your_jobs/delete/{id}', [YourJobController::class, 'destroy'])->name('your_jobs.destroy');
+
+

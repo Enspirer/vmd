@@ -340,6 +340,30 @@
                     <span class="title">@lang('menus.backend.sidebar.account.title')</span>
                 </a>
             </li>
+
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/your_jobs*','admin/find_candidate*']), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/find_candidate*')) }}"
+                    href="#">
+                    <i class="nav-icon fas fa-user-tie"></i> Recruitment
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/your_jobs*')) }}"
+                            href="{{ route('admin.your_jobs.index') }}">
+                            Post Your Jobs
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/find_candidate*')) }}"
+                            href="{{ route('admin.find_candidate.index') }}">
+                            Find Candidates
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             @if ($logged_in_user->hasRole('student'))
             <li class="nav-item ">
                 <a class="nav-link {{ $request->segment(1) == 'subscriptions' ? 'active' : '' }}"
