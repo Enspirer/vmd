@@ -374,13 +374,13 @@
             }
         });
 
-    //     $('input')
-    // .each(function(element, i) {
-    //     if ((element.value !== undefined && element.value.length > 0) || $(this).attr('placeholder') !== null) {
-    //         $(this).siblings('label').addClass('click-input');
-    //     } else {
-    //         $(this).siblings('label').removeClass('click-input');
-    //     }
-    // });
+     $('input')
+     .each(function(element, i) {
+         if ((element.value !== undefined && element.value.length > 0) || $(this).attr('placeholder') !== null) {
+             $(this).siblings('label').addClass('click-input');
+        } else {
+            $(this).siblings('label').removeClass('click-input');
+        }
+     });
     </script>
 @endpush
