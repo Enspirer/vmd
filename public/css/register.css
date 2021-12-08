@@ -8,6 +8,13 @@
 }
 
 
+.reg-error {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 60px;
+    width: max-content;
+}
+
 
 /*mobile-view*/
 @media screen and (max-width: 767px) {

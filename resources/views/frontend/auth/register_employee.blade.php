@@ -18,7 +18,7 @@
 
                 @if($errors->any())
 
-                  <div style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
+                  <div class="reg-error" style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
                 @endif
 
                 <form method="post" action="{{route('frontend.auth.register.post')}}">
