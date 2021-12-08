@@ -152,7 +152,7 @@
                             @else
                                 <div class="order-payment">
                                     <div class="section-title-2  headline text-left">
-                                        <h2>@lang('labels.frontend.cart.order_payment')</h2>
+                                        <h2 class="cart-sub-title">@lang('labels.frontend.cart.order_payment')</h2>
                                     </div>
                                     <div id="accordion">
                                         @if(config('services.stripe.active') == 1)
