@@ -16,6 +16,11 @@
                 <h3 class="text-center mb-2 p-topic-10-xs register-title">Register as a Employer</h3>
 {{--                {{ html()->form('POST', route('frontend.auth.login.post'))->open() }}--}}
 
+                @if($errors->any())
+
+                  <div style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
+                @endif
+
                 <form method="post" action="{{route('frontend.auth.register.post')}}">
                     {{csrf_field()}}
 
