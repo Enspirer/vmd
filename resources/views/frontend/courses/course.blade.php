@@ -7,7 +7,19 @@
 @push('after-styles')
 <link href="{{ url('css/individual-course.css') }}" rel="stylesheet">
 @endpush
+@push('after-styles')
+<style>
+    .leanth-course.go {
+        right: 0;
+    }
+    .video-container iframe{
+        max-width: 100%;
+    }
 
+</style>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css"/>
+
+@endpush
 
 @section('content')
 
@@ -46,24 +58,25 @@
             <!-- banner area -->
             <div class="row">
                 <div class="col-md-9 banner-txt-wrapper">
-                    <span class="trending-tag">
+                    @if($course->trending == 1)
+                        <span class="trending-tag">
                         <svg id="baseline-flash_on-24px" xmlns="http://www.w3.org/2000/svg" width="25.545" height="25.545"
-                            viewBox="0 0 25.545 25.545">
+                             viewBox="0 0 25.545 25.545">
                             <path id="Path_1638" data-name="Path 1638" d="M0,0H25.545V25.545H0Z" fill="none" />
                             <path id="Path_1639" data-name="Path 1639"
-                                d="M7,2V13.708h3.193v9.579l7.451-12.772H13.386L17.644,2Z"
-                                transform="translate(0.451 0.129)" />
+                                  d="M7,2V13.708h3.193v9.579l7.451-12.772H13.386L17.644,2Z"
+                                  transform="translate(0.451 0.129)" />
                         </svg>
                         Trending
                     </span>
+                    @endif
+
                     <h1>{{$course->title}}</h1>
                     <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
                     <div class="col-6">
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star gold" aria-hidden="true"></i>
-                        <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                        @for($i=1; $i<=(int)$course->rating; $i++)
+                            <i class="fas fa-star gold" aria-hidden="true"></i>
+                        @endfor
                     </div>
                 </div>
             </div>
@@ -174,37 +187,84 @@
             <!-- sidebar -->
             <div class="col-md-4 side-cards">
                 <div class="top-card i-course-card">
-                    <div class="video-wrapper">
-                        <video id="video" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" width="100%"
-                            height="100%" poster="{{ url('img/frontend/individual_courses/video-banner.jpg')}}"
-                            controls>
-                            <source src="{{ url('video/frontend/individual_course/computer_science.mp4') }}"
-                                type="video/mp4">
-                        </video>
-                        <!-- <span class="play-btn"><img src="{{ url('img/frontend/individual_courses/play.png') }}" alt=""> -->
-                        <div class="play-button-wrapper">
-                            <div title="Play video" class="play-gif" id="circle-play-b">
-                                <!-- SVG Play Button -->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-                                    <path d="M40 0a40 40 0 1040 40A40 40 0 0040 0zM26 61.56V18.44L64 40z" />
-                                </svg>
-                            </div>
-                        </div>
-                        </span>
-                    </div>
+
+
+                    @if($course->mediaVideo && $course->mediavideo->count() > 0)
+                            @if($course->mediavideo != "")
+                                <div class="course-details-content mt-3">
+                                    <div class="video-container mb-5" data-id="{{$course->mediavideo->id}}">
+                                        @if($course->mediavideo->type == 'youtube')
+
+
+                                            <div id="player" class="js-player" data-plyr-provider="youtube"
+                                                 data-plyr-embed-id="{{$course->mediavideo->file_name}}"></div>
+                                        @elseif($course->mediavideo->type == 'vimeo')
+                                            <div id="player" class="js-player" data-plyr-provider="vimeo"
+                                                 data-plyr-embed-id="{{$course->mediavideo->file_name}}"></div>
+                                        @elseif($course->mediavideo->type == 'upload')
+                                            <video poster="" id="player" class="js-player" playsinline controls>
+                                                <source src="{{$course->mediavideo->url}}" type="video/mp4"/>
+                                            </video>
+                                        @elseif($course->mediavideo->type == 'embed')
+                                            {!! $course->mediavideo->url !!}
+                                        @endif
+                                    </div>
+                                </div>
+                            @endif
+                    @endif
+
+                        @php
+                            $matched = checkCourseSubscribeOrNot($checkSubcribePlan,$course->id);
+                            $courseExpire = courseOrBundleExpire($course->id,'');
+                        @endphp
+
+                        @if ($courseExpire==false && !$purchased_course && $matched['matched']==false && $matched['matchedBundle']==false)
+
+                            @if($course->free == 1)
+
+                                <form action="{{ route('cart.getnow') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="course_id" value="{{ $course->id }}"/>
+                                    <input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>
+                                    <button class="btn sidebar-btn" style="background-color: green;">Free Get Now</button>
+
+                                </form>
+                            @else
+                                <form action="{{ route('cart.checkout') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="course_id" value="{{ $course->id }}"/>
+                                    <input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>
+                                    <button class="btn sidebar-btn white-btn">Buy Now</button>
+
+                                </form>
+
+                                <h3 class="coourse-price" style="color: #0763E5">${{$course->price}}</h3>
+
+                            @endif
+
+
+                        @else
 
 
 
-                    <h3 class="coourse-price" style="color: #0763E5">${{$course->price}}</h3>
-                    <button class="btn sidebar-btn">Entroll Now</button>
-                    <button class="btn sidebar-btn white-btn">Buy Now</button>
-                    <p>Pass the AWS Certified Solutions Architect Associate Certification SAA-C02. Complete Amazon Web
-                        Services Cloud training!</p>
+
+                            @if($continue_course || !empty($checkSubcribePlan))
+                                <a href="{{route('lessons.show',['course_id' => $course->id,'slug'=>$continue_course->model->slug])}}"
+                                   class="btn btn-primary">
+
+                                    @lang('labels.frontend.course.continue_course')
+
+                                    <i class="fa fa-arow-right"></i></a>
+                            @endif
+
+                        @endif
+
+                    <p style="overflow: hidden;text-overflow: ellipsis;height: 86px;">{{$course->meta_description}}</p>
                     <div class="notification-row row  mb-3 align-items-center">
                         <div class="col-6 border-right">
                             <p><i class="bi bi-layers-fill"
                                     style="color: #0763E5; font-size: 1.2rem; vertical-align: middle"></i><span
-                                    class="fw-bold ms-2 time-and-lessons-small" style="color: #150D6D">12 Lessons</span>
+                                    class="fw-bold ms-2 time-and-lessons-small" style="color: #150D6D">{{count($lessons) }} Lessons</span>
                             </p>
                         </div>
                         <div class="col-6">
@@ -326,6 +386,22 @@
 
 
 @endsection
+@push('after-scripts')
+<script src="https://cdn.plyr.io/3.5.3/plyr.polyfilled.js"></script>
+
+<script>
+    const player = new Plyr('#player');
+
+    $(document).on('change', 'input[name="stars"]', function () {
+        $('#rating').val($(this).val());
+    })
+            @if(isset($review))
+    var rating = "{{$review->rating}}";
+    $('input[value="' + rating + '"]').prop("checked", true);
+    $('#rating').val(rating);
+    @endif
+</script>
+@endpush
 
 
 @push('after-scripts')
