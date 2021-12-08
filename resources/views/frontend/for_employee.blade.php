@@ -8,8 +8,22 @@
     <link href="{{ url('css/for_employee.css') }}" rel="stylesheet">
 @endpush
 
-
 @section('content')
+
+@if ( session()->has('message') )
+
+    <div class="container" style="background-color: #98FB98; padding-top:5px; margin-top:50px; margin-bottom:50px; border-radius: 50px 50px; text-align:center;">
+
+        <h1 style="margin-top:70px;" class="fs-1">Thank You!</h1><br>
+        <p class="lead mb-3"><h4>One of our member will get back in touch with you soon!<br><br> Have a great day!</h4></p>
+        <br><hr><br>    
+        <p class="lead">
+            <a class="btn btn-success btn-md mt-3 mb-3" href="{{url('for-employee')}}" role="button">Go Back</a>
+        </p>
+        <br>
+    </div>
+
+@else
 
     <div class="container-fluid banner" style="margin-bottom : 2rem;">
         <div class="container p-5 zero-margin">
@@ -53,7 +67,8 @@
                             <h4 class="fw-bold mb-4">Find Candidates</h4>
 
                             <div class="text-center">
-                                <a href="{{route('frontend.auth.login')}}" class="btn btn-primary">Contact us</a>
+                                <!-- <a href="{{route('frontend.auth.login')}}" class="btn btn-primary">Contact us</a> -->
+                                <a href="" data-bs-toggle="modal" data-bs-target="#candidates" class="btn btn-primary">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -258,7 +273,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
 
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{route('frontend.post_job')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
                 <div class="modal-header text-white" style="background-color: #1D5001;">
                   <h6 class="modal-title" id="inquire-modal">Post Your Job</h6>
@@ -270,37 +285,89 @@
                       <input type="text" class="form-control" name="first_name" required>
                     </div>
                     <div class="mb-2">
-                      <label for="last-name" class="form-label"><p>Last Name</p></label>
-                      <input type="text" class="form-control" name="last_name">
+                      <label for="last-name" class="form-label"><p>Last Name <span class="text-danger">*</span></p></label>
+                      <input type="text" class="form-control" name="last_name" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="company_name" class="form-label"><p>Company Name <span class="text-danger">*</span></p></label>
+                      <input type="text" class="form-control" name="company_name" required>
                     </div>
                     <div class="mb-2">
                       <label for="contact-number" class="form-label"><p>Contact Number <span class="text-danger">*</span></p></label>
                       <input type="number" class="form-control" name="contact_number" required>
                     </div>
                     <div class="mb-2">
-                      <label for="email" class="form-label"><p>Email Address</p></label>
-                      <input type="email" class="form-control" name="email">
+                      <label for="email" class="form-label"><p>Email Address <span class="text-danger">*</span></p></label>
+                      <input type="email" class="form-control" name="email" required>
                     </div>
                     <div class="mb-2">
-                      <label for="file" class="form-label"><p>Attached File</p></label>
-                      <input type="file" class="form-control" name="file">
+                      <label for="attached_file" class="form-label"><p>Attached File <span class="text-danger">*</span></p></label>
+                      <input type="file" class="form-control" name="attached_file" required>
                     </div>
                     <div class="mb-3">
-                      <label for="message" class="form-label"><p>Message</p></label>
-                      <textarea class="form-control" name="message" cols="30" rows="3"></textarea>
+                      <label for="message" class="form-label"><p>Message <span class="text-danger">*</span></p></label>
+                      <textarea class="form-control" name="message" cols="30" rows="3" required></textarea>
                     </div>
                     
                 </div>
                 <div class="modal-footer justify-content-center">
                   <button type="button" class="btn" data-bs-dismiss="modal" style="color: #68AE42;">Cancel</button>
-                  <input type="submit" class="submit-btn btn text-white px-5" style="background-color: #68AE42;" value="Send Request"/>
+                  <input type="submit" class="submit-btn btn text-white px-5" style="background-color: #68AE42;" value="Send"/>
                 </div>
             </form>  
           </div>
         </div>
       </div>
-@endsection
 
+      <div class="modal fade" id="candidates" tabindex="-1" aria-labelledby="inquireLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <form action="{{route('frontend.find_canidates')}}" method="post" enctype="multipart/form-data">
+            {{csrf_field()}}
+                <div class="modal-header text-white" style="background-color: #1D5001;">
+                  <h6 class="modal-title" id="inquire-modal">Find Candidates</h6>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="mb-2">
+                      <label for="first-name" class="form-label"><p>First Name <span class="text-danger">*</span></p></label>
+                      <input type="text" class="form-control" name="first_name" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="last-name" class="form-label"><p>Last Name <span class="text-danger">*</span></p></label>
+                      <input type="text" class="form-control" name="last_name" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="company_name" class="form-label"><p>Company Name <span class="text-danger">*</span></p></label>
+                      <input type="text" class="form-control" name="company_name" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="contact-number" class="form-label"><p>Contact Number <span class="text-danger">*</span></p></label>
+                      <input type="number" class="form-control" name="contact_number" required>
+                    </div>
+                    <div class="mb-2">
+                      <label for="email" class="form-label"><p>Email Address <span class="text-danger">*</span></p></label>
+                      <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label"><p>Message <span class="text-danger">*</span></p></label>
+                      <textarea class="form-control" name="message" cols="30" rows="3" required></textarea>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn" data-bs-dismiss="modal" style="color: #68AE42;">Cancel</button>
+                  <input type="submit" class="submit-btn btn text-white px-5" style="background-color: #68AE42;" value="Send"/>
+                </div>
+            </form>  
+          </div>
+        </div>
+      </div>
+
+@endif
+
+@endsection
 
 @push('after-scripts')
     
