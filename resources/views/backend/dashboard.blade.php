@@ -33,6 +33,11 @@
     width: 100%;
     background-repeat: no-repeat;
 }
+
+.dashboard-sub-heading {
+    margin-bottom: 30px !important;
+}
+
 </style>
 <link rel="stylesheet" href="{{ url('css/user-dashboard-main.css') }}" />
 @endpush
@@ -52,7 +57,7 @@
 
                     @if(count($pending_orders) > 0)
                     <div class="col-12">
-                        <h4>@lang('labels.backend.dashboard.pending_orders')</h4>
+                        <h4 class="dashboard-sub-heading">@lang('labels.backend.dashboard.pending_orders')</h4>
                     </div>
                     <div class="col-12 text-center">
 
@@ -268,7 +273,7 @@
                     @else
                     <div class="col-12 text-center">
                         <h4 class="text-center">@lang('labels.backend.dashboard.no_data')</h4>
-                        <a class="btn btn-primary"
+                        <a style="margin-top:15px; margin-bottom: 15px;" class="btn btn-primary"
                             href="{{route('courses.all')}}">@lang('labels.backend.dashboard.buy_course_now')
                             <i class="fa fa-arrow-right"></i></a>
                     </div>
@@ -276,7 +281,7 @@
                     @if(count($purchased_bundles) > 0)
 
                     <div class="col-12 mt-5">
-                        <h4>@lang('labels.backend.dashboard.my_course_bundles')</h4>
+                        <h4 class="dashboard-sub-heading">@lang('labels.backend.dashboard.my_course_bundles')</h4>
                     </div>
                     @foreach($purchased_bundles as $key=>$bundle)
                     @php $key++ @endphp
@@ -358,7 +363,7 @@
                     @endif
                     @if($subscribed_courses->count() > 0)
                     <div class="col-12 mt-5">
-                        <h4>@lang('labels.backend.dashboard.my_subscribed_courses')</h4>
+                        <h4 class="dashboard-sub-heading">@lang('labels.backend.dashboard.my_subscribed_courses')</h4>
                     </div>
                     @foreach($subscribed_courses as $item)
 
@@ -681,7 +686,7 @@
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="d-inline-block form-group w-100">
-                            <h4 class="mb-0">@lang('labels.backend.dashboard.recent_contact_requests') <a
+                            <h4 class="mb-0 dashboard-sub-heading">@lang('labels.backend.dashboard.recent_contact_requests') <a
                                     class="btn btn-primary float-right"
                                     href="{{route('admin.contact-requests.index')}}">@lang('labels.backend.dashboard.view_all')</a>
                             </h4>
@@ -717,7 +722,7 @@
                             </tbody>
                         </table>
                     </div>
-
+                 
                     @else
                     <div class="col-12">
                         <h1>@lang('labels.backend.dashboard.title')</h1>
