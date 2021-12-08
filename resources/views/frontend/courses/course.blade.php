@@ -11,34 +11,66 @@
 
 @section('content')
 
-<div class="container-fluid single-course-banner-container">
-    <div class="container">
-        <!-- banner area -->
-        <div class="row">
-            <div class="col-md-9 banner-txt-wrapper">
-                <span class="trending-tag">
-                    <svg id="baseline-flash_on-24px" xmlns="http://www.w3.org/2000/svg" width="25.545" height="25.545"
-                        viewBox="0 0 25.545 25.545">
-                        <path id="Path_1638" data-name="Path 1638" d="M0,0H25.545V25.545H0Z" fill="none" />
-                        <path id="Path_1639" data-name="Path 1639"
-                            d="M7,2V13.708h3.193v9.579l7.451-12.772H13.386L17.644,2Z"
-                            transform="translate(0.451 0.129)" />
-                    </svg>
-                    Trending
-                </span>
-                <h1>{{$course->title}}</h1>
-                <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
-                <div class="col-6">
-                    <i class="fas fa-star gold" aria-hidden="true"></i>
-                    <i class="fas fa-star gold" aria-hidden="true"></i>
-                    <i class="fas fa-star gold" aria-hidden="true"></i>
-                    <i class="fas fa-star gold" aria-hidden="true"></i>
-                    <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+@if($course->course_image == null)
+    <div class="container-fluid single-course-banner-container" style="background-image: url('../img/no_image_available.png');">
+        <div class="container">
+            <!-- banner area -->
+            <div class="row">
+                <div class="col-md-9 banner-txt-wrapper">
+                    <span class="trending-tag">
+                        <svg id="baseline-flash_on-24px" xmlns="http://www.w3.org/2000/svg" width="25.545" height="25.545"
+                            viewBox="0 0 25.545 25.545">
+                            <path id="Path_1638" data-name="Path 1638" d="M0,0H25.545V25.545H0Z" fill="none" />
+                            <path id="Path_1639" data-name="Path 1639"
+                                d="M7,2V13.708h3.193v9.579l7.451-12.772H13.386L17.644,2Z"
+                                transform="translate(0.451 0.129)" />
+                        </svg>
+                        Trending
+                    </span>
+                    <h1>{{$course->title}}</h1>
+                    <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
+                    <div class="col-6">
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+@else
+    <div class="container-fluid single-course-banner-container" style="background-image: url('{{url('storage/uploads',$course->course_image)}}');">
+        <div class="container">
+            <!-- banner area -->
+            <div class="row">
+                <div class="col-md-9 banner-txt-wrapper">
+                    <span class="trending-tag">
+                        <svg id="baseline-flash_on-24px" xmlns="http://www.w3.org/2000/svg" width="25.545" height="25.545"
+                            viewBox="0 0 25.545 25.545">
+                            <path id="Path_1638" data-name="Path 1638" d="M0,0H25.545V25.545H0Z" fill="none" />
+                            <path id="Path_1639" data-name="Path 1639"
+                                d="M7,2V13.708h3.193v9.579l7.451-12.772H13.386L17.644,2Z"
+                                transform="translate(0.451 0.129)" />
+                        </svg>
+                        Trending
+                    </span>
+                    <h1>{{$course->title}}</h1>
+                    <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
+                    <div class="col-6">
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star gold" aria-hidden="true"></i>
+                        <i class="fas fa-star-half-alt gold" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
 
 <div class="container-fluid main-content-height">
     <div class="container">
@@ -52,14 +84,13 @@
                     <div class="course-list-box">
                         <div class="inner-box">
                             <ul>
+                                
                                 <li>
-                                    <span><img class="check-icon"
-                                            src="{{ url('img/frontend/individual_courses/checked.png')}}"
-                                            alt=""></span><span class="learn-task">FULLY UPDATED FOR SAA-CO2:Pass the
-                                        AWS Certified Solutions
-                                        Architect Associate Certification</span>
+                                    <span>
+                                        {!!$course->description!!}
+                                    </span>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <span><img class="check-icon"
                                             src="{{ url('img/frontend/individual_courses/checked.png')}}"
                                             alt=""></span><span class="learn-task">Perform Real-World Solution
@@ -83,10 +114,10 @@
                                             src="{{ url('img/frontend/individual_courses/checked.png')}}"
                                             alt=""></span><span class="learn-task">|Secure your entire AWS Cloud using
                                         KMS, IAM, Policies & SSM</span>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
-                        <div class="inner-box">
+                        <!-- <div class="inner-box">
                             <ul>
                                 <li>
                                     <span><img class="check-icon"
@@ -113,7 +144,7 @@
                                         Databases on AWS</span>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- course timeline -->
@@ -139,7 +170,7 @@
                 @endif
             </div>
 
-            <div style="padding:450px"></div>
+            <!-- <div style="padding:0 0 350px 0"></div> -->
             <!-- sidebar -->
             <div class="col-md-4 side-cards">
                 <div class="top-card i-course-card">
@@ -164,7 +195,7 @@
 
 
 
-                    <h3 class="coourse-price" style="color: #0763E5">$11.99</h3>
+                    <h3 class="coourse-price" style="color: #0763E5">${{$course->price}}</h3>
                     <button class="btn sidebar-btn">Entroll Now</button>
                     <button class="btn sidebar-btn white-btn">Buy Now</button>
                     <p>Pass the AWS Certified Solutions Architect Associate Certification SAA-C02. Complete Amazon Web

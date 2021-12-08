@@ -1,7 +1,6 @@
 .single-course-banner-container {
     padding-left: 0;
-    padding-right: 0;
-    background-image: url('../img/frontend/individual_courses/individual-coures-banner.png');
+    padding-right: 0;    
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -119,7 +118,7 @@ svg#baseline-flash_on-24px {
 }
 
 .main-content-wrapper {
-    display: flex;
+    display: block;
     width: 100%;
     position: relative;
     height: 100%;
