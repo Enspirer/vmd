@@ -341,6 +341,8 @@
                 </a>
             </li>
 
+            
+
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/your_jobs*','admin/find_candidate*']), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/find_candidate*')) }}"
                     href="#">
@@ -458,6 +460,24 @@
                             <a class="nav-link {{ active_class(Active::checkUriPattern('admin/settings/zoom-settings*')) }}"
                                href="{{ route('admin.zoom-settings') }}">
                                 @lang('menus.backend.sidebar.settings.zoom_setting')
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ $request->segment(2) == 'home_banner' ? 'active' : '' }}"
+                                href="{{ route('admin.home_banner.index') }}">
+                                <span class="title">Home Banner</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ $request->segment(2) == 'candidate_banner' ? 'active' : '' }}"
+                                href="{{ route('admin.candidate_banner.index') }}">
+                                <span class="title">Candidate Banner</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ $request->segment(2) == 'employee_banner' ? 'active' : '' }}"
+                                href="{{ route('admin.employee_banner.index') }}">
+                                <span class="title">Employee Banner</span>
                             </a>
                         </li>
                     </ul>

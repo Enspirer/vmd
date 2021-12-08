@@ -12,7 +12,7 @@
 @section('content')
 
     <div class="container-fluid p-0 banner" style="margin-bottom : 4rem;">
-        <img src="{{ url('img/frontend/candidate/banner.png') }}" style="object-fit: cover;" alt="" class="img-fluid w-100">
+        <img src="{{ url('files/candidate_banner',config('candidate_banner')) }}" alt="" class="img-fluid w-100" style="object-fit: cover; height:500px; margin-bottom : 2rem;">
     </div>
 
 
