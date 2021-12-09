@@ -58,7 +58,7 @@
                 </li>
                 <li class="nav-item ps-3">
                     <a class="nav-link p-0 btn register-btn px-3 py-2" type="button"
-                        href="{{ route('frontend.auth.register_employee') }}">Register</a>
+                        href="{{ route('frontend.auth.register_candidate') }}">Register</a>
                 </li>
                 @endif
             </ul>

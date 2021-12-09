@@ -56,9 +56,11 @@
                         <h4 class="fw-bold mb-4">Post your Jobs</h4>
 
                         <div class="text-center">
-                            <!-- <a href="{{url('register-employee')}}" class="btn btn-primary">Register</a> -->
-                            <a href="" data-bs-toggle="modal" data-bs-target="#post_job"
-                                class="btn btn-primary">Register</a>
+                            <a href="{{ route('frontend.auth.register_employee') }}" class="btn btn-primary">Register</a>
+                            <!-- <a href="" data-bs-toggle="modal" data-bs-target="#post_job"
+                                class="btn btn-primary">Register
+                            </a> -->
+                               
                         </div>
                     </div>
                 </div>
