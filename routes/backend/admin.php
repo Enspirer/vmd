@@ -9,6 +9,7 @@ use \App\Http\Controllers\Backend\FindCandidatesController;
 use \App\Http\Controllers\Backend\YourJobController;
 use \App\Http\Controllers\Backend\EmployeeBannerController;
 use \App\Http\Controllers\Backend\ForEmployeeController;
+use \App\Http\Controllers\Backend\ContactUsController;
 
 
 /*
@@ -378,7 +379,14 @@ Route::get('candidate_banner', [EmployeeBannerController::class, 'candidate_inde
 Route::post('candidate_banner/update', [EmployeeBannerController::class, 'candidate_update'])->name('candidate_banner.update');
 
 
+Route::get('contact_us', [ContactUsController::class, 'index'])->name('contact_us.index');
+Route::get('contact_us/getdetails', [ContactUsController::class, 'getdetails'])->name('contact_us.getdetails');
+Route::get('contact_us/edit/{id}', [ContactUsController::class, 'edit'])->name('contact_us.edit');
+Route::post('contact_us/update', [ContactUsController::class, 'update'])->name('contact_us.update');
+Route::get('contact_us/delete/{id}', [ContactUsController::class, 'destroy'])->name('contact_us.destroy');
 
+Route::get('contact_information', [ContactUsController::class, 'contact_information'])->name('contact_information.index');
+Route::post('contact_information/update', [ContactUsController::class, 'contact_information_update'])->name('contact_information.update');
 
 
 

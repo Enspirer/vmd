@@ -366,6 +366,29 @@
                 </ul>
             </li>
 
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/contact_us*','admin/contact_information*']), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
+                    href="#">
+                    <i class="nav-icon fas fa-comments"></i> Contact Us
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/contact_us*')) }}"
+                            href="{{ route('admin.contact_us.index') }}">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
+                            href="{{ route('admin.contact_information.index') }}">
+                            Contact Informations
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             @if ($logged_in_user->hasRole('student'))
             <li class="nav-item ">
                 <a class="nav-link {{ $request->segment(1) == 'subscriptions' ? 'active' : '' }}"
