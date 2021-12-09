@@ -31,7 +31,7 @@
     </div>
 
 
-    <div class="container" style="margin-bottom : 6rem;">
+    <div class="container" style="margin-bottom : 6rem;padding-left:0px;padding-right:0px;">
         <div class="row" style="justify-content: center;">
             <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100 vision-height">
@@ -69,7 +69,7 @@
     <div class="container" style="margin-bottom: 7rem;">
         <div class="row">
             <div class="col-12">
-                <h3 class="fw-bold text-center">Why choose us?</h3>
+                <h3 style="margin-bottom:30px !important;" class="fw-bold text-center">Why choose us?</h3>
 
                 <div class="row">
 

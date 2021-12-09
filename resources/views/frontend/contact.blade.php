@@ -13,7 +13,7 @@
 
 @if( session()->has('message') )
    
-    <div class="container" style="background-color: #0dcaf0; padding-top:5px; margin-top:50px; margin-bottom:50px; border-radius: 50px 50px; text-align:center;">
+    <div class="container" style="background-color: #c8d9dd; padding-left:5px; padding-right: 5px; padding-top:5px; margin-top:50px; margin-bottom:50px; border-radius: 50px 50px; text-align:center;">
 
             <h1 style="margin-top:80px;" class="fs-1">Thank You!</h1><br>
             <p class="lead mb-3"><h4>We appreciate you contacting us. One of our member will get back in touch with you soon!<br><br> Have a great day!</h4></p>

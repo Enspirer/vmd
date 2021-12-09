@@ -297,7 +297,7 @@
             <div class="row align-items-center">
                 <div class="col-6">
                     <h3 class="fw-bold mb-4">Get started with your future progress today</h3>
-                    <a href="{{route('frontend.contact_us')}}" class="btn join">Join Now</a>
+                    <a href="{{route('frontend.auth.register_candidate')}}" class="btn join">Join Now</a>
                 </div>
                 <div class="col-6">
                     <img src="{{ url('img/frontend/candidate/bottom_banner.png') }}" alt="" class="img-fluid w-100">

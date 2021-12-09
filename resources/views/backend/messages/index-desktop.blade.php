@@ -7,6 +7,7 @@
                 right: unset !important;
                 left: 0 !important;
             }
+          
         </style>
     @endif
     <style>
@@ -34,7 +35,7 @@
                             @if(request()->has('thread'))
                             <div class="recent_heading btn-sm btn btn-dark">
                                 <a class="text-decoration-none" href="{{route('admin.messages')}}">
-                                    <h5 class="text-white mb-0"><i class="icon-plus"></i>&nbsp;&nbsp; @lang('labels.backend.messages.compose')</h5>
+                                    <h5 style="font-size:0.7rem;" class="text-white mb-0"><i class="icon-plus"></i>&nbsp;&nbsp; @lang('labels.backend.messages.compose')</h5>
                                 </a>
                             </div>
                             @endif
