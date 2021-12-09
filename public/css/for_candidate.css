@@ -80,8 +80,6 @@
     padding-bottom: 15px;
   }
 
-
-
   .mobile-check-logo {
     width: 20%;
   }
@@ -94,6 +92,11 @@
     padding: 15px !important;
     padding-top: 3rem!important;
     margin-bottom: 0 !important;
+  }
+
+  .candidate-inner-heading {
+    font-size: 2rem !important;
+    top: -2rem !important;
   }
 
 }
@@ -115,6 +118,10 @@
 
   .vl_4 {
     top: 905px;
+  }
+
+  .candidate-inner-heading {
+    font-size: 3rem !important;
   }
 }
 
