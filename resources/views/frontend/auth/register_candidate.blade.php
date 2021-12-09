@@ -6,6 +6,11 @@
 
 @push('after-styles')
     <link href="{{ url('css/login.css') }}" rel="stylesheet">
+    <style>
+        .country-input {
+            top:0px !important;
+        }
+    </style>    
 @endpush
 
 @section('content')
@@ -17,7 +22,7 @@
 
                 @if($errors->any())
 
-                    <div class="reg-error" style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
+                    <div class="reg-error" style="background: darkred;color: white;padding:15px;margin-bottom:30px;margin-top:30px;">{{ implode('', $errors->all(':message')) }}</div>
                 @endif
 
                 <form enctype="multipart/form-data" action="{{route('frontend.auth.register.post')}}" method="post">
@@ -379,11 +384,17 @@
             $(this).siblings('label').addClass('click-input');
         });
 
+        $('#country').focus(function() {
+            $(this).siblings('label').addClass('country-input');
+        });
+
         $('input').focusout(function() {
             if($(this).val() == '' ) {
                 $(this).siblings('label').removeClass('click-input');
             }
         });
+
+        
 
      $('input')
      .each(function(element, i) {
@@ -393,5 +404,7 @@
             $(this).siblings('label').removeClass('click-input');
         }
      });
+
+   
     </script>
 @endpush

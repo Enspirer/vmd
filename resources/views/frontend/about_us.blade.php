@@ -33,7 +33,7 @@
 
     <div class="container" style="margin-bottom : 6rem;">
         <div class="row" style="justify-content: center;">
-            <div class="col-4 position-relative">
+            <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100 vision-height">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="col-4 position-relative">
+            <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/vision_1.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
@@ -75,7 +75,7 @@
 
                     @if(count($why_choose_us) != 0)
                         @foreach($why_choose_us as $key => $why_choose)
-                            <div class="col-4 col-xs-12 mt-5">
+                            <div class="col-4 col-xs-12 mt-5 col-sm-6">
                                 <div class="row align-items-center">
                                     <div class="col-3">
                                         <img src="{{ url('files/why_choose_us',$why_choose->icon) }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">

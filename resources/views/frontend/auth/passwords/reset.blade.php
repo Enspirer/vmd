@@ -2,13 +2,30 @@
 
 @section('title', app_name() . ' | ' . __('labels.frontend.passwords.reset_password_box_title'))
 
+@push('after-styles')
+<style>
+.form-group.reset-form {
+    padding-top: 15px;
+}
+.reset-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.reset-submit {
+    margin-bottom: 50px !important;
+}
+
+</style>
+@endpush
+
 @section('content')
     <section id="breadcrumb" class="breadcrumb-section relative-position backgroud-style">
         <div class="blakish-overlay"></div>
         <div class="container">
             <div class="page-breadcrumb-content text-center">
                 <div class="page-breadcrumb-title">
-                    <h2 class="breadcrumb-head black bold">{{__('labels.frontend.passwords.reset_password_box_title')}}</h2>
+                    <h2 class="breadcrumb-head black bold reset-title">{{__('labels.frontend.passwords.reset_password_box_title')}}</h2>
                 </div>
             </div>
         </div>
@@ -33,7 +50,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
+                                <div class="form-group reset-form">
                                     {{ html()->label(__('validation.attributes.frontend.email'))->for('email') }}
 
                                     {{ html()->email('email')
@@ -47,7 +64,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
+                                <div class="form-group reset-form">
                                     {{ html()->label(__('validation.attributes.frontend.password'))->for('password') }}
 
                                     {{ html()->password('password')
@@ -60,7 +77,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
+                                <div class="form-group reset-form">
                                     {{ html()->label(__('validation.attributes.frontend.password_confirmation'))->for('password_confirmation') }}
 
                                     {{ html()->password('password_confirmation')
@@ -73,7 +90,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <div class="form-group mb-0 clearfix">
+                                <div class="form-group mb-0 clearfix reset-form reset-submit">
                                     <button class="btn btn-info" type="submit">{{__('labels.frontend.passwords.reset_password_button')}}</button>
                                 </div><!--form-group-->
                             </div><!--col-->

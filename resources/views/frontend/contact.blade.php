@@ -148,7 +148,7 @@
                     <div class="mb-3">
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control rounded-0" name="name" id="name"
+                                <input type="text" class="name-input form-control rounded-0" name="name" id="name"
                                     placeholder="Your Name" required>
                             </div>
 
@@ -161,7 +161,7 @@
                                             <option value="+95">+95</option>
                                         </select>
                                     </div> -->
-                                    <input type="text" class="form-control rounded-0" name="phone_number" id="phone_number"
+                                    <input type="text" class="name-input form-control rounded-0" name="phone_number" id="phone_number"
                                         placeholder="Your Number" required>
                                 </div>
                             </div>

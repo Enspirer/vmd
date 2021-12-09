@@ -52,7 +52,7 @@
             <!--card-header-->
             <div class="card-body dashboard-main-card">
                 <div class="card-body-wrapper">
-                    <img src="" alt="">
+                    <img class="card-bg " src="{{ url('img/backend/dashboard/dashboard-banner.jpg') }}" alt="">
                      <div class="row">
                     @if(auth()->user()->hasRole('student'))
 
