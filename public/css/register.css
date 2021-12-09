@@ -30,6 +30,11 @@
         padding-top: 10px !important;
         padding-bottom: 10px !important;
     }
+
+    .register-title {
+        margin-top: 15px;
+        margin-bottom: 15px !important;
+    }
 }
 
 

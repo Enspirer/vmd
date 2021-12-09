@@ -46,12 +46,14 @@
 <div class="row">
     <div class="col">
         <div class="card">
-            <div class="card-header">
+            <!-- <div class="card-header">
                 <strong>@lang('strings.backend.dashboard.welcome') {{ $logged_in_user->name }}!</strong>
-            </div>
+            </div> -->
             <!--card-header-->
-            <div class="card-body">
-                <div class="row">
+            <div class="card-body dashboard-main-card">
+                <div class="card-body-wrapper">
+                    <img src="" alt="">
+                     <div class="row">
                     @if(auth()->user()->hasRole('student'))
 
 
@@ -257,8 +259,6 @@
                                 </div>
 
                             </div>
-
-                           
                         </div>
 
                     </div>
@@ -729,6 +729,8 @@
                     </div>
                     @endif
                 </div>
+                </div>
+               
             </div>
             <!--card-body-->
         </div>
@@ -736,3 +738,21 @@
     </div>
     <!--col-->
     @endsection
+
+    @push('after-scripts')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    @endpush

@@ -35,6 +35,12 @@ p {
     color: #0763E5!important;
 }
 
+.register-btn:hover {
+    color: #fff !important;
+    background-color: #000;
+    border-color: #000 !important;
+}
+
 
 .footer p, .footer .first-column i {
     font-size: 0.8rem;
@@ -114,6 +120,8 @@ ul.dropdown li a {
 i.drop-icon.fa.fa-caret-down {
     padding: 0;
 }
+
+
 
 
 /*mobile-view*/

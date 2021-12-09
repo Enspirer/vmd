@@ -55,12 +55,6 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-*,
-*::before,
-*::after {
-    /* -webkit-box-sizing: border-box; */
-    /* box-sizing: border-box; */
-}
 
 html {
     font-family: sans-serif;
@@ -82,7 +76,7 @@ section {
     display: block;
 }
 
-body {
+/* body {
     /* margin: 0; */
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
     /* font-size: 0.875rem; */
@@ -91,7 +85,7 @@ body {
     /* color: #23282c; */
     /* text-align: left; */
     /* background-color: #e4e5e6; */
-}
+/* }  */
 
 [tabindex="-1"]:focus {
     outline: 0 !important;
@@ -187,11 +181,7 @@ sup {
     top: -.5em;
 }
 
-a {
-    /* color: #20a8d8; */
-    /* text-decoration: none; */
-    /* background-color: transparent; */
-}
+
 
 a:hover {
     color: #167495;
@@ -520,10 +510,10 @@ mark,
     content: "\2014\A0";
 }
 
-.img-fluid {
+/* .img-fluid {
     /* max-width: 100%; */
     /* height: auto; */
-}
+/*} */
 
 .img-thumbnail {
     padding: 0.25rem;
@@ -589,36 +579,36 @@ pre code {
     overflow-y: scroll;
 }
 
-.container {
+/* .container {
     /* width: 100%; */
     /* padding-right: 15px; */
     /* padding-left: 15px; */
     /* margin-right: auto; */
-    /* margin-left: auto; */
-}
+    /* margin-left: auto; 
+} */
 
 @media (min-width: 576px) {
-    .container {
-        /* max-width: 540px; */
-    }
+    /* .container {
+        /* max-width: 540px; 
+    } */
 }
 
 @media (min-width: 768px) {
-    .container {
-        /* max-width: 720px; */
-    }
+    /* .container {
+        /* max-width: 720px; 
+    } */
 }
 
 @media (min-width: 992px) {
-    .container {
-        /* max-width: 960px; */
-    }
+    /* .container {
+        /* max-width: 960px; 
+    } */
 }
 
 @media (min-width: 1200px) {
-    .container {
-        /* max-width: 1140px; */
-    }
+    /* .container {
+        /* max-width: 1140px; 
+    } */
 }
 
 .container-fluid {
@@ -22564,6 +22554,7 @@ div.dt-buttons {
     width: max-content;
     color: #000;
     font-size: 0.9rem;
+    margin-top: 10px;
 }
 
 .course-card-item-wrapper {
@@ -22573,4 +22564,5 @@ div.dt-buttons {
     width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
+    flex-direction: column;
 }

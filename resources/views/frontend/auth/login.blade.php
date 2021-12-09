@@ -76,11 +76,11 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-4 col-xs-12">
+                <div class="col-4 col-xs-12 reduce-padding-xs">
                     <a href="" class="text-decoration-none text-dark">
                         <div class="row align-items-center bg-white p-2 shadow">
                             <div class="col-4">
-                                <img src="{{ url('img/frontend/auth/facebook.png') }}" alt="" class="img-fluid">
+                                <img src="{{ url('img/frontend/auth/facebook.png') }}" alt="" class="img-fluid social-logo">
                             </div>
                             <div class="col-8">
                                 <p style="font-size: 0.9rem">Facebook</p>
@@ -91,11 +91,11 @@
 
                 <div class="col-1"></div>
 
-                <div class="col-4 col-xs-12">
+                <div class="col-4 col-xs-12 reduce-padding-xs">
                     <a href="" class="text-decoration-none text-dark">
                         <div class="row align-items-center bg-white p-2 shadow">
                             <div class="col-4">
-                                <img src="{{ url('img/frontend/auth/google-logo.png') }}" alt="" class="img-fluid">
+                                <img src="{{ url('img/frontend/auth/google-logo.png') }}" alt="" class="img-fluid social-logo">
                             </div>
                             <div class="col-8">
                                 <p style="font-size: 0.9rem">Google</p>

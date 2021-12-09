@@ -81,6 +81,15 @@ input[type="text"]:focus {
     .pb-20-xs {
         padding-bottom: 20px;
     }
+
+    .reduce-padding-xs {
+        padding: 15px;
+    }
+
+    .social-logo {
+        width: 40px;
+        height: auto;
+    }
 }
 
 

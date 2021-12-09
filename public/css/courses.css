@@ -471,9 +471,7 @@ i.far.fa-heart {
     }
 
     .swiper-slide {
-        width: 90% !important;
-        padding-left: 5%;
-        padding-right: 5%;
+        justify-content: center;
     }
 
     .swiper-button-lock {
@@ -492,8 +490,26 @@ i.far.fa-heart {
         margin-bottom: 10px;
     }
 
+    .swiper-button-next {
+        right: 0 !important;
+    }
     
+
+    .swiper-button-prev {
+        left: 20px !important;
+    }
     
+    .card.p-4.slider-card {
+        padding-top: 45px !important;
+    }
+
+    .card-slider-prev i, .card-slider-next i {
+        font-size: 30px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        top: 44% !important;
+    }
 
 }
 
