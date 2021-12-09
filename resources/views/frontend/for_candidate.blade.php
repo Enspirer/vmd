@@ -19,7 +19,7 @@
     <div class="container" style="margin-bottom : 5rem;">
         <div class="row position-relative">
             <h1 class="fw-bold text-center">SIMPLE PROCESS WITH VMD</h1>
-            <p class="text-center position-absolute" style="opacity: 0.04; top: -0.9rem; font-size: 4rem; line-height: 1.2; z-index: -1; font-weight: 800">SIMPLE PROCESS WITH VMD</p>
+            <p class="candidate-inner-heading text-center position-absolute" style="opacity: 0.04; top: -0.9rem; font-size: 4rem; line-height: 1.2; z-index: -1; font-weight: 800">SIMPLE PROCESS WITH VMD</p>
         </div>
     </div>
 
