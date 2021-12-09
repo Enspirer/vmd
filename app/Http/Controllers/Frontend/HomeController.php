@@ -21,6 +21,7 @@ use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Newsletter;
+use App\Models\Models\WhyChooseUs;
 
 /**
  * Class HomeController.
@@ -103,8 +104,10 @@ class HomeController extends Controller
             $total_teachers = User::role('teacher')->get()->count();
         }
 
+        $why_choose_us = WhyChooseUs::where('featured','Enabled')->where('status','Enabled')->orderBy('order','ASC')->get();
+
         $categories = Category::get();
-        return view($this->path . '.index-' . config('theme_layout'), compact('popular_courses', 'featured_courses', 'sponsors', 'total_students', 'total_courses', 'total_teachers', 'testimonials', 'news', 'trending_courses', 'teachers', 'faqs', 'course_categories', 'reasons', 'sections','categories'));
+        return view($this->path . '.index-' . config('theme_layout'), compact('popular_courses', 'featured_courses', 'sponsors', 'total_students', 'total_courses', 'total_teachers', 'testimonials', 'news', 'trending_courses', 'teachers', 'faqs', 'course_categories', 'reasons', 'sections','categories','why_choose_us'));
     }
 
     public function getFaqs()

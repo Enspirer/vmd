@@ -366,8 +366,8 @@
                 </ul>
             </li>
 
-            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/about_us*','admin/contact_information*']), 'open') }}">
-                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/about_us*','admin/why_choose_us*']), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/why_choose_us*')) }}"
                     href="#">
                     <i class="nav-icon far fa-address-card"></i> About us
                 </a>
@@ -379,14 +379,14 @@
                         </a>
                     </li>
                 </ul>
-                <!-- <ul class="nav-dropdown-items">
+                <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
-                            href="{{ route('admin.contact_information.index') }}">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/why_choose_us*')) }}"
+                            href="{{ route('admin.why_choose_us.index') }}">
                             Why Choose VMD
                         </a>
                     </li>
-                </ul> -->
+                </ul>
             </li>
 
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/contact_us*','admin/contact_information*']), 'open') }}">
