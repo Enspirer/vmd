@@ -414,6 +414,31 @@ span.play-btn img {
     min-height: 950px;
 }
 
+.course-banner-txt-area {
+    width: 80%;
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 4px;
+}
+
+.course-banner-txt-area h3 {
+    width: 100%;
+    max-height: 90px;
+}
+
+.banner-txt-wrapper h1 {
+    margin-top: 0;
+    border-bottom: 5px solid #fff;
+    width: max-content;
+}
+
+.course-banner-txt-area {
+    padding: 25px;
+}
+
+
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
     .side-cards {
@@ -439,6 +464,11 @@ span.play-btn img {
 
     .progress-bar-wrapper {
         flex: 1;
+    }
+
+    .banner-inner-container {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
 }
@@ -494,6 +524,18 @@ span.play-btn img {
 
 }
 
+
+/*tab-landscape*/
+@media (min-width: 992px) and (max-width: 1024px) {
+    .sidebar-btn {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    li.drop-list ul.dropdown {
+        top: 35px !important;
+    }
+}
 
 
 /*large screen*/

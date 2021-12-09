@@ -107,22 +107,27 @@
     justify-content: start;
     width: 50%;
     margin-bottom: 15px;
-}
+  }
 
-.chart-txt {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
+  .chart-txt {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
 
 
-.mobile-check-logo {
-  width: 20%;
-}
+  .mobile-check-logo {
+    width: 20%;
+  }
 
-.mobile-check-list {
-  width: 80%;
-}
+  .mobile-check-list {
+    width: 80%;
+  }
+
+  .inner-heading {
+    top: -2.2rem !important;
+    font-size: 2rem !important;
+  }
 
 }
 
@@ -130,6 +135,16 @@
 
 /*tab-portrait*/
 @media (min-width: 768px) and (max-width: 991px) {
+  .inner-heading {
+    top: -2rem !important;
+  }
+}
+
+/*tab-landscape*/
+@media (min-width: 992px) and (max-width: 1024px) {
+  .inner-heading {
+    top: -2rem !important;
+  }
 }
 
 

@@ -25,7 +25,7 @@
 
 @if($course->course_image == null)
     <div class="container-fluid single-course-banner-container" style="background-image: url('../img/no_image_available.png');">
-        <div class="container">
+        <div class="container banner-inner-container">
             <!-- banner area -->
             <div class="row">
                 <div class="col-md-9 banner-txt-wrapper">
@@ -39,8 +39,10 @@
                         </svg>
                         Trending
                     </span>
-                    <h1>{{$course->title}}</h1>
-                    <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
+                    <div class="course-banner-txt-area">
+                        <h1>{{$course->title}}</h1>
+                        <h3 style="overflow:hidden;text-overflow: ellipsis;">{{$course->meta_description}}</h3>
+                    </div>
                     <div class="col-6">
                         <i class="fas fa-star gold" aria-hidden="true"></i>
                         <i class="fas fa-star gold" aria-hidden="true"></i>
@@ -54,7 +56,7 @@
     </div>
 @else
     <div class="container-fluid single-course-banner-container" style="background-image: url('{{url('storage/uploads',$course->course_image)}}');">
-        <div class="container">
+        <div class="container banner-inner-container">
             <!-- banner area -->
             <div class="row">
                 <div class="col-md-9 banner-txt-wrapper">
@@ -70,9 +72,11 @@
                         Trending
                     </span>
                     @endif
-
-                    <h1>{{$course->title}}</h1>
-                    <h3 style="overflow: hidden;text-overflow: ellipsis;height: 70px;width: 80%;">{{$course->meta_description}}</h3>
+                    <div class="course-banner-txt-area">
+                        <h1>{{$course->title}}</h1>
+                        <h3 style="overflow:hidden;text-overflow: ellipsis;">{{$course->meta_description}}</h3>
+                    </div>
+                    
                     <div class="col-6">
                         @for($i=1; $i<=(int)$course->rating; $i++)
                             <i class="fas fa-star gold" aria-hidden="true"></i>

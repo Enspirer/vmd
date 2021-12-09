@@ -392,7 +392,7 @@ i.far.fa-heart {
 
   
 
-  /*mobile-view*/
+/*mobile-view*/
 @media screen and (max-width: 767px) {
     .mobile-row-gap {
         gap: 20px;
@@ -508,7 +508,31 @@ i.far.fa-heart {
     }
 
     .swiper-button-next, .swiper-button-prev {
-        top: 44% !important;
+        top: 46% !important;
+    }
+
+    .course-list-item-price {
+        text-align: center;
+        width: max-content;
+        display: block;
+        background-color: #eee;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 45px;
+        border-radius: 4px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .time-and-lessons-small {
+        font-size: 0.6rem;
+    }
+
+    .notification-row {
+        margin-bottom: 0rem, im !important;
+        margin-top: 1rem;
     }
 
 }

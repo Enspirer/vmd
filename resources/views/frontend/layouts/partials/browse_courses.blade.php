@@ -125,7 +125,7 @@
                                                         {{$pop_courses->meta_description}}</p>
                                                 </div>
 
-                                                <div class="row mb-3 align-items-center">
+                                                <div class="row mb-3 align-items-center notification-row">
                                                     <div class="col-6">
                                                         <i class="fas fa-star gold" aria-hidden="true"></i>
                                                         <i class="fas fa-star gold" aria-hidden="true"></i>
@@ -248,7 +248,7 @@
                                                         {!!$trend_courses->description!!}</p>
                                                 </div>
 
-                                                <div class="row mb-3 align-items-center">
+                                                <div class="row mb-3 align-items-center notification-row">
                                                     <div class="col-6">
                                                         <i class="fas fa-star gold" aria-hidden="true"></i>
                                                         <i class="fas fa-star gold" aria-hidden="true"></i>

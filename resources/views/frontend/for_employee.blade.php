@@ -82,7 +82,7 @@
 <div class="container" style="margin-bottom : 5rem;">
     <div class="row position-relative">
         <h1 class="fw-bold text-center">SIMPLE AND EFFECTIVE PROCESS WITH VMD</h1>
-        <p class="text-center position-absolute"
+        <p class="text-center position-absolute inner-heading"
             style="opacity: 0.04; top: -0.2rem; font-size: 3rem; line-height: 1.2; z-index: -1; font-weight: 800">SIMPLE
             AND EFFECTIVE PROCESS WITH VMD</p>
     </div>
