@@ -92,7 +92,18 @@ class RegisterController extends Controller
 
         if ($validator->passes()) {
             // Store your user in database
-            event(new Registered($user = $this->create($request->all())));
+            if($request->file('cv'))
+            {
+                    $preview_fileName = time().'_'.rand(1000,10000).'.'.$request->cv->getClientOriginalExtension();
+                    $fullURLsPreviewFile = $request->cv->move(public_path('files/cv'), $preview_fileName);
+                    $image_url = $preview_fileName;
+
+            }else{
+                    $image_url = null;
+            }
+
+
+            event(new Registered($user = $this->create(array_merge($request->all(), ['cv' => $image_url]))));
             return redirect()-> route('frontend.auth.login');
 
         }

@@ -21,7 +21,7 @@
                   <div class="reg-error" style="background: darkred;color: white;">{{ implode('', $errors->all(':message')) }}</div>
                 @endif
 
-                <form method="post" action="{{route('frontend.auth.register.post')}}">
+                <form enctype="multipart/form-data" method="post" action="{{route('frontend.auth.register.post')}}">
                     {{csrf_field()}}
 
                     <input type="hidden" name="profile_type" value="employee_account">
