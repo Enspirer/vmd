@@ -33,7 +33,7 @@
 
     <div class="container" style="margin-bottom : 6rem;">
         <div class="row" style="justify-content: center;">
-            <div class="col-4 position-relative col-sm-6">
+            <div class="col-4 position-relative">
                 <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100 vision-height">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="col-4 position-relative col-sm-6">
+            <div class="col-4 position-relative">
                 <img src="{{ url('img/frontend/about_us/vision_1.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
@@ -69,9 +69,48 @@
     <div class="container" style="margin-bottom: 7rem;">
         <div class="row">
             <div class="col-12">
-                <h3 class="fw-bold text-center mb-3">Why choose us?</h3>
+                <h3 class="fw-bold text-center mb-5">Why choose us?</h3>
 
-                <p style="line-height: 1.5rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nesciunt dolores maiores? Odio, cum ducimus eligendi rerum dignissimos doloribus. Unde error esse aspernatur voluptates nobis, quod neque doloribus laborum mollitia natus, quia, dignissimos facere. Alias assumenda non amet consectetur dolore ex debitis, asperiores et dolorum eveniet, quod voluptates? Iure quas voluptates hic vero aliquid beatae laudantium iusto impedit ex? Vitae cumque itaque perspiciatis rem praesentium dolorum, magni ex similique doloremque maiores ducimus accusantium totam natus sapiente obcaecati nesciunt quasi beatae officiis minima asperiores. Odio porro est iure? Explicabo rerum hic neque deserunt non, minus, temporibus fuga, error placeat odio perspiciatis?</p>
+                <div class="row">
+                    <div class="col-4 col-xs-12">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="{{ url('img/frontend/index/consultant_1.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
+                            </div>
+                            <div class="col-9">
+                                <h6 class="fw-bold mb-2">Presales Questions</h6>
+                                <p class="mb-1" style="font-size: 0.9rem;">Have any question about Rocket LMS?</p>
+                                <p class="fw-bold" style="font-size: 0.75rem; color: #AB67BF">Ask a Presale Question</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-xs-12">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="{{ url('img/frontend/index/consultant_2.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
+                            </div>
+                            <div class="col-9">
+                                <h6 class="fw-bold mb-2">Support</h6>
+                                <p class="mb-1" style="font-size: 0.9rem;">Need help with the product and functionalities?</p>
+                                <p class="fw-bold" style="font-size: 0.75rem; color: #F05B68">Send a Support Ticket</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-xs-12">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="{{ url('img/frontend/index/consultant_3.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
+                            </div>
+                            <div class="col-9">
+                                <h6 class="fw-bold mb-2">Reports & Suggestions</h6>
+                                <p class="mb-1" style="font-size: 0.9rem;">Need a new feature or find a bug? We are here?</p>
+                                <p class="fw-bold" style="font-size: 0.75rem; color: #305EDF">Contact Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
