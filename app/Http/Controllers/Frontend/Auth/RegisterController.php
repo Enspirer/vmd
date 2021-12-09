@@ -95,13 +95,15 @@ class RegisterController extends Controller
             if($request->file('cv'))
             {
                     $preview_fileName = time().'_'.rand(1000,10000).'.'.$request->cv->getClientOriginalExtension();
-                    $fullURLsPreviewFile = $request->cv->move(public_path('files/about_us'), $preview_fileName);
+                    $fullURLsPreviewFile = $request->cv->move(public_path('files/cv'), $preview_fileName);
                     $image_url = $preview_fileName;
+
             }else{
-                    $image_url = 'about.png';
+                    $image_url = null;
             }
-            $request->image_url = $image_url;
-            event(new Registered($user = $this->create($request->all())));
+
+
+            event(new Registered($user = $this->create(array_merge($request->all(), ['cv' => $image_url]))));
             return redirect()-> route('frontend.auth.login');
 
         }
