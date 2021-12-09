@@ -11,6 +11,21 @@
 
 @section('content')
 
+@if( session()->has('message') )
+   
+    <div class="container" style="background-color: #0dcaf0; padding-top:5px; margin-top:50px; margin-bottom:50px; border-radius: 50px 50px; text-align:center;">
+
+            <h1 style="margin-top:80px;" class="fs-1">Thank You!</h1><br>
+            <p class="lead mb-3"><h4>We appreciate you contacting us. One of our member will get back in touch with you soon!<br><br> Have a great day!</h4></p>
+            <br><hr><br>    
+            <p class="lead">
+                <a class="btn btn-success btn-md px-4 mt-3 mb-3" href="{{url('contact-us')}}" role="button">Go Back</a>
+            </p>
+        <br>
+    </div>
+
+@else 
+
 <div class="container" style="margin-top: 4rem; margin-bottom : 5rem;">
     <div class="row position-relative">
         <h1 class="fw-bold text-center">CONTACT US</h1>
@@ -53,8 +68,9 @@
             <h6 class="mb-3">Want to get ahead?</h6>
             <h4 class="fw-bold mb-3" style="color: #0090FF">Contact Information</h4>
 
-            <p class="mb-3" style="font-size: 0.8rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                quod earum voluptates consequatur. Aspernatur perspiciatis.</p>
+            <p class="mb-3" style="font-size: 0.8rem;">
+                {{ config('contact_text') }}
+            </p>
 
 
             <div class="row mt-4">
@@ -68,8 +84,7 @@
                             <i style="padding-top:5px;" class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="col-11 ps-0">
-                            <h6 class="fw-bolder mb-2 pl-10-xs">VMD Consultant</h6>
-                            <p class="pl-10-xs" style="line-height: 1.4rem; font-weight: 600">45/a 1st Avenue, <br> London, <br> USA</p>
+                            <p class="pl-10-xs" style="line-height: 1.4rem; font-weight: 600">{!! config('contact_address') !!}</p>
                         </div>
                     </div>
                     <div class="row align-items-center mb-3">
@@ -77,7 +92,7 @@
                             <i class="bi bi-telephone-fill"></i>
                         </div>
                         <div class="col-11 ps-0">
-                            <p class="pl-10-xs">0094 11 2942952 / 11 5022832</p>
+                            <p class="pl-10-xs">{{ config('contact_number') }}</p>
                         </div>
                     </div>
 
@@ -87,7 +102,7 @@
                                 style="height: 1rem; width: 1rem;">
                         </div>
                         <div class="col-11 ps-0">
-                            <p class="pl-10-xs">0094 11 5526575</p>
+                            <p class="pl-10-xs">{{ config('contact_fax') }}</p>
                         </div>
                     </div>
 
@@ -96,7 +111,7 @@
                             <i class="bi bi-envelope-fill"></i>
                         </div>
                         <div class="col-11 ps-0">
-                            <p class="pl-10-xs">info@anur.com</p>
+                            <p class="pl-10-xs">{{ config('contact_email') }}</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +140,8 @@
     <div class="row">
         <div class="col-6">
             <div class="contact-form p-4">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="{{route('frontend.contact_us')}}" method="post" enctype="multipart/form-data">
+                {{csrf_field()}}
                     <h4 class="fw-bold mb-1">Let Us Call You!</h4>
                     <h6 class="fw-bold mb-4">To help you choose your property</h6>
 
@@ -138,14 +154,14 @@
 
                             <div class="col-6 ">
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
+                                    <!-- <div class="input-group-prepend">
                                         <select class="form-select" aria-label="country_code" id="country_code"
                                             name="agent_type" required>
                                             <option value="+94">+94</option>
                                             <option value="+95">+95</option>
                                         </select>
-                                    </div>
-                                    <input type="text" class="form-control rounded-0" name="phone" id="phone"
+                                    </div> -->
+                                    <input type="text" class="form-control rounded-0" name="phone_number" id="phone_number"
                                         placeholder="Your Number" required>
                                 </div>
                             </div>
@@ -165,7 +181,7 @@
                     <div>
                         <p class="mb-1">Consent</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                             <label class="form-check-label ms-2" for="flexCheckDefault">
                                 Acceptance * <br>
                                 I would like to receive information & updates from Trace Solutions in relation to my
@@ -198,7 +214,7 @@
 </div>
 
 
-
+@endif
 
 @endsection
 
@@ -214,3 +230,4 @@ function checked() {
 </script>
 
 @endpush
+

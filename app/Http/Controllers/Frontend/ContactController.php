@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+// use Illuminate\Support\Facades\Mail;
 use App\Mail\Frontend\Contact\SendContact;
 use App\Http\Requests\Frontend\Contact\SendContactRequest;
 use Illuminate\Support\Facades\Session;
 use Arcanedev\NoCaptcha\Rules\CaptchaRule;
-
+use App\Models\Models\ContactUs;
+use Mail;  
+use \App\Mail\ContactUsMail;
 
 /**
  * Class ContactController.
@@ -74,4 +76,33 @@ class ContactController extends Controller
 
         return redirect()->back();
     }
+
+    public function contact_us(Request $request)
+    {        
+        // dd($request);     
+   
+        $contactus = new ContactUs;
+
+        $contactus->name=$request->name;
+        $contactus->phone=$request->phone_number;
+        $contactus->email=$request->email;
+        $contactus->message=$request->message;
+        $contactus->status='Pending'; 
+
+        $contactus->save();
+
+        $details = [
+            'name' => $request->name,
+            'phone_number' => $request->phone_number,
+            'email' => $request->email,
+            'message' => $request->message
+        ];
+
+        \Mail::to([$request->email,'nihsaan.enspirer@gmail.com'])->send(new ContactUsMail($details));
+        
+        session()->flash('message','Thanks!');
+
+        return back();    
+    }
+
 }

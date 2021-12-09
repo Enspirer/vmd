@@ -25,6 +25,7 @@ Route::get('for-employee', [EmployeeController::class, 'index'])->name('for_empl
 Route::post('find_canidates', [FindCandidatesController::class, 'find_canidates'])->name('find_canidates');
 Route::post('post_job', [FindCandidatesController::class, 'post_job'])->name('post_job');
 
+Route::post('contact_us', [ContactController::class, 'contact_us'])->name('contact_us');
 
 
 
