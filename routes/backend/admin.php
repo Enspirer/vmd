@@ -12,6 +12,8 @@ use \App\Http\Controllers\Backend\ForEmployeeController;
 use \App\Http\Controllers\Backend\ContactUsController;
 use \App\Http\Controllers\Backend\AboutUsController;
 use \App\Http\Controllers\Backend\WhyChooseController;
+use \App\Http\Controllers\Backend\CandidatesController;
+use \App\Http\Controllers\Backend\EmployeesController;
 
 
 /*
@@ -401,3 +403,22 @@ Route::get('why_choose_us/getdetails', [WhyChooseController::class, 'getdetails'
 Route::get('why_choose_us/edit/{id}', [WhyChooseController::class, 'edit'])->name('why_choose_us.edit');
 Route::post('why_choose_us/update', [WhyChooseController::class, 'update'])->name('why_choose_us.update');
 Route::get('why_choose_us/delete/{id}', [WhyChooseController::class, 'destroy'])->name('why_choose_us.destroy');
+
+
+Route::get('candidates', [CandidatesController::class, 'index'])->name('candidates.index');
+Route::get('candidates/getdetails', [CandidatesController::class, 'getdetails'])->name('candidates.getdetails');
+Route::get('candidates/edit/{id}', [CandidatesController::class, 'edit'])->name('candidates.edit');
+Route::post('candidates/update', [CandidatesController::class, 'update'])->name('candidates.update');
+// Route::get('candidates/delete/{id}', [CandidatesController::class, 'destroy'])->name('candidates.destroy');
+
+Route::get('employees', [EmployeesController::class, 'index'])->name('employees.index');
+Route::get('employees/getdetails', [EmployeesController::class, 'getdetails'])->name('employees.getdetails');
+Route::get('employees/edit/{id}', [EmployeesController::class, 'edit'])->name('employees.edit');
+Route::post('employees/update', [EmployeesController::class, 'update'])->name('employees.update');
+// Route::get('employees/delete/{id}', [EmployeesController::class, 'destroy'])->name('employees.destroy');
+
+
+
+
+
+

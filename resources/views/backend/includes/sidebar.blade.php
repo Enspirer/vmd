@@ -364,6 +364,22 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/candidates*')) }}"
+                            href="{{ route('admin.candidates.index') }}">
+                            Canidates
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/employees*')) }}"
+                            href="{{ route('admin.employees.index') }}">
+                            Employees
+                        </a>
+                    </li>
+                </ul>
             </li>
 
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/about_us*','admin/why_choose_us*']), 'open') }}">
