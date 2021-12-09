@@ -140,7 +140,7 @@
     <div class="row">
         <div class="col-6">
             <div class="contact-form p-4">
-                <form action="{{route('frontend.contact_us')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('frontend.contact_us_send')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                     <h4 class="fw-bold mb-1">Let Us Call You!</h4>
                     <h6 class="fw-bold mb-4">To help you choose your property</h6>

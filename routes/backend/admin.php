@@ -11,6 +11,7 @@ use \App\Http\Controllers\Backend\EmployeeBannerController;
 use \App\Http\Controllers\Backend\ForEmployeeController;
 use \App\Http\Controllers\Backend\ContactUsController;
 use \App\Http\Controllers\Backend\AboutUsController;
+use \App\Http\Controllers\Backend\WhyChooseController;
 
 
 /*
@@ -393,3 +394,10 @@ Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us.inde
 Route::post('about_us/update', [AboutUsController::class, 'update'])->name('about_us.update');
 
 
+Route::get('why_choose_us', [WhyChooseController::class, 'index'])->name('why_choose_us.index');
+Route::get('why_choose_us/create', [WhyChooseController::class, 'create'])->name('why_choose_us.create');
+Route::post('why_choose_us/store', [WhyChooseController::class, 'store'])->name('why_choose_us.store');
+Route::get('why_choose_us/getdetails', [WhyChooseController::class, 'getdetails'])->name('why_choose_us.getdetails');
+Route::get('why_choose_us/edit/{id}', [WhyChooseController::class, 'edit'])->name('why_choose_us.edit');
+Route::post('why_choose_us/update', [WhyChooseController::class, 'update'])->name('why_choose_us.update');
+Route::get('why_choose_us/delete/{id}', [WhyChooseController::class, 'destroy'])->name('why_choose_us.destroy');
