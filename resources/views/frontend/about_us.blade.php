@@ -22,32 +22,10 @@
     <div class="container" style="margin-bottom : 7rem;">
         <div class="row align-items-center">
             <div class="col-6">
-                <img src="{{ url('img/frontend/about_us/about.png') }}" alt="" class="img-fluid w-100" style="height: 30rem; object-fit: cover">
+                <img src="{{ url('files/about_us',config('about_us_image')) }}" alt="" class="img-fluid w-100" style="height: 30rem; object-fit: cover">
             </div>
             <div class="col-6 mt">
-                <p>Our main aim is to provide the right position to the right person. We believe, if you
-                    meet the required standards we will be able to provide you the role no matter what
-                    background or what country you come from.</p> <br>
-
-                <h5>Start your desired life in the UK :</h5> <br>
-
-                <p>Our promise to you is to provide a superior employment experience whether you are
-                    a candidate or we are engaging with your organization. While our competitors think
-                    recruiting is a business, we believe it is one of the most important services in the
-                    world. We believe we can make people’s lives better with correct recruitment.</p>
-                <br>
-
-                <p>For Candidates(Applicants) : If you have the right Qualifications, experience, talent
-                    and more than anything else, you have the commitment and drive to pursue your
-                    dreams, we are at your service to provide you with the opportunity to achieve your
-                    goals. Nothing else matters to us. We will lead you to the career life you deserve.</p>
-                <br>
-
-                <p>For Clients (Employers) : We understand the importance of recruiting the suitable
-                    candidate to a company. We dedicate much time, and energy to provide best
-                    suitable &amp; most importantly the candidates which we think have the utter
-                    commitment and dedication to work for you. We want our candidates to be a part of
-                    the organisation family and make a positive different.</p>
+                {!! config('about_us_description') !!}
             </div>
         </div>
     </div>
@@ -55,22 +33,22 @@
 
     <div class="container" style="margin-bottom : 6rem;">
         <div class="row" style="justify-content: center;">
-            <div class="col-4 position-relative">
+            <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100 vision-height">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
                         <h4 class="fw-bold mb-2" style="color: #0763E5">Our Mission</h4>
-                        <p style="font-size: 0.85rem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, illum. Delectus inventore ad ex recusandae velit explicabo sint fuga. Maxime qui, unde doloribus itaque dolores nemo laborum temporibus ducimus. Adipisci!</p>
+                        <p style="font-size: 0.85rem">{{config('our_mision')}}</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-4 position-relative">
+            <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/vision_1.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
                         <h4 class="fw-bold mb-2" style="color: #0763E5">Our Vision</h4>
-                        <p style="font-size: 0.85rem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, illum. Delectus inventore ad ex recusandae velit explicabo sint fuga. Maxime qui, unde doloribus itaque dolores nemo laborum temporibus ducimus. Adipisci!</p>
+                        <p style="font-size: 0.85rem">{{config('our_vision')}}</p>
                     </div>
                 </div>
             </div>

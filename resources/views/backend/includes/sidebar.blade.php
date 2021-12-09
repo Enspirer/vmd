@@ -366,6 +366,29 @@
                 </ul>
             </li>
 
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/about_us*','admin/contact_information*']), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
+                    href="#">
+                    <i class="nav-icon far fa-address-card"></i> About us
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/about_us*')) }}"
+                            href="{{ route('admin.about_us.index') }}">
+                            About Us Informations
+                        </a>
+                    </li>
+                </ul>
+                <!-- <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
+                            href="{{ route('admin.contact_information.index') }}">
+                            Why Choose VMD
+                        </a>
+                    </li>
+                </ul> -->
+            </li>
+
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/contact_us*','admin/contact_information*']), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/contact_information*')) }}"
                     href="#">

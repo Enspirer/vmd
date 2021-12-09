@@ -24,7 +24,7 @@
     </div>
 
 
-    <div class="container position-relative" style="margin-bottom : 7rem;">
+    <div class="container position-relative hidden-xs" style="margin-bottom : 7rem;">
         <div class="row justify-content-end align-items-center" style="margin-bottom: 9rem;">
             <div class="col-2 text-center">
                 <img src="{{ url('img/frontend/candidate/sample_1.png') }}" alt="" class="img-fluid">
@@ -87,123 +87,209 @@
         <div class="row">
             <div class="col-6 vl_4"></div>
         </div>
-    </div>      
+    </div>     
+    
+    
+    <div class="container visible-xs chart-container">
+    <div class="row" style="">
+        <div>
+            <img src="{{ url('img/frontend/employee/sample_1.png') }}" alt="" class="img-fluid">
+        </div>
+        <div class="chart-txt">
+            <h5 class="fw-bold mb-2">Register with VMD</h5>
+            <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
+            </p>
+        </div>
+    </div>
+    <span class="dotted-line"></span>
+    <div class="row" style="">
+        <div>
+        <img src="http://127.0.0.1:8000/img/frontend/candidate/sample_2.png" alt="" class="img-fluid">
+        </div>
+        <div class="chart-txt">
+            <h5 class="fw-bold mb-2">Create your profile LMS</h5>
+            <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
+            </p>
+        </div>
+
+    </div>
+    <span class="dotted-line"></span>
+    <div class="row">
+        <div>
+        <img src="http://127.0.0.1:8000/img/frontend/candidate/sample_3.png" alt="" class="img-fluid">
+        </div>
+        <div class="chart-txt">
+            <h5 class="fw-bold mb-2">Get Qualified</h5>
+            <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
+            </p>
+        </div>
+    </div>
+    <span class="dotted-line"></span>
+    <div class="row">
+        <div>
+        <img src="http://127.0.0.1:8000/img/frontend/candidate/sample_4.png" alt="" class="img-fluid">
+        </div>
+        <div class="chart-txt">
+            <h5 class="fw-bold mb-2">Find a sponsor</h5>
+            <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
+            </p>
+        </div>
+    </div>
+    <span class="dotted-line"></span>
+    <div class="row">
+        <div>
+        <img src="http://127.0.0.1:8000/img/frontend/candidate/sample_5.png" alt="" class="img-fluid">
+        </div>
+        <div class="chart-txt">
+            <h5 class="fw-bold mb-2">Apply for job</h5>
+            <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
+            </p>
+        </div>
+    </div>
 
 
-    <div class="container" style="margin-bottom : 5rem;">
-        <div class="row align-items-center">
-            <div class="col-5">
-                <img src="{{ url('img/frontend/candidate/girl.png') }}" alt="" class="img-fluid w-100" style="height: 48rem; object-fit: cover;">
+</div>
+
+
+
+<div class="container" style="margin-bottom : 4rem;">
+    <h1 class="fw-bold text-center mb-5">Why Choose <span class="fw-bolder">VMD</span></h1>
+
+    <div class="row align-items-center">
+        <div class="col-5 hidden-xs">
+            <img src="{{ url('img/frontend/employee/girl.png') }}" alt="" class="img-fluid w-100"
+                style="height: 48rem; object-fit: cover;">
+        </div>
+
+        <div class="col-7 col-xs-12">
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-7">
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
-                    </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
-                    </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
-                    </div>
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
                 </div>
 
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
-                    </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
-                    </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
-                    </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
-                    </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
-                    </div>
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
                 </div>
 
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
-                    </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
-                    </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
-                    </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
-                    </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
-                    </div>
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
                 </div>
 
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
-                    </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
-                    </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="row align-items-center mb-3">
-                    <div class="col-1">
-                        <img src="{{ url('img/frontend/candidate/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
                     </div>
-                    <div class="col-11">
-                        <h5 class="fw-bold">Sample text here</h5>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
                     </div>
-                    
-                    <div class="row justify-content-end">
-                        <div class="col-11">
-                            <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.  This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines. </p>
-                        </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-3">
+                <div class="col-1 mobile-check-logo">
+                    <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
+                        style="height: 2.2rem;">
+                </div>
+                <div class="col-11 mobile-check-list">
+                    <h5 class="fw-bold">Sample text here</h5>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-11 mobile-check-list">
+                        <p style="font-size: 0.8rem;">This course is CPD accredited. It meets accepted Continuing
+                            Professional Development (CPD) guidelines. This course is CPD accredited. It meets accepted
+                            Continuing Professional Development (CPD) guidelines. </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
     <div class="container-fluid bottom_banner">
