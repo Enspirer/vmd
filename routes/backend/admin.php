@@ -10,6 +10,7 @@ use \App\Http\Controllers\Backend\YourJobController;
 use \App\Http\Controllers\Backend\EmployeeBannerController;
 use \App\Http\Controllers\Backend\ForEmployeeController;
 use \App\Http\Controllers\Backend\ContactUsController;
+use \App\Http\Controllers\Backend\AboutUsController;
 
 
 /*
@@ -388,5 +389,7 @@ Route::get('contact_us/delete/{id}', [ContactUsController::class, 'destroy'])->n
 Route::get('contact_information', [ContactUsController::class, 'contact_information'])->name('contact_information.index');
 Route::post('contact_information/update', [ContactUsController::class, 'contact_information_update'])->name('contact_information.update');
 
+Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us.index');
+Route::post('about_us/update', [AboutUsController::class, 'update'])->name('about_us.update');
 
 
