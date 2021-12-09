@@ -7295,6 +7295,11 @@ button.bg-success:focus {
     background-color: #3a9d5d !important;
 }
 
+a.bg-success:hover {
+    color: #fff;
+    background-color: #000 !important;
+}
+
 .bg-info {
     background-color: #17a2b8 !important;
 }
