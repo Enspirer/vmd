@@ -100,6 +100,13 @@
     
 }
 
+/*tab-landscape*/
+@media (min-width: 992px) and (max-width: 1024px) {
+    .home-card-side {
+        width: 40%;
+    }
+}
+
 
 
 /*large screen*/

@@ -442,6 +442,27 @@
 
             mySwiper.realIndex(2);
         } 
+
+        else if (y.matches) {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                slidesPerGroup: 1,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            mySwiper.realIndex(2);
+        }
+
         else {
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 3,
@@ -464,8 +485,11 @@
     }
 
     var x = window.matchMedia("(max-width: 767px)")
+    var y = window.matchMedia("(max-width: 991px)")
     myFunction(x) // Call listener function at run time
+    myFunction(y)
     x.addListener(myFunction) // Attach listener function on state changes
+    y.addListener(myFunction) // Attach listener function on state changes
     </script>
 
     <script>

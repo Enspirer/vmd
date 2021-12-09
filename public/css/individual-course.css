@@ -413,3 +413,94 @@ span.play-btn img {
     height: 100%;
     min-height: 950px;
 }
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .side-cards {
+        position:inherit;
+        right: 0;
+        top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sidebar-btn {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .inner-box ul {
+        padding: 0;
+    }
+
+    .btn-bar a {
+        font-size: 0.8rem;
+    }
+
+    .progress-bar-wrapper {
+        flex: 1;
+    }
+
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+   .col-sm-7 {
+        width: 58.33%;
+   }
+   .col-sm-5 {
+        width: 41.67%;
+   }
+
+   .single-course-banner-container {
+       height: 35vh;
+   }
+
+   .banner-txt-wrapper {
+       height: 35vh;
+   }
+
+   .side-cards {
+       padding-left: 15px;
+       padding-right: 15px;
+       top: -22vh;
+   }
+
+   .sidebar-btn {
+       padding-left: 50px;
+       padding-right: 50px;
+       margin-top: 0px;
+   }
+
+   .video-container.mb-5 {
+       margin-bottom: 2rem;
+   }
+
+   .btn-bar a {
+       font-size: 0.8rem;
+   }
+
+   .inner-box ul {
+       padding: 15px;
+       padding-top: 30px;
+       margin-bottom: 0;
+   }
+
+   .progress-bar-wrapper {
+        flex: 1;
+    }
+
+}
+
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}

@@ -90,7 +90,7 @@
         <!-- main content area -->
         <div class="main-content-wrapper">
             <!-- main content -->
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-7">
                 <!-- learn box -->
                 <div class="learn-box">
                     <h3>What you'll learn</h3>
@@ -185,7 +185,7 @@
 
             <!-- <div style="padding:0 0 350px 0"></div> -->
             <!-- sidebar -->
-            <div class="col-md-4 side-cards">
+            <div class="col-md-4 col-sm-5 side-cards">
                 <div class="top-card i-course-card">
 
 

@@ -51,7 +51,7 @@
     <div class="row justify-content-center">
         <div class="col-9 col-xs-12 padding-15-xs">
             <div class="row justify-content-center">
-                <div class="col-5 col-xs-12">
+                <div class="col-5 col-xs-12 col-sm-6">
                     <div class="card p-5 text-center">
                         <h4 class="fw-bold mb-4">Post your Jobs</h4>
 
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5 col-xs-12 padding-15-xs">
+                <div class="col-5 col-xs-12 padding-15-xs col-sm-6">
                     <div class="card p-5 text-center">
                         <h4 class="fw-bold mb-4">Find Candidates</h4>
 
