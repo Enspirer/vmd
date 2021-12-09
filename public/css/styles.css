@@ -185,6 +185,34 @@ i.drop-icon.fa.fa-caret-down {
 
 /*tab-portrait*/
 @media (min-width: 768px) and (max-width: 991px) {
+      /*navigation styles*/
+
+      li.drop-list ul.dropdown {
+        position:inherit;
+    }
+
+    a.nav-link.p-0.text-dark {
+        text-align: center;
+    }
+
+
+    .logo {
+        object-fit: contain;
+    }
+    
+    a.navbar-brand {
+        width: 50%;
+    }
+
+    li.nav-item.px-3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+    }
+    
 }
 
 

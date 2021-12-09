@@ -41,6 +41,10 @@
   top: 944px;
 }
 
+.visible-xs {
+  display: none !important;
+}
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
   .join {
@@ -50,11 +54,68 @@
   .container.p-5.pb-0.join-banner {
     padding-bottom: 3rem !important;
   }
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .visible-xs {
+    display: block !important;
+  }
+
+  .chart-container {
+    text-align: center;
+  }
+
+  .dotted-line {
+    border-right: 4px dashed #0763E5;
+    height: 144px;
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    margin-bottom: 15px;
+  }
+
+  .chart-txt {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+
+
+  .mobile-check-logo {
+    width: 20%;
+  }
+
+  .mobile-check-list {
+    width: 80%;
+  }
+
+  .join-banner {
+    padding: 15px !important;
+    padding-top: 3rem!important;
+    margin-bottom: 0 !important;
+  }
+
 }
 
 
 /*tab-portrait*/
 @media (min-width: 768px) and (max-width: 991px) {
+  .vl_1 {
+    top: 118px;
+  }
+
+  .vl_2 {
+    top: 382px;
+  }
+
+  .vl_3  {
+    top: 642px;
+  }
+
+  .vl_4 {
+    top: 905px;
+  }
 }
 
 

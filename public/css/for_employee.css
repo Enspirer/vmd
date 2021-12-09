@@ -56,6 +56,10 @@
   margin-bottom: 6rem;
 }
 
+.visible-xs {
+  display: none !important;
+}
+
 /*mobile-view*/
 @media screen and (max-width: 767px) {
   .zero-margin {
@@ -74,6 +78,51 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+
+  .mobile-small-title {
+    font-size: 2rem !important;
+  }
+
+  .padding-15-xs {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .visible-xs {
+    display: block !important;
+  }
+
+  .chart-container {
+    text-align: center;
+  }
+
+  .dotted-line {
+    border-right: 4px dashed #0763E5;
+    height: 144px;
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.chart-txt {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+
+.mobile-check-logo {
+  width: 20%;
+}
+
+.mobile-check-list {
+  width: 80%;
+}
 
 }
 
