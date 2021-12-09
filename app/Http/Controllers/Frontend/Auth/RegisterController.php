@@ -114,6 +114,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
                 $user->dob = isset($data['dob']) ? $data['dob'] : NULL ;
                 $user->phone = isset($data['phone']) ? $data['phone'] : NULL ;
                 $user->gender = isset($data['gender']) ? $data['gender'] : NULL;
@@ -122,6 +123,16 @@ class RegisterController extends Controller
                 $user->pincode = isset($data['pincode']) ? $data['pincode'] : NULL;
                 $user->state = isset($data['state']) ? $data['state'] : NULL;
                 $user->country = isset($data['country']) ? $data['country'] : NULL;
+
+                $user->profile_type = isset($data['profile_type']) ? $data['profile_type'] : NULL;
+                $user->company_name = isset($data['company_name']) ? $data['company_name'] : NULL;
+                $user->postion_vacant = isset($data['postion_vacant']) ? $data['postion_vacant'] : NULL;
+                $user->comments = isset($data['comments']) ? $data['comments'] : NULL;
+                $user->contact_number = isset($data['contact_number']) ? $data['contact_number'] : NULL;
+                $user->education_qulification = isset($data['education_qulification']) ? $data['education_qulification'] : NULL;
+                $user->country = isset($data['country']) ? $data['country'] : NULL;
+                $user->cv = isset($data['cv']) ? $data['cv'] : NULL;
+
                 $user->save();
 
         $userForRole = User::find($user->id);
