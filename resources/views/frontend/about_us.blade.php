@@ -33,7 +33,7 @@
 
     <div class="container" style="margin-bottom : 6rem;">
         <div class="row" style="justify-content: center;">
-            <div class="col-4 position-relative">
+            <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/mission.png') }}" alt="" class="img-fluid w-100 vision-height">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="col-4 position-relative">
+            <div class="col-4 position-relative col-sm-6">
                 <img src="{{ url('img/frontend/about_us/vision_1.png') }}" alt="" class="img-fluid w-100" style="height: 30rem;">
                 <div class="row content justify-content-center text-center mobile-fix-row">
                     <div class="col-9">
