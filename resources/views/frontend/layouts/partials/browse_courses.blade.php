@@ -13,7 +13,7 @@
     <div class="row">
         @if(count($feature_courses) != 0 )
         @foreach($feature_courses as $fea_courses)
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12 col-sm-12">
             <a style="text-decoration: none;" href="{{ route('courses.show',$fea_courses->slug) }}">
                 <div class="featured-card">
                     <div class="row">

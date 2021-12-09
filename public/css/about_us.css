@@ -49,6 +49,9 @@
 
 /*tab-portrait*/
 @media (min-width: 768px) and (max-width: 991px) {
+    .col-sm-6 {
+        width: 50%;
+    }
 }
 
 

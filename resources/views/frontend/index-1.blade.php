@@ -67,7 +67,7 @@
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
                             <div class="row home-card">
-                                <div class="col-4 col-xs-12 padding-reduce">
+                                <div class="col-4 col-xs-12 padding-reduce home-card-side">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
 
@@ -124,7 +124,7 @@
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
                             <div class="row" class="home-card">
-                                <div class="col-4 col-xs-12 padding-reduce">
+                                <div class="col-4 col-xs-12 padding-reduce home-card-side">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
 
@@ -180,7 +180,7 @@
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
                             <div class="row" class="home-card">
-                                <div class="col-4 col-xs-12 padding-reduce">
+                                <div class="col-4 col-xs-12 padding-reduce home-card-side">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
 

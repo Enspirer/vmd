@@ -89,6 +89,15 @@
 
 /*tab-portrait*/
 @media (min-width: 768px) and (max-width: 991px) {
+    .home-card-side {
+        width: 50%;
+    }
+
+    img.img-fluid.shadow.w-100.p-2 {
+        height: auto !important;
+    }
+
+    
 }
 
 
