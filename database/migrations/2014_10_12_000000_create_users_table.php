@@ -21,6 +21,14 @@ class CreateUsersTable extends Migration
             $table->uuid('uuid');
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->string('profile_type')->nullable()->comment('employee or candidate');
+            $table->text('company_name')->nullable();
+            $table->text('position_vacant')->nullable();
+            $table->text('comments')->nullable();
+            $table->text('contact_number')->nullable();
+            $table->text('education_qulification')->nullable();
+            $table->text('country')->nullable();
+            $table->text('cv')->nullable();
             $table->string('email')->unique();
             $table->string('avatar_type')->default('gravatar');
             $table->string('avatar_location')->nullable();

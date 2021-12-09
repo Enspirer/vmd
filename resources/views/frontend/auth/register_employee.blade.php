@@ -24,6 +24,8 @@
                 <form method="post" action="{{route('frontend.auth.register.post')}}">
                     {{csrf_field()}}
 
+                    <input type="hidden" name="profile_type" value="employee_account">
+
                     <div class="row mb-12">
                         <div class="col-6 col-xs-12 p-10-xs p-20-md">
                             <label for="employee_name" class="form-label mb-0 me-3 form-label">First Name</label>
@@ -69,12 +71,12 @@
                     <div class="row mb-3">
                         <div class="col-6 col-xs-12 p-10-xs p-20-md">
                             <label for="position" class="form-label mb-0 me-3 form-label">The position vacant</label>
-                            <input type="text" class="form-control text-white" id="position" name="position" required>
+                            <input type="text" class="form-control text-white" id="position" name="postion_vacant" required>
                         </div>
 
                         <div class="col-6 col-xs-12 p-10-xs p-20-md">
                             <label for="comment" class="form-label mb-0 me-3 form-label">Comments</label>
-                            <input type="text" class="form-control text-white" id="comment" name="comment" required>
+                            <input type="text" class="form-control text-white" id="comment" name="comments" required>
 
                             <div class="form-check mt-2">
                                 <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
