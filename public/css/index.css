@@ -97,6 +97,11 @@
         height: auto !important;
     }
 
+    .large-design-title, .large-design-title-about {
+        top: -1.5rem;
+        font-size: 3rem;
+    }
+
     
 }
 
