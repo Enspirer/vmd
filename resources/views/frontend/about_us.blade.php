@@ -75,7 +75,7 @@
 
                     @if(count($why_choose_us) != 0)
                         @foreach($why_choose_us as $key => $why_choose)
-                            <div class="col-4 col-xs-12 mt-5 col-sm-6">
+                            <div class="col-4 col-xs-12 mt-5">
                                 <div class="row align-items-center">
                                     <div class="col-3">
                                         <img src="{{ url('files/why_choose_us',$why_choose->icon) }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
