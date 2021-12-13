@@ -403,7 +403,12 @@
                     <i class="nav-icon far fa-hand-pointer"></i> For Candidate Page
                 </a>
                 <ul class="nav-dropdown-items">
-                    
+                    <li class="nav-item ">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/for_candidate*')) }}"
+                            href="{{ route('admin.for_candidate.index') }}">
+                            Why Choose VMD
+                        </a>
+                    </li>
                 </ul>
             </li>
             
