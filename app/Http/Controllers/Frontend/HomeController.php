@@ -106,8 +106,11 @@ class HomeController extends Controller
 
         $why_choose_us = WhyChooseUs::where('featured','Enabled')->where('status','Enabled')->orderBy('order','ASC')->get();
 
+        $course_slider = Course::where('published', '=', 1)->get();
+        // dd($course_slider);
+
         $categories = Category::get();
-        return view($this->path . '.index-' . config('theme_layout'), compact('popular_courses', 'featured_courses', 'sponsors', 'total_students', 'total_courses', 'total_teachers', 'testimonials', 'news', 'trending_courses', 'teachers', 'faqs', 'course_categories', 'reasons', 'sections','categories','why_choose_us'));
+        return view($this->path . '.index-' . config('theme_layout'), compact('popular_courses', 'featured_courses', 'sponsors', 'total_students', 'total_courses', 'total_teachers', 'testimonials', 'news', 'trending_courses', 'teachers', 'faqs', 'course_categories', 'reasons', 'sections','categories','why_choose_us','course_slider'));
     }
 
     public function getFaqs()
