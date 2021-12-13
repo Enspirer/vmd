@@ -232,7 +232,28 @@
         </div>
 
         <div class="col-7 col-xs-12">
-            <div class="row align-items-center mb-3">
+
+            @if(count($for_employee) != 0)
+                @foreach($for_employee as $for_emp)
+                    <div class="row align-items-center mb-3">
+                        <div class="col-1">
+                            <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        </div>
+                        <div class="col-11">
+                            <h5 class="fw-bold">{{$for_emp->title}}</h5>
+                        </div>
+                        
+                        <div class="row justify-content-end">
+                            <div class="col-11">
+                                <p style="font-size: 0.8rem;">{{$for_emp->description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <h5>No Any Data Here</h5>
+            @endif
+            <!-- <div class="row align-items-center mb-3">
                 <div class="col-1 mobile-check-logo">
                     <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
                         style="height: 2.2rem;">
@@ -356,7 +377,7 @@
                             Continuing Professional Development (CPD) guidelines. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

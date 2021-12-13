@@ -5,20 +5,21 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DataTables;
-use App\Models\Models\WhyChoose;
+use App\Models\Models\WhyChooseCandidate;
 
-class ForEmployeeController extends Controller
+
+class ForCandidateController extends Controller
 {
     public function index()
     {
-        return view('backend.for_employee.index');
+        return view('backend.for_candidate.index');
     }
 
     public function store(Request $request)
     {        
         // dd($request);
     
-        $add = new WhyChoose;
+        $add = new WhyChooseCandidate;
 
         $add->title=$request->title; 
         $add->description=$request->description;   
@@ -34,11 +35,11 @@ class ForEmployeeController extends Controller
     {
         if($request->ajax())
         {
-            $data = WhyChoose::get();
+            $data = WhyChooseCandidate::get();
             return DataTables::of($data)
                 ->addColumn('action', function($data){
                        
-                    $button = '<a href="'.route('admin.for_employee.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
+                    $button = '<a href="'.route('admin.for_candidate.edit',$data->id).'" name="edit" id="'.$data->id.'" class="edit btn btn-secondary btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
                     $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>';
                     return $button;
                 })
@@ -59,11 +60,11 @@ class ForEmployeeController extends Controller
 
     public function edit($id)
     {
-        $for_employee = WhyChoose::where('id',$id)->first();        
-        // dd($for_employee);              
+        $for_candidate = WhyChooseCandidate::where('id',$id)->first();        
+        // dd($for_candidate);              
 
-        return view('backend.for_employee.edit',[
-            'for_employee' => $for_employee         
+        return view('backend.for_candidate.edit',[
+            'for_candidate' => $for_candidate         
         ]);  
     }
 
@@ -71,22 +72,22 @@ class ForEmployeeController extends Controller
     {        
         // dd($request);
 
-        $update = new WhyChoose;
+        $update = new WhyChooseCandidate;
 
         $update->title=$request->title; 
         $update->description=$request->description;   
         $update->status=$request->status;
         $update->order=$request->order;
 
-        WhyChoose::whereId($request->hidden_id)->update($update->toArray());
+        WhyChooseCandidate::whereId($request->hidden_id)->update($update->toArray());
    
-        return redirect()->route('admin.for_employee.index')->withFlashSuccess('Updated Successfully');                   
+        return redirect()->route('admin.for_candidate.index')->withFlashSuccess('Updated Successfully');                   
 
     }
 
     public function destroy($id)
     {        
-        $data = WhyChoose::findOrFail($id);
+        $data = WhyChooseCandidate::findOrFail($id);
         $data->delete();   
     }
 }

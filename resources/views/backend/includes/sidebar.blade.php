@@ -382,6 +382,32 @@
                 </ul>
             </li>
 
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/for_employee*']), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/for_employee*')) }}"
+                    href="#">
+                    <i class="nav-icon far fa-hand-pointer"></i> For Employee Page
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item ">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/for_employee*')) }}"
+                            href="{{ route('admin.for_employee.index') }}">
+                            Why Choose VMD
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/for_candidate*']), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/for_candidate*')) }}"
+                    href="#">
+                    <i class="nav-icon far fa-hand-pointer"></i> For Candidate Page
+                </a>
+                <ul class="nav-dropdown-items">
+                    
+                </ul>
+            </li>
+            
+
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/about_us*','admin/why_choose_us*']), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/why_choose_us*')) }}"
                     href="#">

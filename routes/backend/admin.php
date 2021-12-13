@@ -14,6 +14,7 @@ use \App\Http\Controllers\Backend\AboutUsController;
 use \App\Http\Controllers\Backend\WhyChooseController;
 use \App\Http\Controllers\Backend\CandidatesController;
 use \App\Http\Controllers\Backend\EmployeesController;
+use \App\Http\Controllers\Backend\ForCandidateController;
 
 
 /*
@@ -417,6 +418,19 @@ Route::get('employees/edit/{id}', [EmployeesController::class, 'edit'])->name('e
 Route::post('employees/update', [EmployeesController::class, 'update'])->name('employees.update');
 // Route::get('employees/delete/{id}', [EmployeesController::class, 'destroy'])->name('employees.destroy');
 
+Route::get('for_employee', [ForEmployeeController::class, 'index'])->name('for_employee.index');
+Route::post('for_employee/store', [ForEmployeeController::class, 'store'])->name('for_employee.store');
+Route::get('for_employee/getdetails', [ForEmployeeController::class, 'getdetails'])->name('for_employee.getdetails');
+Route::get('for_employee/edit/{id}', [ForEmployeeController::class, 'edit'])->name('for_employee.edit');
+Route::post('for_employee/update', [ForEmployeeController::class, 'update'])->name('for_employee.update');
+Route::get('for_employee/delete/{id}', [ForEmployeeController::class, 'destroy'])->name('for_employee.destroy');
+
+Route::get('for_candidate', [ForCandidateController::class, 'index'])->name('for_candidate.index');
+Route::post('for_candidate/store', [ForCandidateController::class, 'store'])->name('for_candidate.store');
+Route::get('for_candidate/getdetails', [ForCandidateController::class, 'getdetails'])->name('for_candidate.getdetails');
+Route::get('for_candidate/edit/{id}', [ForCandidateController::class, 'edit'])->name('for_candidate.edit');
+Route::post('for_candidate/update', [ForCandidateController::class, 'update'])->name('for_candidate.update');
+Route::get('for_candidate/delete/{id}', [ForCandidateController::class, 'destroy'])->name('for_efor_candidatemfor_candidateployee.destroy');
 
 
 
