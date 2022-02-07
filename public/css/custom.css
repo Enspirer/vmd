@@ -1,0 +1,60 @@
+/* Services Page */
+#section-applications {
+  margin: 3rem 0 4rem;
+  position: relative;
+}
+#section-applications .title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+#section-applications .row {
+  margin-bottom: 1rem;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+}
+#section-applications .thead {
+  font-size: 1.25rem;
+  font-weight: 700;
+  height: 3rem;
+}
+#section-applications .tbody {
+  height: 5rem;
+  font-size: 1.25rem;
+  box-shadow: 0px 3px 10px -5px;
+}
+#section-applications .tbody .age {
+  font-size: 1rem;
+}
+#section-applications .view-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #02a934;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  #section-applications .container {
+    max-width: 95%;
+  }
+  #section-applications .thead {
+    height: 5rem;
+  }
+}
+@media screen and (max-width: 763px) {
+  #section-applications .thead {
+    font-size: 1rem;
+  }
+  #section-applications .tbody {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 668px) {
+  #section-applications .table-container {
+    overflow-x: scroll;
+  }
+  #section-applications .row {
+    width: 700px;
+  }
+}/*# sourceMappingURL=custom.css.map */

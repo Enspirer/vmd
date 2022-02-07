@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontend\CandidateController;
 use App\Http\Controllers\Frontend\EmployeeController;
 use App\Http\Controllers\Frontend\IndividualCourseController;
 use App\Http\Controllers\Frontend\FindCandidatesController;
+use App\Http\Controllers\Frontend\ServicesController;
 
 /*
  * Frontend Controllers
@@ -26,6 +27,8 @@ Route::post('find_canidates', [FindCandidatesController::class, 'find_canidates'
 Route::post('post_job', [FindCandidatesController::class, 'post_job'])->name('post_job');
 
 Route::post('contact_us_send', [ContactController::class, 'contact_us_send'])->name('contact_us_send');
+
+Route::get('services', [ServicesController::class, 'index'])->name('services');
 
 
 

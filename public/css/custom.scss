@@ -1,0 +1,79 @@
+/* Services Page */
+
+#section-applications {
+    margin: 3rem 0 4rem;
+    position: relative;
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
+
+    .row {
+        margin-bottom: 1rem;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .thead {
+        font-size: 1.25rem;
+        font-weight: 700;
+        height: 3rem;
+    }
+
+    .tbody {
+        height: 5rem;
+        font-size: 1.25rem;
+        box-shadow: 0px 3px 10px -5px;
+
+        .age {
+            font-size: 1rem;
+        }
+    }
+
+    .view-btn {
+        text-decoration: none;
+        color: #fff;
+        background-color: #02a934;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #section-applications {
+        .container {
+            max-width: 95%;
+        }
+
+        .thead {
+            height: 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 763px) {
+    #section-applications {
+
+        .thead {
+            font-size: 1rem;
+        }
+
+        .tbody {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 668px) {
+    #section-applications {
+        .table-container {
+            overflow-x: scroll;
+        }
+
+        .row {
+            width: 700px;
+        }
+    }
+}

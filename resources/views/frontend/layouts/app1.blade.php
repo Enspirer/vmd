@@ -23,6 +23,8 @@
         <script src="https://kit.fontawesome.com/aa4e69f91b.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 
+        <link href="{{ url('css/custom.css') }}" rel="stylesheet">
+
 
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
