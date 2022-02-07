@@ -411,6 +411,14 @@
                     </li>
                 </ul>
             </li>
+
+            <li class="nav-item ">
+                <a class="nav-link {{ $request->segment(1) == 'candidate_category' ? 'active' : '' }}"
+                       href="{{ route('admin.candidate_category.index') }}">
+                    <i class="nav-icon fas fa-list"></i>
+                    <span class="title">Candidate Category</span>
+                </a>
+            </li>
             
 
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/about_us*','admin/why_choose_us*']), 'open') }}">
