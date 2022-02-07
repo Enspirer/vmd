@@ -15,6 +15,7 @@ use \App\Http\Controllers\Backend\WhyChooseController;
 use \App\Http\Controllers\Backend\CandidatesController;
 use \App\Http\Controllers\Backend\EmployeesController;
 use \App\Http\Controllers\Backend\ForCandidateController;
+use \App\Http\Controllers\Backend\CandidateCategoryController;
 
 
 /*
@@ -432,6 +433,13 @@ Route::get('for_candidate/edit/{id}', [ForCandidateController::class, 'edit'])->
 Route::post('for_candidate/update', [ForCandidateController::class, 'update'])->name('for_candidate.update');
 Route::get('for_candidate/delete/{id}', [ForCandidateController::class, 'destroy'])->name('for_efor_candidatemfor_candidateployee.destroy');
 
+
+Route::get('candidate_category', [CandidateCategoryController::class, 'index'])->name('candidate_category.index');
+Route::post('candidate_category/store', [CandidateCategoryController::class, 'store'])->name('candidate_category.store');
+Route::get('candidate_category/getdetails', [CandidateCategoryController::class, 'getdetails'])->name('candidate_category.getdetails');
+Route::get('candidate_category/edit/{id}', [CandidateCategoryController::class, 'edit'])->name('candidate_category.edit');
+Route::post('candidate_category/update', [CandidateCategoryController::class, 'update'])->name('candidate_category.update');
+Route::get('candidate_category/delete/{id}', [CandidateCategoryController::class, 'destroy'])->name('candidate_category.destroy');
 
 
 
