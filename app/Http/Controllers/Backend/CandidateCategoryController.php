@@ -26,6 +26,7 @@ class CandidateCategoryController extends Controller
         $add = new CandidateCategory;
 
         $add->name=$request->name; 
+        $add->slug=$request->slug; 
         $add->description=$request->description;   
         $add->featured=$request->featured;   
         $add->status=$request->status;
@@ -93,6 +94,7 @@ class CandidateCategoryController extends Controller
         $update = new CandidateCategory;
 
         $update->name=$request->name; 
+        $update->slug=$request->slug; 
         $update->description=$request->description; 
         $update->featured=$request->featured;   
         $update->status=$request->status;

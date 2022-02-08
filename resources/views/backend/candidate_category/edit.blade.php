@@ -12,7 +12,12 @@
                         
                         <div class="form-group">
                             <label>Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="name" value="{{$candidate_category->name}}" required>
+                            <input type="text" class="form-control" id="name" name="name" value="{{$candidate_category->name}}" required>
+                        </div> 
+
+                        <div class="form-group">
+                            <label>Slug <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="slug" name="slug" value="{{$candidate_category->slug}}" required>
                         </div> 
 
                         <label>Description</label> 
@@ -55,4 +60,14 @@
 
 
 <br><br>
+
+
+    <script>
+        $("#name").keyup(function(){
+            var str = $(this).val();
+            var trims = $.trim(str)
+            var slug = trims.replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+            $("#slug").val(slug.toLowerCase()) 
+        });    
+    </script>
 @endsection
