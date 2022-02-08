@@ -85,6 +85,11 @@ input.invalid {
     padding: 0 10px;
 }
 
+small {
+    display:none;
+    color:red;
+}
+
 @media screen and (max-width:767px) {
     .tab{
         height: auto !important;
@@ -481,15 +486,19 @@ input.invalid {
 
                 <div class="row mb-3">
                     <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
                         <input type="password" class="form-control text-white" id="password" name="password" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
                     <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>
                         <input type="password" class="form-control text-white" id="password_confirmation"
                             name="password_confirmation" required>
                             <small>Error Message</small>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -497,6 +506,7 @@ input.invalid {
                 <div class="tab">
                 <div class="row mb-3">
                     <div class="col-12 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="qualification" class="form-label me-3 form-label">Educational Qualification</label>
                         <!-- <input type="text" class="form-control text-white" id="qualification" name="education_qulification" required> -->
                         
@@ -517,13 +527,15 @@ input.invalid {
                             <button id="addRow" type="button" class="btn btn-info">Add Row</button> 
                             <small>Error Message</small>                                                           
                         </div> 
-
+                        </div>
                     </div>
                 </div>
                 </div>
+
                 <div class="tab">
                 <div class="row mb-3">
                     <div class="col-12 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="professional_background" class="form-label me-3 form-label">Professional Background</label>
                         <!-- <input type="text" class="form-control text-white" id="professional_background" name="professional_background" required> -->
                         
@@ -543,7 +555,7 @@ input.invalid {
                             <button id="addRowTwo" type="button" class="btn btn-info">Add Row</button>
                             <small>Error Message</small>                                                           
                         </div> 
-
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -551,17 +563,21 @@ input.invalid {
                 <div class="tab">
                 <div class="row mb-3">
                     <div class="col col-xs-12 p-10-xs ">
+                        <div class="input-wrapper">
                         <label for="profilePic" class="form-label">Choose a profile picture</label>
                         <input class="form-control" type="file" id="profilePic" name="profile_picture" required>
                         <small>Error Message</small>
                         <p class="mt-1" style="font-size: 0.7rem;">JPG, PNG, GIF (5 MB)</p>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col col-xs-12 p-10-xs">
+                        <div class="input-wrapepr">
                         <label for="personalProfile" class="form-label">Personal Profile</label>
                         <textarea class="form-control" id="personalProfile"  name="description"></textarea required>
                         <small>Error Message</small>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -777,18 +793,18 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-//   x = document.getElementsByClassName("tab");
-//   y = x[currentTab].getElementsByTagName("input");
-//   // A loop that checks every input field in the current tab:
-//   for (i = 0; i < y.length; i++) {
-//     // If a field is empty...
-//     if (y[i].value == "") {
-//       // add an "invalid" class to the field:
-//       y[i].className += " invalid";
-//       // and set the current valid status to false:
-//       valid = false;
-//     }
-//   }
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == '') {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
