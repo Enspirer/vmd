@@ -5,19 +5,9 @@
 @section('meta_keywords','')
 
 @push('after-styles')
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link href="{{ url('css/login.css') }}" rel="stylesheet">
 <style>
-    .country-input {
-        top: 0px !important;
-    }
-
-    .gender-input {
-        top: 0px !important;
-    }
-    .type-input {
-        top: 0px !important;
-    }
     .p-10-xs {
         padding: 10px !important;
     }
@@ -29,6 +19,97 @@
         color: black !important;
     }  
 
+    /* Registration form */
+
+    /* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+    height: 300px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 12px;
+  width: 12px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #207CD8;
+  opacity: 1;
+}
+
+#prevBtn, #nextBtn {
+    width: 100px;
+    border: 1px solid #207CD8;
+    padding: 0.5rem 0;
+    border-radius: 0.3rem;
+}
+
+#prevBtn {
+    background-color: #fff;
+    color: #207CD8;
+}
+
+#nextBtn {
+    background-color: #207CD8;
+    color: #fff;
+}
+
+#profilePic {
+    border: 1px solid #b2b2b2;
+}
+
+#personalProfile {
+    background-attachment: local;
+    background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 10px, transparent 10px), repeating-linear-gradient(white, white 30px, #b2b2b2 30px, #b2b2b2 32px, white 31px);
+    line-height: 64px;
+    padding: 0;
+    border-bottom: none;
+    resize: none;
+}
+
+@media screen and (max-width:767px) {
+    .tab{
+        height: auto !important;
+    }
+
+    .row {
+        --bs-gutter-x: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+.recaptcha-col {
+    padding-left: 0!important;
+    padding-right: 0!important;
+    padding-bottom: 0!important;
+}
+}
+
+@media screen and (max-width: 375px) {
+
+    .col-lg-7.col-xs-12.mb-5 {
+        padding: 0 !important;
+    }
+    
+}
+
 </style>
 
 @endpush
@@ -36,8 +117,8 @@
 @section('content')
 <div class="container login" style="margin-top: 3rem; margin-bottom: 5rem;">
     <div class="row align-items-center">
-        <div class="col-7 col-xs-12 ">
-            <h3 class="text-center mb-2">Register as a Candidate.</h3>
+        <div class="col-lg-7 col-xs-12 mb-5">
+            <h3 class="text-center mb-5">Register as a Candidate.</h3>
             <!-- {{ html()->form('POST', route('frontend.auth.login.post'))->open() }} -->
 
             @if($errors->any())
@@ -51,6 +132,7 @@
                 {{csrf_field()}}
                 <input type="hidden" name="profile_type" value="candidate_account">
 
+                <div class="tab">
                 <div class="row mb-3">
                     <div class="col-6 col-xs-12 p-10-xs">
                         <label for="first_name" class="form-label mb-0 me-3 form-label">First Name</label>
@@ -69,14 +151,14 @@
                         <input type="text" class="form-control text-white" id="contact" name="contact_number" required>
                     </div>
                     <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="tel" class="form-label mb-0 me-3 form-label">Tel</label>
+                        <label for="tel" class="form-label mb-0 me-3 form-label">Mobile</label>
                         <input type="text" class="form-control text-white" id="tel" name="tel" required>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="dob" class="form-label mb-0 me-3 form-label">DOB</label>
+                        <label for="dob" class="form-label mb-0 me-3 form-label">Birthday</label>
                         <input type="date" class="form-control text-white" id="dob" name="dob" required>
                     </div>
                     <div class="col-6 col-xs-12 p-10-xs">
@@ -88,7 +170,9 @@
                         </select>
                     </div>                    
                 </div>
+                </div>
 
+                <div class="tab">
                 <div class="row mb-3">                    
                     <div class="col-6 col-xs-12 p-10-xs">
                         <label for="address" class="form-label mb-0 me-3 form-label">Address</label>
@@ -363,7 +447,7 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="row mb-3">
                     <div class="col-6 col-xs-12 p-10-xs">
                         <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
@@ -375,10 +459,12 @@
                             name="password_confirmation" required>
                     </div>
                 </div>
+                </div>
 
+                <div class="tab">
                 <div class="row mb-3">
                     <div class="col-12 col-xs-12 p-10-xs">
-                        <label for="qualification" class="form-label mb-5 me-3 form-label">Educational Qualification</label>
+                        <label for="qualification" class="form-label me-3 form-label">Educational Qualification</label>
                         <!-- <input type="text" class="form-control text-white" id="qualification" name="education_qulification" required> -->
                         
                         <div class="form-group">
@@ -399,12 +485,11 @@
 
                     </div>
                 </div>
-
-
-
+                </div>
+                <div class="tab">
                 <div class="row mb-3">
                     <div class="col-12 col-xs-12 p-10-xs">
-                        <label for="professional_background" class="form-label mb-5 me-3 form-label">Professional Background</label>
+                        <label for="professional_background" class="form-label me-3 form-label">Professional Background</label>
                         <!-- <input type="text" class="form-control text-white" id="professional_background" name="professional_background" required> -->
                         
                         <div class="form-group">
@@ -425,9 +510,25 @@
 
                     </div>
                 </div>
+                </div>
 
+                <div class="tab">
+                <div class="row mb-3">
+                    <div class="col col-xs-12 p-10-xs">
+                        <label for="profilePic" class="form-label">Choose a profile picture</label>
+                        <input class="form-control" type="file" id="profilePic" name="profile_picture">
+                        <p class="mt-1" style="font-size: 0.7rem;">JPG, PNG, GIF (5 MB)</p>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col col-xs-12 p-10-xs">
+                        <label for="personalProfile" class="form-label">Personal Profile</label>
+                        <textarea class="form-control" id="personalProfile"  name="descrption"></textarea>
+                    </div>
+                </div>
+                </div>
 
-
+                <div class="tab">
                 <div class="row align-items-center my-4">
 
                     <div class="col-6 col-xs-12 p-10-xs">
@@ -438,13 +539,13 @@
                         <p class="mt-1" style="font-size: 0.7rem;">DOC, DOCX, PDF (5 MB)</p>
                     </div>
 
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 recaptcha-col">
                         <div class="g-recaptcha d-inline" data-callback="checked"
                             data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="row">
+                    <div class="row">
                     <div class="col-6 col-xs-12">
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
@@ -457,7 +558,27 @@
                                 disabled>Register</button>
                         </div>
                     </div>
+                    </div>
                 </div>
+
+                <div style="text-align:center;margin-top:40px;margin-bottom:20px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+
+
+                <div style="overflow:auto;">
+  <div style="float:right;">
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  </div>
+</div>
+
+                
             </form>
 
 
@@ -465,7 +586,7 @@
 
 
 
-        <div class="col-5 col-xs-12">
+        <div class="col-lg-5 col-xs-12">
             <img src="{{ url('img/frontend/auth/candidate.png') }}" alt="" class="img-fluid w-100"
                 style="height: 35rem; object-fit: cover;">
         </div>
@@ -488,7 +609,7 @@ function checked() {
 </script>
 
 
-<script>
+<!-- <script>
 $('input').focus(function() {
     $(this).siblings('label').addClass('click-input');
 });
@@ -521,7 +642,7 @@ $('input')
             $(this).siblings('label').removeClass('click-input');
         }
     });
-</script>
+</script> -->
 
 
     <script type="text/javascript">
@@ -565,5 +686,87 @@ $('input')
             $(this).closest('#inputFormRowTwo').remove();
         });
     </script>
+
+
+<!-- Registration Form -->
+
+<script type="text/javascript">
+
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").style.display = "none";
+  } else  {
+    document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+
+</script>
 
 @endpush
