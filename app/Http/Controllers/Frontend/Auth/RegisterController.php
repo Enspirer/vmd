@@ -164,6 +164,7 @@ class RegisterController extends Controller
                 $user->phone = isset($data['phone']) ? $data['phone'] : NULL ;
                 $user->gender = isset($data['gender']) ? $data['gender'] : NULL;
                 $user->age = isset($data['age']) ? $data['age'] : NULL;
+                $user->type = isset($data['type']) ? $data['type'] : NULL;
                 $user->tel = isset($data['tel']) ? $data['tel'] : NULL;
                 $user->address = isset($data['address']) ? $data['address'] : NULL;
                 $user->city =  isset($data['city']) ? $data['city'] : NULL;

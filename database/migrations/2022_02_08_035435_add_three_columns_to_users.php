@@ -17,6 +17,7 @@ class AddThreeColumnsToUsers extends Migration
             $table->text('age')->nullable()->after('email');
             $table->text('tel')->nullable()->after('email');
             $table->text('professional_background')->nullable()->after('email');
+            $table->text('type')->nullable()->after('email');
         });
     }
 
@@ -31,6 +32,7 @@ class AddThreeColumnsToUsers extends Migration
             $table->dropColumn('age');
             $table->dropColumn('tel');
             $table->dropColumn('professional_background');
+            $table->dropColumn('type');
         });
     }
 }

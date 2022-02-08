@@ -15,7 +15,9 @@
     .gender-input {
         top: 0px !important;
     }
-
+    .type-input {
+        top: 0px !important;
+    }
     .p-10-xs {
         padding: 10px !important;
     }
@@ -88,10 +90,19 @@
                 </div>
 
                 <div class="row mb-3">                    
-                    <div class="col-12 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs">
                         <label for="address" class="form-label mb-0 me-3 form-label">Address</label>
                         <input type="text" class="form-control text-white" id="address" name="address" required>
                     </div>
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="type" class="form-label mb-0 me-3 form-label">Type</label>
+                        <select id="type" class="form-control" name="type" required>
+                            <option value="" selected disabled hidden></option>
+                            @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->get() as $key=> $candidate_category)
+                                <option value="{{$candidate_category->id}}">{{$candidate_category->name}}</option>
+                            @endforeach
+                        </select>
+                    </div> 
                 </div>
 
                 <div class="row mb-3">
@@ -488,6 +499,10 @@ $('#country').focus(function() {
 
 $('#gender').focus(function() {
     $(this).siblings('label').addClass('gender-input');
+});
+
+$('#type').focus(function() {
+    $(this).siblings('label').addClass('type-input');
 });
 
 $('input').focusout(function() {
