@@ -13,43 +13,76 @@
 
 <section class="section-applicant-profile" id="section-applicant-profile">
     <div class="container">
-        <div class="row g-5">
+        <div class="row g-5 mb-4">
             <div class="col-lg-4">
-                <img src="{{url('img/frontend/profile/profile.png')}}" alt="" class="profile-picture">
+                @if($user->profile_picture != null)
+                    <img src="{{url('files/profile_picture',$user->profile_picture)}}" alt="" class="profile-picture">
+                @else
+                    <img src="{{url('img/no_image_available.png')}}" alt="" class="profile-picture">
+                @endif
             </div>
             <div class="col-lg-8 about">
-                <div class="applicant-name">Ashen Silva Dasanayeke</div>
-                <p class="personal-profile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eius odit rem minus qui nobis facilis nesciunt reprehenderit deserunt velit ullam officia mollitia praesentium, natus est eveniet aliquid quasi repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, facilis? Corrupti nostrum voluptates unde rerum ducimus earum in ut fugiat, ullam suscipit reiciendis aut recusandae fuga saepe autem iusto amet!</p>
+                <div class="applicant-name">{{$user->first_name}} {{$user->last_name}}</div>
+                <p class="personal-profile">{{$user->description}}</p>
                 <div class="personal-info">
                     <strong>Age:</strong>
-                    28 years old
+                    {{\Carbon\Carbon::parse($user->dob)->diff(\Carbon\Carbon::now())->format('%y years')}} old
                 </div>
                 <div class="personal-info">
                     <strong>Gender</strong>
-                    Male
+                    {{$user->gender}}
                 </div>
-                <div class="personal-info">
-                    <strong>Address:</strong>
-                    54/B, Nawala Road, Colombo 5, Sri Lanka
+                @if(!empty( auth()->user()->id) === true)
+                    @if(App\Models\Auth\User::where('id',auth()->user()->id)->where('profile_type','employee_account')->first())
+                        <div class="personal-info">
+                            <strong>Address:</strong>
+                            {{$user->address}}
+                        </div>
+                        <div class="personal-info">
+                            <strong>Contact Number:</strong>
+                            {{$user->contact_number}}
+                        </div>
+                        <div class="personal-info">
+                            <strong>Email:</strong>
+                            {{$user->email}}
+                        </div>
+                        <div class="personal-info">
+                            <strong>Country:</strong>
+                            {{$user->country}}
+                        </div>
+                        <div class="personal-info">
+                            <strong>DOB:</strong>
+                            {{$user->dob}}
+                        </div>
+                    @endif
+                @endif
+            </div>
+        </div>
+        @if(json_decode($user->education_qulification) != null)
+            <div class="row">
+                <div class="col education-qualification">
+                    <div class="title">Education Qualification</div>
+                    <ul>
+                        @foreach(json_decode($user->education_qulification) as $key => $education)
+                            <li>{{$education->education}}</li>
+                        @endforeach
+                        <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci, eum et, dolorum accusamus natus a veritatis ut nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae culpa labore.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci, eum et, dolorum accusamus natus a veritatis ut nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae culpa labore.</li> -->
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col education-qualification">
-                <div class="title">Education Qualification</div>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci, eum et, dolorum accusamus natus a veritatis ut nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae culpa labore.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci, eum et, dolorum accusamus natus a veritatis ut nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae culpa labore.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci, eum et, dolorum accusamus natus a veritatis ut nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae culpa labore.</li>
-                </ul>
+        @endif
+        @if(json_decode($user->professional_background) != null)
+            <div class="row">
+                <div class="col professional-background">
+                    <div class="title">Professional Background</div>
+                        @foreach(json_decode($user->professional_background) as $key => $professinal)
+                            <p class="mb-2">{{$professinal->professional}}</p>
+                        @endforeach
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col professional-background">
-                <div class="title">Professional Background</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae culpa labore. Architecto, obcaecati. Aspernatur exercitationem corrupti possimus esse vel enim, magnam, aliquam quibusdam corporis itaque placeat eum totam iure! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quia placeat facere officiis adipisci hic, qui modi ducimus obcaecati quaerat ipsam, aspernatur rerum dignissimos fugiat ullam, iste porro similique illum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam nesciunt ipsam quas nobis suscipit corrupti laudantium, distinctio nulla quasi error, voluptates ipsum ducimus iusto! Autem aliquam est soluta perferendis ipsum?</p>
-            </div>
-        </div>
+        @endif
+
     </div>
 </section>
 

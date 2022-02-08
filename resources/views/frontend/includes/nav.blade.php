@@ -25,15 +25,16 @@
                 </li>
                
                 <li class="nav-item px-3 drop-list">
-                    <a class="nav-link p-0 text-dark" href="{{ route('frontend.services') }}">Services <i class="drop-icon fa fa-caret-down"></i></a>
+                    <a class="nav-link p-0 text-dark" href="#">Services <i class="drop-icon fa fa-caret-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="{{ route('frontend.for_employee') }}">Employers</a></li>
                         <!-- <li><a href="{{ route('frontend.for_candidate')}}">Candidates</a></li> -->
                         <li class="nav-item drop-list">
                             <a class="nav-link p-0 text-dark" href="#">Candidates <i class="drop-icon fa fa-caret-right"></i></a>
                             <ul class="dropdown" style="left:170px; top:8px; background-color: #E8E8E8;">
-                                @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->get() as $key=> $candidate_category)
-                                    <li><a href="{{ route('frontend.for_candidate')}}">{{$candidate_category->name}}</a></li>
+                                <li><a href="{{ route('frontend.for_candidate')}}">The Process</a></li>
+                                @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->orderBy('order','asc')->get() as $key=> $candidate_category)
+                                    <li><a href="{{ route('frontend.services',$candidate_category->slug)}}">{{$candidate_category->name}}</a></li>
                                 @endforeach
                             </ul>
                          </li>

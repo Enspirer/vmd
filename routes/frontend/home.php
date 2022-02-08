@@ -29,8 +29,8 @@ Route::post('post_job', [FindCandidatesController::class, 'post_job'])->name('po
 
 Route::post('contact_us_send', [ContactController::class, 'contact_us_send'])->name('contact_us_send');
 
-Route::get('services', [ServicesController::class, 'index'])->name('services');
-Route::get('services/applicant-profile', [ApplicantProfileController::class, 'index'])->name('applicant_profile');
+Route::get('services/{slug}', [ServicesController::class, 'index'])->name('services');
+Route::get('services/applicant-profile/{id}', [ApplicantProfileController::class, 'index'])->name('applicant_profile');
 
 
 
