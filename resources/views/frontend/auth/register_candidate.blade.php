@@ -5,9 +5,14 @@
 @section('meta_keywords','')
 
 @push('after-styles')
+
 <link href="{{ url('css/login.css') }}" rel="stylesheet">
 <style>
     .country-input {
+        top: 0px !important;
+    }
+
+    .gender-input {
         top: 0px !important;
     }
 
@@ -15,11 +20,15 @@
         padding: 10px !important;
     }
 
-    
-
-  
+    input[type=date]:required:invalid::-webkit-datetime-edit {
+        color: transparent;
+    }
+    input[type=date]:focus::-webkit-datetime-edit {
+        color: black !important;
+    }  
 
 </style>
+
 @endpush
 
 @section('content')
@@ -54,36 +63,43 @@
 
                 <div class="row mb-3">
                     <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="contact" class="form-label mb-0 me-3 form-label">Contact</label>
+                        <input type="text" class="form-control text-white" id="contact" name="contact_number" required>
+                    </div>
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="tel" class="form-label mb-0 me-3 form-label">Tel</label>
+                        <input type="text" class="form-control text-white" id="tel" name="tel" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="dob" class="form-label mb-0 me-3 form-label">DOB</label>
+                        <input type="date" class="form-control text-white" id="dob" name="dob" required>
+                    </div>
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="gender" class="form-label mb-0 me-3 form-label">Gender</label>
+                        <select id="gender" class="form-control" name="gender" required>
+                            <option value="" selected disabled hidden></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>                    
+                </div>
+
+                <div class="row mb-3">                    
+                    <div class="col-12 col-xs-12 p-10-xs">
+                        <label for="address" class="form-label mb-0 me-3 form-label">Address</label>
+                        <input type="text" class="form-control text-white" id="address" name="address" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6 col-xs-12 p-10-xs">
                         <label for="email" class="form-label mb-0 me-3 form-label">Email</label>
                         <input type="email" class="form-control text-white" id="email" name="email" required>
                     </div>
                     <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="contact" class="form-label mb-0 me-3 form-label">Contact</label>
-                        <input type="text" class="form-control text-white" id="contact" name="contact_number" required>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
-                        <input type="password" class="form-control text-white" id="password" name="password" required>
-                    </div>
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>
-                        <input type="password" class="form-control text-white" id="password_confirmation"
-                            name="password_confirmation" required>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
-                        <label for="qualification" class="form-label mb-0 me-3 form-label">Educational
-                            Qualification</label>
-                        <input type="text" class="form-control text-white" id="qualification"
-                            name="education_qulification" required>
-                    </div>
-
-                    <div class="col-6 col-xs-12">
                         <label for="country" class="form-label mb-0 me-3 font-weight-bold">Country</label>
                         <select id="country" class="form-control" name="country" required>
                             <option value="" selected disabled hidden></option>
@@ -336,6 +352,70 @@
                         </select>
                     </div>
                 </div>
+                
+                <div class="row mb-3">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
+                        <input type="password" class="form-control text-white" id="password" name="password" required>
+                    </div>
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>
+                        <input type="password" class="form-control text-white" id="password_confirmation"
+                            name="password_confirmation" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-12 col-xs-12 p-10-xs">
+                        <label for="qualification" class="form-label mb-5 me-3 form-label">Educational Qualification</label>
+                        <!-- <input type="text" class="form-control text-white" id="qualification" name="education_qulification" required> -->
+                        
+                        <div class="form-group">
+                            <div id="inputFormRow">
+                                <div class="input-group mb-3">
+                                            
+                                    <input type="text" name="education_qulification[]" class="form-control m-input" autocomplete="off" required>
+                                            
+                                    <div class="input-group-append">                
+                                        <button id="removeRow" type="button" class="btn btn-danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="newRow"></div>
+                            <button id="addRow" type="button" class="btn btn-info">Add Row</button>                                                            
+                        </div> 
+
+                    </div>
+                </div>
+
+
+
+                <div class="row mb-3">
+                    <div class="col-12 col-xs-12 p-10-xs">
+                        <label for="professional_background" class="form-label mb-5 me-3 form-label">Professional Background</label>
+                        <!-- <input type="text" class="form-control text-white" id="professional_background" name="professional_background" required> -->
+                        
+                        <div class="form-group">
+                            <div id="inputFormRowTwo">
+                                <div class="input-group mb-3">
+                                            
+                                    <input type="text" name="professional_background[]" class="form-control m-input" autocomplete="off" required>
+                                            
+                                    <div class="input-group-append">                
+                                        <button id="removeRowTwo" type="button" class="btn btn-danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="newRowTwo"></div>
+                            <button id="addRowTwo" type="button" class="btn btn-info">Add Row</button>                                                            
+                        </div> 
+
+                    </div>
+                </div>
+
+
 
                 <div class="row align-items-center my-4">
 
@@ -356,8 +436,8 @@
                 <div class="row">
                     <div class="col-6 col-xs-12">
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox">
-                            <label class="form-check-label" for="flexRadioDefault1" style="font-size: 0.75rem;">I agree
+                            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
+                            <label class="form-check-label" for="checkbox" style="font-size: 0.75rem;">I agree
                                 to the Terms of Use/ Privacy Policy</label>
                         </div>
 
@@ -406,6 +486,10 @@ $('#country').focus(function() {
     $(this).siblings('label').addClass('country-input');
 });
 
+$('#gender').focus(function() {
+    $(this).siblings('label').addClass('gender-input');
+});
+
 $('input').focusout(function() {
     if ($(this).val() == '') {
         $(this).siblings('label').removeClass('click-input');
@@ -423,4 +507,48 @@ $('input')
         }
     });
 </script>
+
+
+    <script type="text/javascript">
+        
+        $("#addRow").click(function () {
+            var html = '';
+            html += '<div id="inputFormRow">';
+            html += '<div class="input-group mb-3">';
+            html += '<input type="text" name="education_qulification[]" class="form-control m-input" autocomplete="off" required>';
+            html += '<div class="input-group-append">';
+            html += '<button id="removeRow" type="button" class="btn btn-danger">Remove</button>';
+            html += '</div>';
+            html += '</div>';
+
+            $('#newRow').append(html);
+        });
+
+    
+        $(document).on('click', '#removeRow', function () {
+            $(this).closest('#inputFormRow').remove();
+        });
+    </script>
+
+    <script type="text/javascript">
+        
+        $("#addRowTwo").click(function () {
+            var html = '';
+            html += '<div id="inputFormRowTwo">';
+            html += '<div class="input-group mb-3">';
+            html += '<input type="text" name="professional_background[]" class="form-control m-input" autocomplete="off" required>';
+            html += '<div class="input-group-append">';
+            html += '<button id="removeRowTwo" type="button" class="btn btn-danger">Remove</button>';
+            html += '</div>';
+            html += '</div>';
+
+            $('#newRowTwo').append(html);
+        });
+
+    
+        $(document).on('click', '#removeRowTwo', function () {
+            $(this).closest('#inputFormRowTwo').remove();
+        });
+    </script>
+
 @endpush
