@@ -135,39 +135,50 @@ input.invalid {
 
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="first_name" class="form-label mb-0 me-3 form-label">First Name</label>
                         <input type="text" class="form-control text-white" id="first_name" name="first_name" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
 
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="last_name" class="form-label mb-0 me-3 form-label">Last Name</label>
                         <input type="text" class="form-control text-white" id="last_name" name="last_name" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="contact" class="form-label mb-0 me-3 form-label">Contact</label>
                         <input type="tel" class="form-control text-white" id="contact" name="contact_number" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="tel" class="form-label mb-0 me-3 form-label">Mobile</label>
                         <input type="tel" class="form-control text-white" id="tel" name="tel" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="dob" class="form-label mb-0 me-3 form-label">Birthday</label>
                         <input type="date" class="form-control text-white" id="dob" name="dob" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="gender" class="form-label mb-0 me-3 form-label">Gender</label>
                         <select id="gender" class="form-control" name="gender" required>
                             <option value="" selected disabled hidden></option>
@@ -175,18 +186,22 @@ input.invalid {
                             <option value="Female">Female</option>
                         </select>
                         <small>Error Message</small>
+                        </div>
                     </div>                    
                 </div>
                 </div>
 
                 <div class="tab">
                 <div class="row mb-3">                    
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="address" class="form-label mb-0 me-3 form-label">Address</label>
                         <input type="text" class="form-control text-white" id="address" name="address" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="type" class="form-label mb-0 me-3 form-label">Type</label>
                         <select id="type" class="form-control" name="type" required>
                             <option value="" selected disabled hidden></option>
@@ -195,16 +210,20 @@ input.invalid {
                             @endforeach
                         </select>
                         <small>Error Message</small>
+                        </div>
                     </div> 
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="email" class="form-label mb-0 me-3 form-label">Email</label>
                         <input type="email" class="form-control text-white" id="email" name="email" required>
                         <small>Error Message</small>
+                        </div>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
+                        <div class="input-wrapper">
                         <label for="country" class="form-label mb-0 me-3 font-weight-bold">Country</label>
                         <select id="country" class="form-control" name="country" required>
                             <option value="" selected disabled hidden></option>
@@ -456,16 +475,17 @@ input.invalid {
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
                         <small>Error Message</small>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
                         <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
                         <input type="password" class="form-control text-white" id="password" name="password" required>
                         <small>Error Message</small>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-6 col-xs-12 p-10-xs">
                         <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>
                         <input type="password" class="form-control text-white" id="password_confirmation"
                             name="password_confirmation" required>
@@ -476,7 +496,7 @@ input.invalid {
 
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col-12 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-12 col-xs-12 p-10-xs">
                         <label for="qualification" class="form-label me-3 form-label">Educational Qualification</label>
                         <!-- <input type="text" class="form-control text-white" id="qualification" name="education_qulification" required> -->
                         
@@ -503,7 +523,7 @@ input.invalid {
                 </div>
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col-12 col-xs-12 p-10-xs input-wrapper">
+                    <div class="col-12 col-xs-12 p-10-xs">
                         <label for="professional_background" class="form-label me-3 form-label">Professional Background</label>
                         <!-- <input type="text" class="form-control text-white" id="professional_background" name="professional_background" required> -->
                         
@@ -530,7 +550,7 @@ input.invalid {
 
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col col-xs-12 p-10-xs  input-wrapper">
+                    <div class="col col-xs-12 p-10-xs ">
                         <label for="profilePic" class="form-label">Choose a profile picture</label>
                         <input class="form-control" type="file" id="profilePic" name="profile_picture" required>
                         <small>Error Message</small>
@@ -538,9 +558,9 @@ input.invalid {
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col col-xs-12 p-10-xs input-wrapper">
+                    <div class="col col-xs-12 p-10-xs">
                         <label for="personalProfile" class="form-label">Personal Profile</label>
-                        <textarea class="form-control" id="personalProfile"  name="descrption"></textarea required>
+                        <textarea class="form-control" id="personalProfile"  name="description"></textarea required>
                         <small>Error Message</small>
                     </div>
                 </div>
@@ -565,7 +585,7 @@ input.invalid {
 
                     <div class="row">
                     <div class="col-6 col-xs-12">
-                        <div class="form-check mb-3 input-wrapper">
+                        <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
                             <small>Error Message</small>
                             <label class="form-check-label" for="checkbox" style="font-size: 0.75rem;">I agree
