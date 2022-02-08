@@ -77,3 +77,65 @@
         }
     }
 }
+
+/* Applicant Profile Page */
+#section-applicant-profile {
+    margin: 2rem 0 4rem;
+    position: relative;
+
+    .profile-picture {
+        width: 100%;
+    }
+
+    .applicant-name {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .personal-profile {
+        margin-bottom: 1rem !important;
+    }
+
+    .personal-info {
+
+        &:first-child {
+            margin-top: 1rem;
+        }
+
+        strong {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .education-qualification {
+        margin: 3rem 0 2rem;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 425px) {
+    #section-applicant-profile {
+        .g-5 {
+            --bs-gutter-x: 0 !important;
+        }
+
+        .profile-picture {
+            width: 400px !important;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
