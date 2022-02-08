@@ -77,11 +77,12 @@ input.invalid {
 
 #personalProfile {
     background-attachment: local;
-    background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 10px, transparent 10px), repeating-linear-gradient(white, white 30px, #b2b2b2 30px, #b2b2b2 32px, white 31px);
-    line-height: 64px;
-    padding: 0;
+    background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 10px, transparent 10px), repeating-linear-gradient(white, white 30px, #b2b2b2 30px, #b2b2b2 31px, white 31px);
+    line-height: 31px;
     border-bottom: none;
     resize: none;
+    height: 130px;
+    padding: 0 10px;
 }
 
 @media screen and (max-width:767px) {
@@ -128,57 +129,64 @@ input.invalid {
                 {{ implode('', $errors->all(':message')) }}</div>
             @endif
 
-            <form enctype="multipart/form-data" action="{{route('frontend.auth.register.post')}}" method="post">
+            <form id="registrationForm" enctype="multipart/form-data" action="{{route('frontend.auth.register.post')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="profile_type" value="candidate_account">
 
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="first_name" class="form-label mb-0 me-3 form-label">First Name</label>
                         <input type="text" class="form-control text-white" id="first_name" name="first_name" required>
+                        <small>Error Message</small>
                     </div>
 
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="last_name" class="form-label mb-0 me-3 form-label">Last Name</label>
                         <input type="text" class="form-control text-white" id="last_name" name="last_name" required>
+                        <small>Error Message</small>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="contact" class="form-label mb-0 me-3 form-label">Contact</label>
-                        <input type="text" class="form-control text-white" id="contact" name="contact_number" required>
+                        <input type="tel" class="form-control text-white" id="contact" name="contact_number" required>
+                        <small>Error Message</small>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="tel" class="form-label mb-0 me-3 form-label">Mobile</label>
-                        <input type="text" class="form-control text-white" id="tel" name="tel" required>
+                        <input type="tel" class="form-control text-white" id="tel" name="tel" required>
+                        <small>Error Message</small>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="dob" class="form-label mb-0 me-3 form-label">Birthday</label>
                         <input type="date" class="form-control text-white" id="dob" name="dob" required>
+                        <small>Error Message</small>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="gender" class="form-label mb-0 me-3 form-label">Gender</label>
                         <select id="gender" class="form-control" name="gender" required>
                             <option value="" selected disabled hidden></option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
+                        <small>Error Message</small>
                     </div>                    
                 </div>
                 </div>
 
                 <div class="tab">
                 <div class="row mb-3">                    
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="address" class="form-label mb-0 me-3 form-label">Address</label>
                         <input type="text" class="form-control text-white" id="address" name="address" required>
+                        <small>Error Message</small>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="type" class="form-label mb-0 me-3 form-label">Type</label>
                         <select id="type" class="form-control" name="type" required>
                             <option value="" selected disabled hidden></option>
@@ -186,15 +194,17 @@ input.invalid {
                                 <option value="{{$candidate_category->id}}">{{$candidate_category->name}}</option>
                             @endforeach
                         </select>
+                        <small>Error Message</small>
                     </div> 
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="email" class="form-label mb-0 me-3 form-label">Email</label>
                         <input type="email" class="form-control text-white" id="email" name="email" required>
+                        <small>Error Message</small>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="country" class="form-label mb-0 me-3 font-weight-bold">Country</label>
                         <select id="country" class="form-control" name="country" required>
                             <option value="" selected disabled hidden></option>
@@ -445,25 +455,28 @@ input.invalid {
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
+                        <small>Error Message</small>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="password" class="form-label mb-0 me-3 form-label">Password</label>
                         <input type="password" class="form-control text-white" id="password" name="password" required>
+                        <small>Error Message</small>
                     </div>
-                    <div class="col-6 col-xs-12 p-10-xs">
+                    <div class="col-6 col-xs-12 p-10-xs input-wrapper">
                         <label for="confirm_password" class="form-label mb-0 me-3 form-label">Confirm Password</label>
                         <input type="password" class="form-control text-white" id="password_confirmation"
                             name="password_confirmation" required>
+                            <small>Error Message</small>
                     </div>
                 </div>
                 </div>
 
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col-12 col-xs-12 p-10-xs">
+                    <div class="col-12 col-xs-12 p-10-xs input-wrapper">
                         <label for="qualification" class="form-label me-3 form-label">Educational Qualification</label>
                         <!-- <input type="text" class="form-control text-white" id="qualification" name="education_qulification" required> -->
                         
@@ -471,7 +484,8 @@ input.invalid {
                             <div id="inputFormRow">
                                 <div class="input-group mb-3">
                                             
-                                    <input type="text" name="education_qulification[]" class="form-control m-input" autocomplete="off" required>
+                                    <input type="text" id="qualification" name="education_qulification[]" class="form-control m-input" autocomplete="off" required>
+                                    
                                             
                                     <div class="input-group-append">                
                                         <button id="removeRow" type="button" class="btn btn-danger">Remove</button>
@@ -480,7 +494,8 @@ input.invalid {
                             </div>
 
                             <div id="newRow"></div>
-                            <button id="addRow" type="button" class="btn btn-info">Add Row</button>                                                            
+                            <button id="addRow" type="button" class="btn btn-info">Add Row</button> 
+                            <small>Error Message</small>                                                           
                         </div> 
 
                     </div>
@@ -488,7 +503,7 @@ input.invalid {
                 </div>
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col-12 col-xs-12 p-10-xs">
+                    <div class="col-12 col-xs-12 p-10-xs input-wrapper">
                         <label for="professional_background" class="form-label me-3 form-label">Professional Background</label>
                         <!-- <input type="text" class="form-control text-white" id="professional_background" name="professional_background" required> -->
                         
@@ -496,7 +511,7 @@ input.invalid {
                             <div id="inputFormRowTwo">
                                 <div class="input-group mb-3">
                                             
-                                    <input type="text" name="professional_background[]" class="form-control m-input" autocomplete="off" required>
+                                    <input type="text" id="professional_background" name="professional_background[]" class="form-control m-input" autocomplete="off" required>
                                             
                                     <div class="input-group-append">                
                                         <button id="removeRowTwo" type="button" class="btn btn-danger">Remove</button>
@@ -505,7 +520,8 @@ input.invalid {
                             </div>
 
                             <div id="newRowTwo"></div>
-                            <button id="addRowTwo" type="button" class="btn btn-info">Add Row</button>                                                            
+                            <button id="addRowTwo" type="button" class="btn btn-info">Add Row</button>
+                            <small>Error Message</small>                                                           
                         </div> 
 
                     </div>
@@ -514,16 +530,18 @@ input.invalid {
 
                 <div class="tab">
                 <div class="row mb-3">
-                    <div class="col col-xs-12 p-10-xs">
+                    <div class="col col-xs-12 p-10-xs  input-wrapper">
                         <label for="profilePic" class="form-label">Choose a profile picture</label>
-                        <input class="form-control" type="file" id="profilePic" name="profile_picture">
+                        <input class="form-control" type="file" id="profilePic" name="profile_picture" required>
+                        <small>Error Message</small>
                         <p class="mt-1" style="font-size: 0.7rem;">JPG, PNG, GIF (5 MB)</p>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col col-xs-12 p-10-xs">
+                    <div class="col col-xs-12 p-10-xs input-wrapper">
                         <label for="personalProfile" class="form-label">Personal Profile</label>
-                        <textarea class="form-control" id="personalProfile"  name="descrption"></textarea>
+                        <textarea class="form-control" id="personalProfile"  name="descrption"></textarea required>
+                        <small>Error Message</small>
                     </div>
                 </div>
                 </div>
@@ -547,8 +565,9 @@ input.invalid {
 
                     <div class="row">
                     <div class="col-6 col-xs-12">
-                        <div class="form-check mb-3">
+                        <div class="form-check mb-3 input-wrapper">
                             <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
+                            <small>Error Message</small>
                             <label class="form-check-label" for="checkbox" style="font-size: 0.75rem;">I agree
                                 to the Terms of Use/ Privacy Policy</label>
                         </div>
@@ -738,18 +757,18 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false:
-      valid = false;
-    }
-  }
+//   x = document.getElementsByClassName("tab");
+//   y = x[currentTab].getElementsByTagName("input");
+//   // A loop that checks every input field in the current tab:
+//   for (i = 0; i < y.length; i++) {
+//     // If a field is empty...
+//     if (y[i].value == "") {
+//       // add an "invalid" class to the field:
+//       y[i].className += " invalid";
+//       // and set the current valid status to false:
+//       valid = false;
+//     }
+//   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
@@ -765,7 +784,10 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class to the current step:
   x[n].className += " active";
+  
 }
+
+// Form Validation
 
 </script>
 
