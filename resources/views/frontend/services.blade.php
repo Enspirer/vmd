@@ -28,7 +28,7 @@
             <div class="col">Homecare</div>
             <div class="col">3 Years</div>
             <div class="col">
-                <a href="" class="view-btn">View Profile</a>
+                <a href="{{url('services/applicant-profile')}}" class="view-btn">View Profile</a>
             </div>
         </div>
         <div class="row tbody">
