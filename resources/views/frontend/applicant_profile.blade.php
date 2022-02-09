@@ -6,6 +6,60 @@
 
 @push('after-styles')
 
+<style>
+    /* Popup container */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 470px;
+        background-color: #303030;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 14px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 15%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 0.8s;
+        animation: fadeIn 0.8s
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+    }
+</style>
 @endpush
 
 
@@ -32,6 +86,22 @@
                     <strong>Gender</strong>
                     {{$user->gender}}
                 </div>
+                @if(!empty( auth()->user()->id) === true)
+                    @if(App\Models\Auth\User::where('id',auth()->user()->id)->where('profile_type','!=','employee_account')->first())
+                        <div class="personal-info">
+                            <div class="popup mt-3 text-danger" onclick="myFunction()"><b>More Info! <i class="fas fa-info-circle"></i></b>
+                                <span class="popuptext" id="myPopup">If you want more details <a href="{{route('frontend.for_employee')}}" style="text-decoration:none; color:#66CCFF;">Register as an Employer</a></span>
+                            </div>
+                        </div>
+                    @endif
+                @else
+                    <div class="personal-info">
+                        <div class="popup mt-3 text-danger" onclick="myFunction()"><b>More Info! <i class="fas fa-info-circle"></i></b>
+                            <span class="popuptext" id="myPopup">If you want more details <a href="{{route('frontend.auth.register_employee')}}" style="text-decoration:none; color:#66CCFF;">Register as an Employer</a></span>
+                        </div>
+                    </div>
+                @endif
+
                 @if(!empty( auth()->user()->id) === true)
                     @if(App\Models\Auth\User::where('id',auth()->user()->id)->where('profile_type','employee_account')->first())
                         <div class="personal-info">
@@ -90,5 +160,10 @@
 
 
 @push('after-scripts')
-
+<script>
+    function myFunction() {
+    var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+</script>
 @endpush

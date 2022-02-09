@@ -12,7 +12,20 @@
 
 <section class="section-applications" id="section-applications">
     <div class="container">
-        <div class="title">Homecare</div>
+        <div class="title">
+            <div class="row">
+                <div class="col-8">
+                    {{$cadidate_category->name}}
+                </div>
+                <div class="col-4">
+                    <form action="{{route('frontend.services',$cadidate_category->slug)}}" method="get" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                        <input type="text" class="form-control" id="search" name="search" @isset($sort_search) value="{{ $sort_search }}" @endisset placeholder="{{ 'Type name & Enter' }}">
+                    </form>                
+                </div>
+            </div>
+                
+        </div>
 
             @if(count($users) == 0)
                 @include('frontend.includes.not_found',[
@@ -42,6 +55,14 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+
+                <div class="my-md-5">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">{{ $users->appends(request()->input())->links() }}</li>
+                        </ul>
+                    </nav>
                 </div>
             @endif
 
