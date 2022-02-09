@@ -86,7 +86,8 @@ input.invalid {
 }
 
 small {
-    display:none;
+    display:block;
+    visibility: hidden;
     color:red;
 }
 
@@ -186,7 +187,7 @@ small {
                         <div class="input-wrapper">
                         <label for="gender" class="form-label mb-0 me-3 form-label">Gender</label>
                         <select id="gender" class="form-control" name="gender" required>
-                            <option value="" selected disabled hidden></option>
+                            <option value="" selected ></option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
@@ -210,6 +211,7 @@ small {
                         <label for="type" class="form-label mb-0 me-3 form-label">Type</label>
                         <select id="type" class="form-control" name="type" required>
                             <option value="" selected disabled hidden></option>
+                            <option value="Afghanistan">Afghanistan</option>
                             @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->get() as $key=> $candidate_category)
                                 <option value="{{$candidate_category->id}}">{{$candidate_category->name}}</option>
                             @endforeach
@@ -794,7 +796,7 @@ function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
+  y = x[currentTab].getElementsByClassName("form-control");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
@@ -825,6 +827,152 @@ function fixStepIndicator(n) {
 
 // Form Validation
 
+const form = document.getElementById('registrationForm');
+const firstName = document.getElementById('first_name');
+const lastName = document.getElementById('last_name');
+const contact = document.getElementById('contact');
+const mobile = document.getElementById('tel');
+const birthday = document.getElementById('dob');
+const gender = document.getElementById('gender');
+const address = document.getElementById('address');
+const type = document.getElementById('type');
+const email = document.getElementById('email');
+const country = document.getElementById('country');
+const password = document.getElementById('password');
+const passwordConfirmation = document.getElementById('password_confirmation');
+const qualification = document.getElementById('qualification');
+const professionalBackground = document.getElementById('professional_background');
+const profilePicture = document.getElementById('profilePic');
+const personalProfile = document.getElementById('personalProfile');
+const checkbox = document.getElementById('checkbox');
+const button = document.getElementById('nextBtn');
+
+//Show input error messages
+function showError(input, message) {
+    const formControl = input.parentElement;
+    formControl.classList.add("error");
+
+    const small = formControl.querySelector('small');
+    small.style.visibility = 'visible';
+    small.innerText = message;
+}
+
+//show success colour
+function showSucces(input) {
+    const formControl = input.parentElement;
+    formControl.classList.remove("error");
+
+    const small = formControl.querySelector('small');
+    small.style.visibility = 'hidden';
+}
+
+//get FieldName
+function getFieldName(input) {
+
+    if (input == firstName) {
+        return ('First Name');
+    } else if (input == lastName) {
+        return ('Last Name');
+    } else if (input == contact) {
+        return ('Contact');
+    } else if (input == mobile) {
+        return ('Mobile');
+    } else if (input == birthday) {
+        return ('Birthday');
+    } else if (input == gender) {
+        return ('Gender');
+    } else if (input == address) {
+        return ('Address');
+    } else if (input == type) {
+        return ('Type');
+    } else if (input == email) {
+        return ('Email');
+    } else if (input == country) {
+        return ('Country');
+    } else if (input == password) {
+        return ('Password');
+    } else if (input == passwordConfirmation) {
+        return ('Password Confirmation');
+    } else if (input == qualification) {
+        return ('Educational Qualifications');
+    } else if (input == professionalBackground) {
+        return ('Professional Background');
+    } else if (input == profilePicture) {
+        return ('Profile Picture');
+    } else if (input == personalProfile) {
+        return ('Personal Profile');
+    } else if (input == checkbox) {
+        return ('Checkbox');
+    }
+}
+
+//checkRequired fields
+function checkRequired(inputArr) {
+    inputArr.forEach(function (input) {
+        if (input.value.trim() === '') {
+            showError(input, `${getFieldName(input)} is required`)
+        } else {
+            showSucces(input);
+        }
+    });
+}
+
+//check email is valid
+function checkEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(input.value.trim())) {
+        showSucces(input)
+    } else {
+        showError(input, 'Email is not valid');
+    }
+}
+
+// Check phone numbers are valid
+function checkPhone(input) {
+    const ph = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    if (ph.test(input.value.trim())) {
+        showSucces(input)
+    } else {
+        showError(input, 'Phone number is not valid');
+    }
+}
+
+//check input Length
+function checkLength(input, min, max) {
+    if (input.value.length < min) {
+        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    } else if (input.value.length > max) {
+        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
+    } else {
+        showSucces(input);
+    }
+}
+
+// check passwords match
+function checkPasswordMatch(input1, input2) {
+    if (input1.value !== input2.value) {
+        showError(input2, 'Passwords do not match');
+    }
+}
+
+
+// Event Listeners
+button.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    checkRequired([firstName, lastName, contact, mobile, birthday, gender, address, type, email, country, password, passwordConfirmation, qualification, professionalBackground, profilePicture, personalProfile, checkbox]);
+    checkLength(firstName, 3, 15);
+    checkLength(lastName, 3, 15);
+    checkLength(address, 5, 50);
+    checkLength(password, 8, 16);
+    checkLength(qualification, 20, 99999);
+    checkLength(professionalBackground, 20, 99999);
+    checkLength(personalProfile, 20, 99999);
+    checkPhone(contact);
+    checkPhone(mobile);
+    checkEmail(email);
+    checkPasswordMatch(password, passwordConfirmation);
+});
 </script>
 
 @endpush
