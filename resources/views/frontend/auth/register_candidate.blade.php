@@ -605,9 +605,9 @@ small {
                     <div class="col-6 col-xs-12">
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox" required>
-                            <small>Error Message</small>
                             <label class="form-check-label" for="checkbox" style="font-size: 0.75rem;">I agree
                                 to the Terms of Use/ Privacy Policy</label>
+                                <small>Error Message</small>
                         </div>
 
                         <div>
@@ -840,8 +840,8 @@ const email = document.getElementById('email');
 const country = document.getElementById('country');
 const password = document.getElementById('password');
 const passwordConfirmation = document.getElementById('password_confirmation');
-const qualification = document.getElementById('qualification');
-const professionalBackground = document.getElementById('professional_background');
+const qualification = $('#inputFormRow input');
+const professionalBackground = $('#inputFormRowTwo input');
 const profilePicture = document.getElementById('profilePic');
 const personalProfile = document.getElementById('personalProfile');
 const checkbox = document.getElementById('checkbox');
@@ -850,7 +850,6 @@ const button = document.getElementById('nextBtn');
 //Show input error messages
 function showError(input, message) {
     const formControl = input.parentElement;
-    formControl.classList.add("error");
 
     const small = formControl.querySelector('small');
     small.style.visibility = 'visible';
@@ -860,7 +859,6 @@ function showError(input, message) {
 //show success colour
 function showSucces(input) {
     const formControl = input.parentElement;
-    formControl.classList.remove("error");
 
     const small = formControl.querySelector('small');
     small.style.visibility = 'hidden';
@@ -911,6 +909,20 @@ function checkRequired(inputArr) {
     inputArr.forEach(function (input) {
         if (input.value.trim() === '') {
             showError(input, `${getFieldName(input)} is required`)
+        } else if (input == firstName || input == lastName) {
+            checkLength(input, 3, 15);
+        } else if (input == address) {
+            checkLength(input, 5, 50);
+        } else if (input == password) {
+            checkLength(input, 8, 16);
+        } else if (input == qualification || input == professionalBackground || input == personalProfile) {
+            checkLength(input, 20, 99999);
+        } else if (input == contact || input == mobile) {
+            checkPhone(input);
+        } else if (input == email) {
+            checkEmail(input);
+        } else if (input == passwordConfirmation) {
+            checkPasswordMatch(input, password);
         } else {
             showSucces(input);
         }
@@ -951,7 +963,7 @@ function checkLength(input, min, max) {
 // check passwords match
 function checkPasswordMatch(input1, input2) {
     if (input1.value !== input2.value) {
-        showError(input2, 'Passwords do not match');
+        showError(input1, 'Passwords do not match');
     }
 }
 
@@ -961,17 +973,6 @@ button.addEventListener("click", function (e) {
     e.preventDefault();
 
     checkRequired([firstName, lastName, contact, mobile, birthday, gender, address, type, email, country, password, passwordConfirmation, qualification, professionalBackground, profilePicture, personalProfile, checkbox]);
-    checkLength(firstName, 3, 15);
-    checkLength(lastName, 3, 15);
-    checkLength(address, 5, 50);
-    checkLength(password, 8, 16);
-    checkLength(qualification, 20, 99999);
-    checkLength(professionalBackground, 20, 99999);
-    checkLength(personalProfile, 20, 99999);
-    checkPhone(contact);
-    checkPhone(mobile);
-    checkEmail(email);
-    checkPasswordMatch(password, passwordConfirmation);
 });
 </script>
 
