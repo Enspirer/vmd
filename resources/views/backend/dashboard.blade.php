@@ -38,6 +38,15 @@
     margin-bottom: 30px !important;
 }
 
+.dash-category-tag {
+    padding: 5px;
+    background-color: green;
+    font-size: 0.8rem;
+    color: #fff;
+    border-radius: 4px;
+}
+
+
 </style>
 <link rel="stylesheet" href="{{ url('css/user-dashboard-main.css') }}" />
 @endpush
@@ -52,7 +61,7 @@
             <!--card-header-->
             <div class="card-body dashboard-main-card">
                 <div class="card-body-wrapper">
-                    <img src="" alt="">
+                    <img class="card-bg " src="{{ url('img/backend/dashboard/dashboard-banner.jpg') }}" alt="">
                      <div class="row">
                     @if(auth()->user()->hasRole('student'))
 
@@ -223,9 +232,7 @@
                                         <a href="{{ route('courses.show', [$item->slug]) }}">{{$item->title}}</a>
                                     </h5>
                                     <div class="course-card-item-wrapper">
-                                        <span class="course-category-tag">
-                                            <a href="{{route('courses.category',['category'=>$item->category->slug])}}"
-                                                class="bg-success">{{$item->category->name}}</a>
+                                        <span class="course-category-tag dash-category-tag">{{$item->category->name}}
                                         </span>
 
                                         <span class="course-author-count-tag">

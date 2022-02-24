@@ -51,18 +51,20 @@
     <div class="row justify-content-center">
         <div class="col-9 col-xs-12 padding-15-xs">
             <div class="row justify-content-center">
-                <div class="col-5 col-xs-12">
+                <div class="col-5 col-xs-12 col-sm-6">
                     <div class="card p-5 text-center">
                         <h4 class="fw-bold mb-4">Post your Jobs</h4>
 
                         <div class="text-center">
-                            <!-- <a href="{{url('register-employee')}}" class="btn btn-primary">Register</a> -->
-                            <a href="" data-bs-toggle="modal" data-bs-target="#post_job"
-                                class="btn btn-primary">Register</a>
+                            <a href="{{ route('frontend.auth.register_employee') }}" class="btn btn-primary">Register</a>
+                            <!-- <a href="" data-bs-toggle="modal" data-bs-target="#post_job"
+                                class="btn btn-primary">Register
+                            </a> -->
+                               
                         </div>
                     </div>
                 </div>
-                <div class="col-5 col-xs-12 padding-15-xs">
+                <div class="col-5 col-xs-12 padding-15-xs col-sm-6">
                     <div class="card p-5 text-center">
                         <h4 class="fw-bold mb-4">Find Candidates</h4>
 
@@ -81,10 +83,10 @@
 
 <div class="container" style="margin-bottom : 5rem;">
     <div class="row position-relative">
-        <h1 class="fw-bold text-center">SIMPLE AND EFFECTIVE PROCESS WITH SKILL JOBS</h1>
-        <p class="text-center position-absolute"
+        <h1 class="fw-bold text-center">SIMPLE AND EFFECTIVE PROCESS WITH VMD</h1>
+        <p class="text-center position-absolute inner-heading"
             style="opacity: 0.04; top: -0.2rem; font-size: 3rem; line-height: 1.2; z-index: -1; font-weight: 800">SIMPLE
-            AND EFFECTIVE PROCESS WITH Skill Jobs</p>
+            AND EFFECTIVE PROCESS WITH VMD</p>
     </div>
 </div>
 
@@ -95,7 +97,7 @@
             <img src="{{ url('img/frontend/employee/sample_1.png') }}" alt="" class="img-fluid">
         </div>
         <div class="col-5 text-center">
-            <h5 class="fw-bold mb-2">Register with Skill Jobs</h5>
+            <h5 class="fw-bold mb-2">Register with VMD</h5>
             <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
             </p>
         </div>
@@ -165,7 +167,7 @@
             <img src="{{ url('img/frontend/employee/sample_1.png') }}" alt="" class="img-fluid">
         </div>
         <div class="chart-txt">
-            <h5 class="fw-bold mb-2">Register with Skill Jobs</h5>
+            <h5 class="fw-bold mb-2">Register with VMD</h5>
             <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
             </p>
         </div>
@@ -230,7 +232,28 @@
         </div>
 
         <div class="col-7 col-xs-12">
-            <div class="row align-items-center mb-3">
+
+            @if(count($for_employee) != 0)
+                @foreach($for_employee as $for_emp)
+                    <div class="row align-items-center mb-3">
+                        <div class="col-1">
+                            <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100" style="height: 2.2rem;">
+                        </div>
+                        <div class="col-11">
+                            <h5 class="fw-bold">{{$for_emp->title}}</h5>
+                        </div>
+                        
+                        <div class="row justify-content-end">
+                            <div class="col-11">
+                                <p style="font-size: 0.8rem;">{{$for_emp->description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <h5>No Any Data Here</h5>
+            @endif
+            <!-- <div class="row align-items-center mb-3">
                 <div class="col-1 mobile-check-logo">
                     <img src="{{ url('img/frontend/employee/tick.png') }}" alt="" class="img-fluid w-100"
                         style="height: 2.2rem;">
@@ -354,7 +377,7 @@
                             Continuing Professional Development (CPD) guidelines. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

@@ -64,9 +64,87 @@
         <div class="col-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
+
+                @if(count($course_slider) != 0)
+                    @foreach($course_slider as $course_sli)
+
+                        <div class="swiper-slide" style="background-image: url('{{url('storage/uploads',$course_sli->course_image)}}'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
+                            <div class="container">
+                                <div class="row home-card">
+                                    <div class="col-4 col-xs-12 padding-reduce home-card-side">
+                                        <div class="card p-4 slider-card">
+
+                                        @if(DB::table('course_user')->where('course_id',$course_sli->id)->first() != null)
+                                            @php
+                                                $course_user = DB::table('course_user')->where('course_id',$course_sli->id)->first();
+                                            @endphp
+
+                                            @if(App\Models\Auth\User::where('id',$course_user->user_id)->first() != null)
+                                                @php      
+                                                    $user_details = App\Models\Auth\User::where('id',$course_user->user_id)->first();
+                                                @endphp
+
+                                                <p class="mb-1 text-center">{{$user_details->first_name}} {{$user_details->last_name}}</p>
+                                            @endif
+                                        @endif
+                                        
+                                            <h5 class="fw-bold mb-2 text-center" style="color: #150D6D">{{$course_sli->title}}</h5>
+
+                                            <div style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;">
+                                                <p class="mb-3 text-center" style="font-size: 0.8rem;">{!!$course_sli->description!!}</p>
+                                            </div>
+
+                                            <!-- <div class="row mb-3 align-items-center">
+                                                <div class="col-6">
+                                                    <i class="fas fa-star gold"></i>
+                                                    <i class="fas fa-star gold"></i>
+                                                    <i class="fas fa-star gold"></i>
+                                                    <i class="fas fa-star gold"></i>
+                                                    <i class="fas fa-star-half-alt gold"></i>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row justify-content-end">
+                                                        <div class="col-10">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-6">
+                                                                    <p><i class="far fa-user"></i><span class="fw-bold ms-2" style="color: #150D6D">01</span></p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <p><i class="bi bi-chat-left-text"></i><span class="fw-bold ms-2" style="color: #150D6D">00</span></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+
+                                            <!-- <div class="row text-center mb-3 align-items-center">
+                                                <div class="col-6 border-end">
+                                                    <p><i class="bi bi-layers-fill" style="color: #0763E5; font-size: 1.2rem; vertical-align: middle"></i><span class="fw-bold ms-2" style="color: #150D6D">12 Lessons</span></p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p><i class="fas fa-stopwatch" style="color: #0763E5; font-size: 1.2rem; "></i><span class="fw-bold ms-2" style="color: #150D6D">3 hr 30 min</span></p>
+                                                </div>
+                                            </div> -->
+
+                                            <div class="text-center">
+                                                <h3 class="fw-bold mt-3 mb-3" style="color: #0763E5">${{$course_sli->price}}</h3>
+
+                                                <a href="{{ route('courses.show',$course_sli->slug) }}" class="btn enroll w-75">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+
+
+                    <!-- <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
                         <div class="container">
-                            <div class="row home-card">
+                            <div class="row" class="home-card">
                                 <div class="col-4 col-xs-12 padding-reduce home-card-side">
                                     <div class="card p-4 slider-card">
                                         <p class="mb-1 text-center">Rozel | Teacher</p>
@@ -112,13 +190,12 @@
                                         <div class="text-center">
                                             <h3 class="fw-bold mb-3" style="color: #0763E5">$250.00</h3>
 
-                                            <a href="{{'course/morbi-fermentum-sit-amet-libero-vel-ullamcorper'}}" class="btn enroll w-75">Enroll Now</a>
+                                            <button class="btn enroll w-75">Enroll Now</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
@@ -175,63 +252,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="swiper-slide" style="background-image: url('img/frontend/index/slider_1.png'); height: 35rem; background-repeat: no-repeat; background-size: cover;">
-                        <div class="container">
-                            <div class="row" class="home-card">
-                                <div class="col-4 col-xs-12 padding-reduce home-card-side">
-                                    <div class="card p-4 slider-card">
-                                        <p class="mb-1 text-center">Rozel | Teacher</p>
-
-                                        <h5 class="fw-bold mb-2 text-center" style="color: #150D6D">Hospitality Management</h5>
-
-                                        <p class="mb-3 text-center" style="font-size: 0.8rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur qui quaerat illum eaque praesentium laboriosam, placeat at delectus ducimus accusamus saepe non libero harum impedit omnis quas rem nostrum voluptatibus? Maiores possimus dicta laudantium velit unde voluptas ea.</p>
-
-                                        <div class="row mb-3 align-items-center">
-                                            <div class="col-6">
-                                                <i class="fas fa-star gold"></i>
-                                                <i class="fas fa-star gold"></i>
-                                                <i class="fas fa-star gold"></i>
-                                                <i class="fas fa-star gold"></i>
-                                                <i class="fas fa-star-half-alt gold"></i>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="row justify-content-end">
-                                                    <div class="col-10">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-6">
-                                                                <p><i class="far fa-user"></i><span class="fw-bold ms-2" style="color: #150D6D">01</span></p>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <p><i class="bi bi-chat-left-text"></i><span class="fw-bold ms-2" style="color: #150D6D">00</span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="row text-center mb-3 align-items-center">
-                                            <div class="col-6 border-end">
-                                                <p><i class="bi bi-layers-fill" style="color: #0763E5; font-size: 1.2rem; vertical-align: middle"></i><span class="fw-bold ms-2" style="color: #150D6D">12 Lessons</span></p>
-                                            </div>
-                                            <div class="col-6">
-                                                <p><i class="fas fa-stopwatch" style="color: #0763E5; font-size: 1.2rem; "></i><span class="fw-bold ms-2" style="color: #150D6D">3 hr 30 min</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="text-center">
-                                            <h3 class="fw-bold mb-3" style="color: #0763E5">$250.00</h3>
-
-                                            <button class="btn enroll w-75">Enroll Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -305,44 +326,24 @@
         <h2 class="text-center mb-5">Why choose <span class="fw-bolder">VMD Consultants</span></h2>
 
         <div class="row">
-            <div class="col-4 col-xs-12">
-                <div class="row align-items-center">
-                    <div class="col-3">
-                        <img src="{{ url('img/frontend/index/consultant_1.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
+            @if(count($why_choose_us) != 0)
+                @foreach($why_choose_us as $key => $why_choose)
+                    <div class="col-4 col-xs-12 mt-5">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="{{ url('files/why_choose_us',$why_choose->icon) }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
+                            </div>
+                            <div class="col-9">
+                                <h6 class="fw-bold mb-2">{{$why_choose->title}}</h6>
+                                <p class="mb-1" style="font-size: 0.9rem;">{{$why_choose->text}}</p>
+                                <p class="fw-bold" style="font-size: 0.75rem; color: #AB67BF">{{$why_choose->short_text}}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-9">
-                        <h6 class="fw-bold mb-2">Presales Questions</h6>
-                        <p class="mb-1" style="font-size: 0.9rem;">Have any question about Rocket LMS?</p>
-                        <p class="fw-bold" style="font-size: 0.75rem; color: #AB67BF">Ask a Presale Question</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 col-xs-12">
-                <div class="row align-items-center">
-                    <div class="col-3">
-                        <img src="{{ url('img/frontend/index/consultant_2.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
-                    </div>
-                    <div class="col-9">
-                        <h6 class="fw-bold mb-2">Support</h6>
-                        <p class="mb-1" style="font-size: 0.9rem;">Need help with the product and functionalities?</p>
-                        <p class="fw-bold" style="font-size: 0.75rem; color: #F05B68">Send a Support Ticket</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 col-xs-12">
-                <div class="row align-items-center">
-                    <div class="col-3">
-                        <img src="{{ url('img/frontend/index/consultant_3.png') }}" alt="" class="img-fluid shadow w-100 p-2" style="border-radius: 6px; height: 4rem;">
-                    </div>
-                    <div class="col-9">
-                        <h6 class="fw-bold mb-2">Reports & Suggestions</h6>
-                        <p class="mb-1" style="font-size: 0.9rem;">Need a new feature or find a bug? We are here?</p>
-                        <p class="fw-bold" style="font-size: 0.75rem; color: #305EDF">Contact Support</p>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            @else
+                <h3>No Any Data Here</h3>
+            @endif 
         </div>
 
     </div>

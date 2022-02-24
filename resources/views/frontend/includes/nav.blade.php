@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{{ route('frontend.index') }}"><img src="{{ url('img/frontend/logo.png') }}"
@@ -26,9 +28,38 @@
                     <a class="nav-link p-0 text-dark" href="#">Services <i class="drop-icon fa fa-caret-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="{{ route('frontend.for_employee') }}">Employers</a></li>
-                        <li><a href="{{ route('frontend.for_candidate')}}">Candidates</a></li>
+                        <!-- <li><a href="{{ route('frontend.for_candidate')}}">Candidates</a></li> -->
+                        <li class="nav-item drop-list">
+                            <a class="nav-link p-0 text-dark" href="#">Candidates <i class="drop-icon fa fa-caret-right"></i></a>
+                            <ul class="dropdown" style="left:170px; top:8px; background-color: #E8E8E8;">
+                                <li><a href="{{ route('frontend.for_candidate')}}">The Process</a></li>
+                                @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->orderBy('order','asc')->get() as $key=> $candidate_category)
+                                    <li><a href="{{ route('frontend.services',$candidate_category->slug)}}">{{$candidate_category->name}}</a></li>
+                                @endforeach
+                            </ul>
+                         </li>
+
+
                     </ul>
                 </li>
+
+                <!-- <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                    <li class="dropdown-submenu ">
+                        <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown" href="#">
+                            News
+                            <i class="icon icon-caret-right"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#">A & E Passer</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="#">Elementary</a></li>
+                            <li><a href="#">Secondary</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </li>
+                </ul> -->
 
                 <li class="nav-item px-3">
                     <a class="nav-link p-0 text-dark" href="#">Sponsorships</a>
@@ -58,7 +89,7 @@
                 </li>
                 <li class="nav-item ps-3">
                     <a class="nav-link p-0 btn register-btn px-3 py-2" type="button"
-                        href="{{ route('frontend.auth.register_employee') }}">Register</a>
+                        href="{{ route('frontend.auth.register_candidate') }}">Register</a>
                 </li>
                 @endif
             </ul>

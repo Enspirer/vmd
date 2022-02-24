@@ -77,7 +77,7 @@ class ContactController extends Controller
         return redirect()->back();
     }
 
-    public function contact_us(Request $request)
+    public function contact_us_send(Request $request)
     {        
         // dd($request);     
    

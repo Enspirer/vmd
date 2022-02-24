@@ -8,6 +8,10 @@
     height: 30rem;
 }
 
+.col-sm-6 {
+    width: unset !important;
+} 
+
 /*small mobile*/
 @media (min-width: 321px) and (max-width: 375px)  {
     .mobile-fix-row {
@@ -44,6 +48,7 @@
         left: 10.5%;
         width: 80%;
     }
+
     
 }
 

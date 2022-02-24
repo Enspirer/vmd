@@ -11,7 +11,7 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        $for_employee = WhyChoose::where('status','Enabled')->get();        
+        $for_employee = WhyChoose::where('status','Enabled')->orderBy('order','ASC')->get();        
         
         return view('frontend.for_employee',[
             'for_employee' => $for_employee

@@ -11,6 +11,11 @@ use \App\Http\Controllers\Backend\EmployeeBannerController;
 use \App\Http\Controllers\Backend\ForEmployeeController;
 use \App\Http\Controllers\Backend\ContactUsController;
 use \App\Http\Controllers\Backend\AboutUsController;
+use \App\Http\Controllers\Backend\WhyChooseController;
+use \App\Http\Controllers\Backend\CandidatesController;
+use \App\Http\Controllers\Backend\EmployeesController;
+use \App\Http\Controllers\Backend\ForCandidateController;
+use \App\Http\Controllers\Backend\CandidateCategoryController;
 
 
 /*
@@ -391,5 +396,51 @@ Route::post('contact_information/update', [ContactUsController::class, 'contact_
 
 Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us.index');
 Route::post('about_us/update', [AboutUsController::class, 'update'])->name('about_us.update');
+
+
+Route::get('why_choose_us', [WhyChooseController::class, 'index'])->name('why_choose_us.index');
+Route::get('why_choose_us/create', [WhyChooseController::class, 'create'])->name('why_choose_us.create');
+Route::post('why_choose_us/store', [WhyChooseController::class, 'store'])->name('why_choose_us.store');
+Route::get('why_choose_us/getdetails', [WhyChooseController::class, 'getdetails'])->name('why_choose_us.getdetails');
+Route::get('why_choose_us/edit/{id}', [WhyChooseController::class, 'edit'])->name('why_choose_us.edit');
+Route::post('why_choose_us/update', [WhyChooseController::class, 'update'])->name('why_choose_us.update');
+Route::get('why_choose_us/delete/{id}', [WhyChooseController::class, 'destroy'])->name('why_choose_us.destroy');
+
+
+Route::get('candidates', [CandidatesController::class, 'index'])->name('candidates.index');
+Route::get('candidates/getdetails', [CandidatesController::class, 'getdetails'])->name('candidates.getdetails');
+Route::get('candidates/edit/{id}', [CandidatesController::class, 'edit'])->name('candidates.edit');
+Route::post('candidates/update', [CandidatesController::class, 'update'])->name('candidates.update');
+// Route::get('candidates/delete/{id}', [CandidatesController::class, 'destroy'])->name('candidates.destroy');
+
+Route::get('employees', [EmployeesController::class, 'index'])->name('employees.index');
+Route::get('employees/getdetails', [EmployeesController::class, 'getdetails'])->name('employees.getdetails');
+Route::get('employees/edit/{id}', [EmployeesController::class, 'edit'])->name('employees.edit');
+Route::post('employees/update', [EmployeesController::class, 'update'])->name('employees.update');
+// Route::get('employees/delete/{id}', [EmployeesController::class, 'destroy'])->name('employees.destroy');
+
+Route::get('for_employee', [ForEmployeeController::class, 'index'])->name('for_employee.index');
+Route::post('for_employee/store', [ForEmployeeController::class, 'store'])->name('for_employee.store');
+Route::get('for_employee/getdetails', [ForEmployeeController::class, 'getdetails'])->name('for_employee.getdetails');
+Route::get('for_employee/edit/{id}', [ForEmployeeController::class, 'edit'])->name('for_employee.edit');
+Route::post('for_employee/update', [ForEmployeeController::class, 'update'])->name('for_employee.update');
+Route::get('for_employee/delete/{id}', [ForEmployeeController::class, 'destroy'])->name('for_employee.destroy');
+
+Route::get('for_candidate', [ForCandidateController::class, 'index'])->name('for_candidate.index');
+Route::post('for_candidate/store', [ForCandidateController::class, 'store'])->name('for_candidate.store');
+Route::get('for_candidate/getdetails', [ForCandidateController::class, 'getdetails'])->name('for_candidate.getdetails');
+Route::get('for_candidate/edit/{id}', [ForCandidateController::class, 'edit'])->name('for_candidate.edit');
+Route::post('for_candidate/update', [ForCandidateController::class, 'update'])->name('for_candidate.update');
+Route::get('for_candidate/delete/{id}', [ForCandidateController::class, 'destroy'])->name('for_efor_candidatemfor_candidateployee.destroy');
+
+
+Route::get('candidate_category', [CandidateCategoryController::class, 'index'])->name('candidate_category.index');
+Route::post('candidate_category/store', [CandidateCategoryController::class, 'store'])->name('candidate_category.store');
+Route::get('candidate_category/getdetails', [CandidateCategoryController::class, 'getdetails'])->name('candidate_category.getdetails');
+Route::get('candidate_category/edit/{id}', [CandidateCategoryController::class, 'edit'])->name('candidate_category.edit');
+Route::post('candidate_category/update', [CandidateCategoryController::class, 'update'])->name('candidate_category.update');
+Route::get('candidate_category/delete/{id}', [CandidateCategoryController::class, 'destroy'])->name('candidate_category.destroy');
+
+
 
 

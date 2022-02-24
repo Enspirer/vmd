@@ -59,10 +59,20 @@
     .pl-10-xs {
         padding-left: 10px;
     }
+
+    .name-input {
+        margin-bottom: 15px;
+    }
 }
 
 /*tab-portrait*/
 @media (min-width: 768px) and (max-width: 991px) {
+    .submit-btn-area {
+        width: 100%;
+        margin-right: auto;
+        display: flex;
+        justify-content: start;
+    }
 }
 
 

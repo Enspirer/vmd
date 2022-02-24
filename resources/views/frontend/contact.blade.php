@@ -13,7 +13,7 @@
 
 @if( session()->has('message') )
    
-    <div class="container" style="background-color: #0dcaf0; padding-top:5px; margin-top:50px; margin-bottom:50px; border-radius: 50px 50px; text-align:center;">
+    <div class="container" style="background-color: #c8d9dd; padding-left:5px; padding-right: 5px; padding-top:5px; margin-top:50px; margin-bottom:50px; border-radius: 50px 50px; text-align:center;">
 
             <h1 style="margin-top:80px;" class="fs-1">Thank You!</h1><br>
             <p class="lead mb-3"><h4>We appreciate you contacting us. One of our member will get back in touch with you soon!<br><br> Have a great day!</h4></p>
@@ -140,7 +140,7 @@
     <div class="row">
         <div class="col-6">
             <div class="contact-form p-4">
-                <form action="{{route('frontend.contact_us')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('frontend.contact_us_send')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                     <h4 class="fw-bold mb-1">Let Us Call You!</h4>
                     <h6 class="fw-bold mb-4">To help you choose your property</h6>
@@ -148,7 +148,7 @@
                     <div class="mb-3">
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control rounded-0" name="name" id="name"
+                                <input type="text" class="name-input form-control rounded-0" name="name" id="name"
                                     placeholder="Your Name" required>
                             </div>
 
@@ -161,7 +161,7 @@
                                             <option value="+95">+95</option>
                                         </select>
                                     </div> -->
-                                    <input type="text" class="form-control rounded-0" name="phone_number" id="phone_number"
+                                    <input type="text" class="name-input form-control rounded-0" name="phone_number" id="phone_number"
                                         placeholder="Your Number" required>
                                 </div>
                             </div>

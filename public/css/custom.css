@@ -1,0 +1,106 @@
+/* Services Page */
+#section-applications {
+  margin: 3rem 0 4rem;
+  position: relative;
+}
+#section-applications .title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+#section-applications .row {
+  margin-bottom: 1rem;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+}
+#section-applications .thead {
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 3rem;
+}
+#section-applications .tbody {
+  height: 5rem;
+  font-size: 1.1rem;
+  box-shadow: 0px 3px 10px -5px;
+}
+#section-applications .tbody .age {
+  font-size: 0.9rem;
+}
+#section-applications .view-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #02a934;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  #section-applications .container {
+    max-width: 95%;
+  }
+  #section-applications .thead {
+    height: 5rem;
+  }
+}
+@media screen and (max-width: 763px) {
+  #section-applications .thead {
+    font-size: 1rem;
+  }
+  #section-applications .tbody {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 668px) {
+  #section-applications .table-container {
+    overflow-x: scroll;
+  }
+  #section-applications .row {
+    width: 700px;
+  }
+}
+/* Applicant Profile Page */
+#section-applicant-profile {
+  margin: 2rem 0 4rem;
+  position: relative;
+}
+#section-applicant-profile .profile-picture {
+  width: 100%;
+}
+#section-applicant-profile .applicant-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#section-applicant-profile p {
+  font-size: 1rem;
+}
+#section-applicant-profile .personal-profile {
+  margin-bottom: 1rem !important;
+}
+#section-applicant-profile .personal-info:first-child {
+  margin-top: 1rem;
+}
+#section-applicant-profile .personal-info strong {
+  margin-right: 0.5rem;
+}
+#section-applicant-profile .education-qualification {
+  margin: 3rem 0 2rem;
+}
+#section-applicant-profile .title {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+#section-applicant-profile li {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 991px) and (min-width: 425px) {
+  #section-applicant-profile .g-5 {
+    --bs-gutter-x: 0 !important;
+  }
+  #section-applicant-profile .profile-picture {
+    width: 400px !important;
+    display: block;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=custom.css.map */

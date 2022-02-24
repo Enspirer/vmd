@@ -79,6 +79,18 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
+        // dd($request);
+
+        $request->validate(
+            [
+                'education_qulification' => 'required',
+                'professional_background' => 'required'
+            ],
+            [
+                'education_qulification.required' => 'Please fill Educational Qualifications section',
+                'professional_background.required' => ' and Professional Background section'
+            ]
+        );
 
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
@@ -94,16 +106,45 @@ class RegisterController extends Controller
             // Store your user in database
             if($request->file('cv'))
             {
-                    $preview_fileName = time().'_'.rand(1000,10000).'.'.$request->cv->getClientOriginalExtension();
-                    $fullURLsPreviewFile = $request->cv->move(public_path('files/cv'), $preview_fileName);
-                    $image_url = $preview_fileName;
-
+                $preview_fileName = time().'_'.rand(1000,10000).'.'.$request->cv->getClientOriginalExtension();
+                $fullURLsPreviewFile = $request->cv->move(public_path('files/cv'), $preview_fileName);
+                $image_url = $preview_fileName;
             }else{
-                    $image_url = null;
+                $image_url = null;
             }
 
+            if($request->file('profile_picture'))
+            {
+                $preview_fileName_profile = time().'_'.rand(1000,10000).'.'.$request->profile_picture->getClientOriginalExtension();
+                $fullURLsPreviewFile_profile = $request->profile_picture->move(public_path('files/profile_picture'), $preview_fileName_profile);
+                $image_profile = $preview_fileName_profile;
+            }else{
+                $image_profile = null;
+            }
 
-            event(new Registered($user = $this->create(array_merge($request->all(), ['cv' => $image_url]))));
+            $education_qulification = $request->education_qulification;
+            $final_array = [];
+                        
+            foreach($education_qulification as $key => $education){
+                $item_group = [                            
+                    'education' => $education
+                ];
+                array_push($final_array,$item_group);
+            } 
+
+            $professional_background = $request->professional_background;
+            $final_array_two = [];
+                        
+            foreach($professional_background as $key => $professional){
+                $item_group_two = [                            
+                    'professional' => $professional
+                ];
+                array_push($final_array_two,$item_group_two);
+            } 
+
+
+            event(new Registered($user = $this->create(array_merge($request->all(), ['cv' => $image_url, 'profile_picture' => $image_profile, 'education_qulification' => $final_array, 'professional_background' => $final_array_two,]))));
+
             return redirect()-> route('frontend.auth.login');
 
         }
@@ -129,6 +170,10 @@ class RegisterController extends Controller
                 $user->dob = isset($data['dob']) ? $data['dob'] : NULL ;
                 $user->phone = isset($data['phone']) ? $data['phone'] : NULL ;
                 $user->gender = isset($data['gender']) ? $data['gender'] : NULL;
+                $user->age = isset($data['age']) ? $data['age'] : NULL;
+                $user->type = isset($data['type']) ? $data['type'] : NULL;
+                $user->tel = isset($data['tel']) ? $data['tel'] : NULL;
+                $user->description = isset($data['description']) ? $data['description'] : NULL;
                 $user->address = isset($data['address']) ? $data['address'] : NULL;
                 $user->city =  isset($data['city']) ? $data['city'] : NULL;
                 $user->pincode = isset($data['pincode']) ? $data['pincode'] : NULL;
@@ -141,9 +186,11 @@ class RegisterController extends Controller
                 $user->comments = isset($data['comments']) ? $data['comments'] : NULL;
                 $user->contact_number = isset($data['contact_number']) ? $data['contact_number'] : NULL;
                 $user->education_qulification = isset($data['education_qulification']) ? $data['education_qulification'] : NULL;
+                $user->professional_background = isset($data['professional_background']) ? $data['professional_background'] : NULL;
                 $user->country = isset($data['country']) ? $data['country'] : NULL;
                 $user->cv = isset($data['cv']) ? $data['cv'] : NULL;
-
+                $user->profile_picture = isset($data['profile_picture']) ? $data['profile_picture'] : NULL;
+                
                 $user->save();
 
         $userForRole = User::find($user->id);

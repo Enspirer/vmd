@@ -210,16 +210,59 @@ i.drop-icon.fa.fa-caret-down {
     }
 
     .col-sm-12 {
-        width: 100%;
+        width: 100% !important;
+        padding-top: 15px;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .card.p-5.text-center {
+        padding: 25px !important;
+    }
+
+    .card.p-5.text-center h4 {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 0.8rem;    
+    }
+
+    .employee-container {
+        margin-bottom: 3rem !important;
+    }
+
+    .col-1.mobile-check-logo {
+        padding: 0;
     }
     
 }
 
+/*tab-landscape*/
+@media (min-width: 992px) and (max-width: 1024px) {
+    .logo {
+        height: 2rem;
+    }
+
+    .main-nav a {
+        font-size: 0.8rem;
+    }
+
+    .btn-bar a {
+        font-size: 0.8rem;
+    }
+
+    .progress-bar-wrapper {
+        flex: 1 !important;
+    }
+}
 
 
 /*large screen*/
 @media screen and (min-width: 1400px) {
-   
+    
 }
 
 /*windows mobile*/

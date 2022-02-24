@@ -413,3 +413,136 @@ span.play-btn img {
     height: 100%;
     min-height: 950px;
 }
+
+.course-banner-txt-area {
+    width: 80%;
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 4px;
+}
+
+.course-banner-txt-area h3 {
+    width: 100%;
+    max-height: 90px;
+}
+
+.banner-txt-wrapper h1 {
+    margin-top: 0;
+    border-bottom: 5px solid #fff;
+    width: max-content;
+}
+
+.course-banner-txt-area {
+    padding: 25px;
+}
+
+
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .side-cards {
+        position:inherit;
+        right: 0;
+        top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sidebar-btn {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .inner-box ul {
+        padding: 0;
+    }
+
+    .btn-bar a {
+        font-size: 0.8rem;
+    }
+
+    .progress-bar-wrapper {
+        flex: 1;
+    }
+
+    .banner-inner-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+   .col-sm-7 {
+        width: 58.33%;
+   }
+   .col-sm-5 {
+        width: 41.67%;
+   }
+
+   .single-course-banner-container {
+       height: 35vh;
+   }
+
+   .banner-txt-wrapper {
+       height: 35vh;
+   }
+
+   .side-cards {
+       padding-left: 15px;
+       padding-right: 15px;
+       top: -22vh;
+   }
+
+   .sidebar-btn {
+       padding-left: 50px;
+       padding-right: 50px;
+       margin-top: 0px;
+   }
+
+   .video-container.mb-5 {
+       margin-bottom: 2rem;
+   }
+
+   .btn-bar a {
+       font-size: 0.8rem;
+   }
+
+   .inner-box ul {
+       padding: 15px;
+       padding-top: 30px;
+       margin-bottom: 0;
+   }
+
+   .progress-bar-wrapper {
+        flex: 1;
+    }
+
+}
+
+
+/*tab-landscape*/
+@media (min-width: 992px) and (max-width: 1024px) {
+    .sidebar-btn {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    li.drop-list ul.dropdown {
+        top: 35px !important;
+    }
+}
+
+
+/*large screen*/
+@media screen and (min-width: 1400px) {
+   
+}
+
+/*windows mobile*/
+@media (max-width: 767px) and (min-width: 451px){
+}
