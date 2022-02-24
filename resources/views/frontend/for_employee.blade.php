@@ -83,10 +83,10 @@
 
 <div class="container" style="margin-bottom : 5rem;">
     <div class="row position-relative">
-        <h1 class="fw-bold text-center">SIMPLE AND EFFECTIVE PROCESS WITH VMD</h1>
+        <h1 class="fw-bold text-center">SIMPLE AND EFFECTIVE PROCESS WITH SkILL JOBS</h1>
         <p class="text-center position-absolute inner-heading"
             style="opacity: 0.04; top: -0.2rem; font-size: 3rem; line-height: 1.2; z-index: -1; font-weight: 800">SIMPLE
-            AND EFFECTIVE PROCESS WITH VMD</p>
+            AND EFFECTIVE PROCESS WITH SKILL JOBS</p>
     </div>
 </div>
 
@@ -97,7 +97,7 @@
             <img src="{{ url('img/frontend/employee/sample_1.png') }}" alt="" class="img-fluid">
         </div>
         <div class="col-5 text-center">
-            <h5 class="fw-bold mb-2">Register with VMD</h5>
+            <h5 class="fw-bold mb-2">Register with Skill Jobs</h5>
             <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
             </p>
         </div>
@@ -167,7 +167,7 @@
             <img src="{{ url('img/frontend/employee/sample_1.png') }}" alt="" class="img-fluid">
         </div>
         <div class="chart-txt">
-            <h5 class="fw-bold mb-2">Register with VMD</h5>
+            <h5 class="fw-bold mb-2">Register with Skill Jobs</h5>
             <p>This course is CPD accredited. It meets accepted Continuing Professional Development (CPD) guidelines.
             </p>
         </div>
@@ -223,7 +223,7 @@
 
 
 <div class="container" style="margin-bottom : 4rem;">
-    <h1 class="fw-bold text-center mb-5">Why Choose <span class="fw-bolder">VMD</span></h1>
+    <h1 class="fw-bold text-center mb-5">Why Choose <span class="fw-bolder">Skill Jobs</span></h1>
 
     <div class="row align-items-center">
         <div class="col-5 hidden-xs">

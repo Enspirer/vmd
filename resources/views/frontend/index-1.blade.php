@@ -58,7 +58,7 @@
 
 
     <div class="container-fluid p-0 position-relative" style="margin-bottom: 8rem;">
-        <h2 class="text-center mb-4">Get Qualified with <span class="fw-bolder">VMD</span></h2>
+        <h2 class="text-center mb-4">Get Qualified with <span class="fw-bolder">Skill Jobs</span></h2>
 
 
         <div class="col-12">
@@ -323,7 +323,7 @@
 
     <div class="container" style="margin-bottom: 7rem;">
 
-        <h2 class="text-center mb-5">Why choose <span class="fw-bolder">VMD Consultants</span></h2>
+        <h2 class="text-center mb-5">Why choose <span class="fw-bolder">Skill Jobs Consultants</span></h2>
 
         <div class="row">
             @if(count($why_choose_us) != 0)

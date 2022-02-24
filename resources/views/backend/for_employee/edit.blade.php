@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Edit Why Choose VMD'))
+@section('title', __('Edit Why Choose Skill Jobs'))
 
 @section('content')
     <form action="{{route('admin.for_employee.update')}}" method="post" enctype="multipart/form-data">

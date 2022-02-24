@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Why Choose VMD'))
+@section('title', __('Why Choose Skill Jobs'))
 
 @section('content')
     
@@ -10,7 +10,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <strong>Why Choose VMD (For Employee Page)</strong>
+                    <strong>Why Choose Skill Jobs (For Employee Page)</strong>
 
                     <div class="btn btn-info pull-right ml-3" data-toggle="modal" data-target="#exampleModal">Add New</div>
                    

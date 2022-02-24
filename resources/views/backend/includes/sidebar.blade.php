@@ -391,7 +391,7 @@
                     <li class="nav-item ">
                         <a class="nav-link {{ active_class(Active::checkUriPattern('admin/for_employee*')) }}"
                             href="{{ route('admin.for_employee.index') }}">
-                            Why Choose VMD
+                            Why Choose Skill Jobs
                         </a>
                     </li>
                 </ul>
@@ -406,7 +406,7 @@
                     <li class="nav-item ">
                         <a class="nav-link {{ active_class(Active::checkUriPattern('admin/for_candidate*')) }}"
                             href="{{ route('admin.for_candidate.index') }}">
-                            Why Choose VMD
+                            Why Choose Skill Jobs
                         </a>
                     </li>
                 </ul>
@@ -438,7 +438,7 @@
                     <li class="nav-item">
                         <a class="nav-link {{ active_class(Active::checkUriPattern('admin/why_choose_us*')) }}"
                             href="{{ route('admin.why_choose_us.index') }}">
-                            Why Choose VMD
+                            Why Choose Skill Jobs
                         </a>
                     </li>
                 </ul>
