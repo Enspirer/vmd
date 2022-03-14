@@ -19,8 +19,8 @@
                             <input type="file" class="form-control" name="icon" required>
                         </div>
                         <div class="form-group">
-                            <label>Text <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="text" required>
+                            <label>Text</label>
+                            <input type="text" class="form-control" name="text">
                         </div>
                         <div class="form-group">
                             <label>Short text <span class="text-danger">*</span></label>

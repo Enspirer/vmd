@@ -21,8 +21,8 @@
                             <img src="{{url('files/why_choose_us',$why_choose_us->icon)}}" width="10%" />
                         </div>
                         <div class="form-group mt-3">
-                            <label>Text <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="text" value="{{$why_choose_us->text}}" required>
+                            <label>Text</label>
+                            <input type="text" class="form-control" name="text" value="{{$why_choose_us->text}}">
                         </div>
                         <div class="form-group">
                             <label>Short text <span class="text-danger">*</span></label>

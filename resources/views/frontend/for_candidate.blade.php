@@ -153,7 +153,8 @@
 
 
 <div class="container" style="margin-bottom : 4rem;">
-    <h1 class="fw-bold text-center mb-5">Why Choose <span class="fw-bolder">Skill Jobs</span></h1>
+    <h1 class="fw-bold text-center mb-3">Why Choose <span class="fw-bolder">Skill Jobs</span></h1>
+    <p class="text-center mb-5">We provide reliable, honest and cost effective service to all our members.</p>
 
     <div class="row align-items-center">
         <div class="col-5 hidden-xs">
