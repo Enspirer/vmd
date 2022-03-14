@@ -211,7 +211,6 @@ small {
                         <label for="type" class="form-label mb-0 me-3 form-label">Type</label>
                         <select id="type" class="form-control" name="type" required>
                             <option value="" selected disabled hidden></option>
-                            <option value="Afghanistan">Afghanistan</option>
                             @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->get() as $key=> $candidate_category)
                                 <option value="{{$candidate_category->id}}">{{$candidate_category->name}}</option>
                             @endforeach
