@@ -33,9 +33,14 @@
                             <a class="nav-link p-0 text-dark" href="#">Candidates <i class="drop-icon fa fa-caret-right"></i></a>
                             <ul class="dropdown" style="left:170px; top:8px; background-color: #E8E8E8;">
                                 <li><a href="{{ route('frontend.for_candidate')}}">The Process</a></li>
-                                @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->orderBy('order','asc')->get() as $key=> $candidate_category)
-                                    <li><a href="{{ route('frontend.services',$candidate_category->slug)}}">{{$candidate_category->name}}</a></li>
-                                @endforeach
+                                @auth
+                                    @foreach(App\Models\Models\CandidateCategory::where('status','Enabled')->orderBy('order','asc')->get() as $key=> $candidate_category)
+                                        <li><a href="{{ route('frontend.services',$candidate_category->slug)}}">{{$candidate_category->name}}</a></li>
+                                    @endforeach
+                                @else
+
+                                @endauth
+                             
                             </ul>
                          </li>
 

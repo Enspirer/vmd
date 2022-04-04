@@ -49,7 +49,7 @@ class SettingSeeder extends Seeder
         if($config == null){
            $config = new \App\Models\Config();
            $config->key = 'contact_address';
-           $config->value = '<p><strong>VMD Consultant</strong></p><p><strong>518/ B C Avenue,&nbsp;</strong></p><p><strong>London.</strong></p>';
+           $config->value = '<p><strong>Skill Jobs Consultant</strong></p><p><strong>518/ B C Avenue,&nbsp;</strong></p><p><strong>London.</strong></p>';
            $config->save();
         }
 
